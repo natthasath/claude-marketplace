@@ -20,6 +20,13 @@
       "source": "./plugins/plugin-project-masterplan",
       "category": "development",
       "keywords": ["masterplan", "project", "architecture", "database", "requirement", "system-analysis"]
+    },
+    {
+      "name": "plugin-refactor",
+      "description": "Plugin รวม Skills สำหรับ Refactor และปรับปรุงโครงสร้างไฟล์ ครอบคลุม Dockerfile, Docker Compose และ Shell Script",
+      "source": "./plugins/plugin-refactor",
+      "category": "development",
+      "keywords": ["refactor", "dockerfile", "docker-compose", "shell-script", "devops", "best-practices"]
     }
   ]
 }
