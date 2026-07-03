@@ -1,4 +1,4 @@
-# claude-marketplace
+# natthasath-marketplace
 
 รวม Claude Plugins และ Skills สำหรับใช้งานกับ Claude Code
 
