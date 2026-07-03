@@ -5,7 +5,7 @@
 ## การติดตั้ง Marketplace
 
 ```bash
-claude marketplace add github:natthasath/claude-marketplace
+claude marketplace add natthasath/natthasath-marketplace
 ```
 
 ## การติดตั้ง Plugin
