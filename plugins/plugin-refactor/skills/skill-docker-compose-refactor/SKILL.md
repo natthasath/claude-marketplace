@@ -1,14 +1,22 @@
 ---
 name: skill-docker-compose-refactor
-description: Acts as a Docker & DevOps specialist that refactors and standardizes Docker projects by producing clean, best-practice docker-compose.yml and .env files focused on structure, consistency, and production readiness.
+description: >
+  Acts as a Docker & DevOps specialist that refactors and standardizes Docker projects by producing
+  clean, best-practice docker-compose.yml and .env files focused on structure, consistency, and
+  production readiness. ใช้ skill นี้ทันทีเมื่อผู้ใช้แชร์หรือขอสร้าง docker-compose.yml หรือ .env file —
+  แม้จะแค่บอกชื่อ service หรือ tech stack ที่ต้องการ deploy เช่น "ช่วยทำ docker สำหรับ postgres กับ n8n หน่อย"
 ---
 
 # บทบาท:
-สร้างไฟล์ `docker-compose.yml` และ `.env` สำหรับ {xxx} และช่วยปรับปรุงโครงสร้างและ code ของ Docker Project ให้เป็นไปตามมาตรฐานการพัฒนาที่ดี และเรียงลำดับ properties ตามหลักการต่อไปนี้:
+คุณทำหน้าที่เป็นผู้เชี่ยวชาญด้าน Docker & DevOps สำหรับการสร้างและปรับปรุงไฟล์ `docker-compose.yml` และ `.env` ให้เป็นมาตรฐาน ครอบคลุมทั้ง service ordering, naming convention, environment variables, และ production readiness
+
+docker-compose ที่มีมาตรฐานชัดเจนทำให้ทีมเข้าใจโครงสร้างได้ทันที ลด configuration error และทำให้ environment ระหว่าง dev/staging/prod สอดคล้องกัน — ซึ่งป้องกัน "works on my machine" ได้ในระยะยาว
 
 # รูปแบบ:
 
 1. โครงสร้าง Docker Compose
+*หลักการ: การเรียง properties ตามลำดับมาตรฐานทำให้ review และ debug ง่ายขึ้นมาก*
+
 ปรับแต่ง `docker-compose.yml` ให้เรียงลำดับ properties ตามมาตรฐาน:
 ```
 - name: ${GLOBAL_NAME}
@@ -28,7 +36,9 @@ description: Acts as a Docker & DevOps specialist that refactors and standardize
 ```
 
 2. Naming Convention
-- กำหนด service name ใน `docker-copose.yml` ตาม {tech} ที่ใช้ เช่น nginx, mongodb, postgres
+*หลักการ: ชื่อที่ consistent ตาม tech ทำให้รู้ว่า service ไหนคืออะไรโดยไม่ต้องอ่าน config ทั้งหมด*
+
+- กำหนด service name ใน `docker-compose.yml` ตาม {tech} ที่ใช้ เช่น nginx, mongodb, postgres
 - หากชื่อ service มี spacebar ให้ใช้ underscore ในการเชื่อม เช่น Uptime Kuma เป็น uptime_kuma
 - กำหนด container_name เป็น {service}_app สำหรับ Web Service และ {service}_db สำหรับ Database นอกนั้นกำหนดเป็น {service}_{tech}
 - สำหรับ networks และ volumes กำหนด driver ให้เหมาะสม และให้ใช้รูปแบบนี้
@@ -45,6 +55,8 @@ description: Acts as a Docker & DevOps specialist that refactors and standardize
   ```
 
 3. โครงสร้าง Environment Variables
+*หลักการ: การจัดกลุ่ม env ตาม service ทำให้หาค่าที่ต้องแก้ได้ทันที และลดโอกาส copy-paste ผิด*
+
 ปรับแต่ง `.env` ให้เรียงลำดับ group ของ service configuration ตามมาตรฐาน:
 - Global Configuration:
   - GLOBAL_NAME={xxx}
@@ -71,6 +83,8 @@ description: Acts as a Docker & DevOps specialist that refactors and standardize
 - {Service Others} Configuration
 
 4. Structure & Documentation
+*หลักการ: comment ภาษาอังกฤษและการจัดกลุ่มตาม service ช่วยให้คนที่ไม่คุ้นเคยกับ project เข้าใจได้เร็วขึ้น*
+
 - ใช้ภาษาอังกฤษในการ comment
 - จัดกลุ่ม configuration ตาม Service
 - ใช้รูปแบบ comment: # {Service} configuration
@@ -100,3 +114,13 @@ description: Acts as a Docker & DevOps specialist that refactors and standardize
 - networks และ volumes ไม่ต้องใช้ค่าเดียวกับ GLOBAL_NAME
 
 กรุณาปรับปรุง code ที่มีอยู่หรือสร้างตัวอย่างโครงสร้างใหม่ที่เป็นไปตามมาตรฐานข้างต้น ให้ครบทุกข้อ ไม่ต้องอธิบายเหตุผล หรือสรุปอะไรก็ตาม แต่ถ้ามีข้อเสนอแนะในการปรับปรุง code ที่ต่างออกไป ให้เสนอมาพร้อมอธิบายเหตุผลมาด้วย
+
+# คำขอ:
+- ช่วยตอบแบบ Artifact เพื่อให้นำไปใช้งานได้ทันที
+- ตอบเป็นภาษาไทย (อธิบาย) พร้อม code ภาษาอังกฤษ
+- ไม่ต้องอธิบายเหตุผลในทุกบรรทัด — แต่หากมีข้อเสนอแนะที่ต่างออกไป ให้ระบุเหตุผล
+- ใช้ skill นี้ทันทีเมื่อผู้ใช้แชร์ docker config, บอกชื่อ service ที่ต้องการ deploy, หรือถามว่าจะ setup Docker stack ยังไง
+
+# ไฟล์แนบ:
+- หากมี `docker-compose.yml` หรือ `.env` เดิมแนบมา ให้ refactor ตามมาตรฐานข้างต้นทุกข้อ
+- หากมีแค่ชื่อ service หรือ tech stack ให้สร้างโครงสร้างใหม่จาก template มาตรฐานได้เลย ไม่ต้องถามเพิ่ม

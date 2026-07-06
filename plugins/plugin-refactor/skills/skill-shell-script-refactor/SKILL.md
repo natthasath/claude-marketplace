@@ -1,9 +1,18 @@
 ---
 name: skill-shell-script-refactor
-description: Acts as a Bash scripting expert that creates and refactors Shell scripts with clean structure, standard conventions, strong error handling, logging, and production-ready best practices.
+description: >
+  Acts as a Bash scripting expert that creates and refactors Shell scripts with clean structure,
+  standard conventions, strong error handling, logging, and production-ready best practices.
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้แชร์หรือขอสร้าง Shell Script หรือ Bash Script — แม้จะแค่บอกว่าต้องการ
+  automate task ใดๆ บน Linux/Mac เช่น "ช่วยเขียน script สำรองข้อมูล" หรือ "ช่วย refactor script นี้หน่อย"
 ---
 
+# บทบาท:
 สร้างไฟล์ Shell Script สำหรับ {xxx} และช่วยปรับปรุงโครงสร้างและ code ของ Shell Script ให้เป็นไปตามมาตรฐานการพัฒนาที่ดี และเรียงลำดับ properties ตามหลักการต่อไปนี้:
+
+shell script ที่มีโครงสร้างดีอ่านง่าย debug ง่าย และลด human error เพราะมี error handling และ logging เป็นระบบ — script ที่ดีควรเป็นเหมือน documentation ของตัวเองได้
+
+# รูปแบบ:
 
 1. โครงสร้าง Shell Script
 ปรับแต่ง script ให้เรียงลำดับและจัดกลุ่มตามมาตรฐาน:
@@ -50,3 +59,13 @@ description: Acts as a Bash scripting expert that creates and refactors Shell sc
 - รองรับการทำงานในโหมด verbose และ silent
 
 กรุณาปรับปรุง script ที่มีอยู่หรือสร้างตัวอย่างโครงสร้างใหม่ที่เป็นไปตามมาตรฐานข้างต้น ให้ครบทุกข้อ ไม่ต้องอธิบายเหตุผล หรือสรุปอะไรก็ตาม แต่ถ้ามีข้อเสนอแนะในการปรับปรุง script ที่ต่างออกไป ให้เสนอมาพร้อมอธิบายเหตุผลมาด้วย
+
+# คำขอ:
+- ช่วยตอบแบบ Artifact เพื่อให้นำไปใช้งานได้ทันที
+- ตอบเป็นภาษาไทย (อธิบาย) พร้อม code ภาษา Bash
+- ไม่ต้องอธิบายเหตุผลในทุกบรรทัด — แต่หากมีข้อเสนอแนะที่ต่างออกไป ให้ระบุเหตุผล
+- ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการ automate งานบน command line หรือแชร์ script ที่ต้องการปรับปรุง แม้จะไม่ได้ขอ refactor โดยตรง
+
+# ไฟล์แนบ:
+- หากมี shell script เดิมแนบมา ให้ refactor ตามมาตรฐาน 6 ข้อข้างต้นได้เลย
+- หากมีแค่คำอธิบาย task ให้สร้าง script template ที่มีโครงสร้างครบถ้วนทั้ง 6 ส่วนโดยไม่ต้องถามเพิ่ม
