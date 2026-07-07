@@ -16,6 +16,7 @@ claude plugin install plugin-project-masterplan
 claude plugin install plugin-refactor
 claude plugin install plugin-roleplay
 claude plugin install plugin-social-post
+claude plugin install plugin-productive
 ```
 
 ## Plugins
@@ -27,6 +28,7 @@ claude plugin install plugin-social-post
 | `plugin-refactor` | 3 | ปรับปรุงโค้ด Docker และ Shell Script |
 | `plugin-roleplay` | 3 | จำลองบทบาทเพื่อฝึกและวิเคราะห์ |
 | `plugin-social-post` | 2 | สร้างโพสต์โซเชียลมีเดีย |
+| `plugin-productive` | 2 | เพิ่มประสิทธิภาพการทำงาน English Mentor และ Short Summary |
 
 ---
 
@@ -175,4 +177,35 @@ claude plugin install plugin-social-post
 ```
 /skill-facebook-post
 /skill-linkedin-post
+```
+
+---
+
+## plugin-productive
+
+Plugin สำหรับ **เพิ่มประสิทธิภาพการทำงาน** — English Mentor หลายโหมด และ Short Summary สำหรับบริการ/เทคโนโลยี
+
+### Skills
+
+| Skill | วัตถุประสงค์ |
+|---|---|
+| `skill-english-mentor` | ครู English ส่วนตัว รองรับ 6 โหมด: แปล, ตรวจแกรมมา, คิดประโยคตอบกลับ, จำลองสถานการณ์, ปรับ tone, คลังคำศัพท์ |
+| `skill-short-summary` | สรุปข้อมูลบริการหรือเทคโนโลยีแบบกระชับ พร้อม Key Features และ Real-world Example |
+
+### การติดตั้ง
+
+```bash
+claude plugin install plugin-productive
+```
+
+### การเรียกใช้ Skill
+
+```
+/skill-english-mentor --translation
+/skill-english-mentor --grammar
+/skill-english-mentor --reply
+/skill-english-mentor --roleplay
+/skill-english-mentor --tone
+/skill-english-mentor --vocab
+/skill-short-summary
 ```
