@@ -1,0 +1,9 @@
+{
+  "name": "plugin-productive",
+  "version": "0.1.0",
+  "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม English Mentor และ Short Summary",
+  "author": {
+    "name": "natthasath"
+  },
+  "keywords": ["productive", "english", "mentor", "translation", "grammar", "summary"]
+}
