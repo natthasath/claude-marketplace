@@ -64,4 +64,4 @@ Thought Leadership post ที่ดีไม่ใช่แค่การ shar
 - ต้องมีอย่างน้อย 1 Emoji ต่อทุก 2–3 บรรทัด
 
 # ไฟล์แนบ:
-- ใช้ไฟล์ `facebook_post_example_01.txt`, `facebook_post_example_02.txt`, `facebook_post_example_03.txt` เป็นตัวอย่างสไตล์และโทนภาษาที่ต้องการ
+- ใช้ไฟล์ `references/facebook_post_example_01.txt`, `references/facebook_post_example_02.txt`, `references/facebook_post_example_03.txt` เป็นตัวอย่างสไตล์และโทนภาษาที่ต้องการ

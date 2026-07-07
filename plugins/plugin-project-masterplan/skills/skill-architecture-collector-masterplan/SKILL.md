@@ -24,7 +24,7 @@ description: Acts as an IT Architecture Analyst collecting and analyzing infrast
    *หลักการ: การกำหนดวัตถุประสงค์ร่วมกันช่วยให้ทุกทีมเข้าใจทิศทางและขอบเขตของการเก็บข้อมูลอย่างตรงกัน*
 
 2. แบบฟอร์มคำถามพร้อมตัวเลือก (แยกตามกลุ่ม)  
-   - ใช้ไฟล์ `architecture_question_example.txt` เพื่อแสดงตัวอย่างคำถามในแต่ละหมวด  
+   - ใช้ไฟล์ `references/architecture_question_example.txt` เพื่อแสดงตัวอย่างคำถามในแต่ละหมวด  
    *หลักการ: ชุดคำถามที่มีโครงสร้างช่วยให้ข้อมูลที่เก็บได้มีความสม่ำเสมอและนำมาเปรียบเทียบวิเคราะห์ได้อย่างมีประสิทธิภาพ*
 
 3. แนวทางการวิเคราะห์เพื่อสรุป IT Architecture รวม (Consolidated)  
@@ -48,5 +48,5 @@ description: Acts as an IT Architecture Analyst collecting and analyzing infrast
 - ใช้ skill นี้ทันทีเมื่อผู้ใช้กล่าวถึงการสำรวจระบบ, IT Landscape, หรือต้องการออกแบบ Architecture รวม
 
 # ไฟล์แนบ:
-- ใช้ไฟล์ `architecture_question_example.txt` สำหรับแสดงตัวอย่างคำถามในแต่ละหมวด — ช่วยให้การจัดทำแบบสอบถามมีมาตรฐานและครอบคลุมทุกด้านของ Architecture  
+- ใช้ไฟล์ `references/architecture_question_example.txt` สำหรับแสดงตัวอย่างคำถามในแต่ละหมวด — ช่วยให้การจัดทำแบบสอบถามมีมาตรฐานและครอบคลุมทุกด้านของ Architecture  
 - หากมีแผนภาพระบบ, IT Inventory, หรือ Policy แนบมาด้วย เช่น `infra_survey_map.pdf` (ให้บริบทด้าน Infrastructure ปัจจุบัน), `app_register.xlsx` (รายการระบบงานและ Application ที่ใช้งาน) ให้ใช้ประกอบเพื่อออกแบบคำถามและการสรุปที่สะท้อนความเป็นจริงขององค์กรได้มากยิ่งขึ้น
