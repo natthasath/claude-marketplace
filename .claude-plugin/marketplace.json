@@ -44,10 +44,10 @@
     },
     {
       "name": "plugin-productive",
-      "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม English Mentor และ Short Summary",
+      "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม English Mentor, Short Summary และ Meetings Summary",
       "source": "./plugins/plugin-productive",
       "category": "productivity",
-      "keywords": ["productive", "english", "mentor", "translation", "grammar", "summary"]
+      "keywords": ["productive", "english", "mentor", "translation", "grammar", "summary", "meetings", "mom", "minutes"]
     }
   ]
 }
