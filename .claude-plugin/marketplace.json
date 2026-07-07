@@ -41,6 +41,13 @@
       "source": "./plugins/plugin-social-post",
       "category": "productivity",
       "keywords": ["social-media", "facebook", "linkedin", "content", "post", "thought-leadership"]
+    },
+    {
+      "name": "plugin-productive",
+      "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม English Mentor และ Short Summary",
+      "source": "./plugins/plugin-productive",
+      "category": "productivity",
+      "keywords": ["productive", "english", "mentor", "translation", "grammar", "summary"]
     }
   ]
 }
