@@ -34,6 +34,49 @@ claude plugin install plugin-devops
 
 ---
 
+## Folder Structure
+
+โครงสร้าง Folder มาตรฐานของ Plugin และ Skill ในรูปแบบ `skill-creator` standard:
+
+```
+plugin-name/
+├── .claude-plugin/
+│   └── plugin.json               # Plugin metadata (name, version, description, keywords)
+└── skills/
+    └── skill-name/
+        ├── SKILL.md              # (required) Frontmatter + instructions
+        ├── agents/               # Instructions for specialized subagents
+        │   ├── analyzer.md
+        │   ├── comparator.md
+        │   └── grader.md
+        ├── assets/               # Files used in output (templates, icons, HTML)
+        │   └── eval_review.html
+        ├── eval-viewer/          # Evaluation viewer scripts
+        │   ├── generate_review.py
+        │   └── viewer.html
+        ├── references/           # Docs loaded into context as needed
+        │   └── schemas.md
+        └── scripts/              # Executable Python scripts for automation
+            ├── aggregate_benchmark.py
+            ├── improve_description.py
+            ├── package_skill.py
+            ├── run_eval.py
+            ├── run_loop.py
+            └── utils.py
+```
+
+### Progressive Disclosure
+
+Skills ใช้ระบบโหลด 3 ระดับ:
+
+| ระดับ | เนื้อหา | เมื่อโหลด |
+|---|---|---|
+| 1 | `name` + `description` (frontmatter) | ทุกครั้งใน context (~100 words) |
+| 2 | SKILL.md body | เมื่อ skill ถูก trigger |
+| 3 | Bundled resources (scripts/references/assets) | เมื่อ skill เรียกใช้งาน |
+
+---
+
 ## plugin-capacities
 
 Plugin สำหรับ **Capacities PKM** — ออกแบบ Space, Object Types, Tags, Collections และ Workflow
