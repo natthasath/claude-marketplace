@@ -17,6 +17,7 @@ claude plugin install plugin-refactor
 claude plugin install plugin-roleplay
 claude plugin install plugin-social-post
 claude plugin install plugin-productive
+claude plugin install plugin-devops
 ```
 
 ## Plugins
@@ -29,6 +30,7 @@ claude plugin install plugin-productive
 | `plugin-roleplay` | 3 | จำลองบทบาทเพื่อฝึกและวิเคราะห์ |
 | `plugin-social-post` | 2 | สร้างโพสต์โซเชียลมีเดีย |
 | `plugin-productive` | 3 | เพิ่มประสิทธิภาพการทำงาน English Mentor, Short Summary และ Meetings Summary |
+| `plugin-devops` | 1 | จัดการ Session Context และ DevOps Workflow |
 
 ---
 
@@ -210,4 +212,28 @@ claude plugin install plugin-productive
 /skill-english-mentor --vocab
 /skill-short-summary
 /skill-meetings-summary
+```
+
+---
+
+## plugin-devops
+
+Plugin สำหรับ **DevOps Workflow** — จัดการ Session Context และเพิ่มประสิทธิภาพการทำงานกับ Claude Code
+
+### Skills
+
+| Skill | วัตถุประสงค์ |
+|---|---|
+| `skill-session-name` | ตั้งชื่อ session ปัจจุบัน บันทึกลง memory และแสดง context สำหรับอ้างอิงในการสนทนา |
+
+### การติดตั้ง
+
+```bash
+claude plugin install plugin-devops
+```
+
+### การเรียกใช้ Skill
+
+```
+/skill-session-name <ชื่อ session>
 ```
