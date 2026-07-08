@@ -1,5 +1,5 @@
 ---
-name: summarize
+name: tldr
 description: >
   Acts as a concise technology and service reference that delivers structured, professional
   English summaries with key features, real-world examples, and practical context for any
