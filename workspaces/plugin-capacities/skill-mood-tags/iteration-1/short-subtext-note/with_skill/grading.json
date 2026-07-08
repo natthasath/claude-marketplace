@@ -1,0 +1,37 @@
+{
+  "expectations": [
+    {
+      "text": "exactly_one_tag — output contains exactly 1 mood tag (not multiple)",
+      "passed": true,
+      "evidence": "**`#mood-unmotivated`** — only one tag present in the entire output"
+    },
+    {
+      "text": "reads_subtext — response reads beyond surface words — analyzes tone, word choice, or what's implied (not just saying \"can't tell from short note\")",
+      "passed": true,
+      "evidence": "ไม่อยากทำอะไร ขาดแรงขับ — \"ไม่ค่อยได้ทำอะไร\" สะท้อนวันที่ผ่านไปแบบเฉื่อยๆ ไม่มีแรงดึงดูดให้ลุกขึ้นทำสิ่งใด — interprets implied listlessness and lack of drive rather than surface description"
+    },
+    {
+      "text": "plausible_zone — selected zone is plausible (Blue is most reasonable for \"นอนอยู่บ้านทั้งวัน ไม่ได้ทำอะไร\")",
+      "passed": true,
+      "evidence": "→ โซน 🔵 Blue — Blue zone selected, matching the low-energy, withdrawn tone of the note"
+    },
+    {
+      "text": "correct_format — uses format **`#mood-{tag}`** followed by > reason line with zone emoji",
+      "passed": true,
+      "evidence": "**`#mood-unmotivated`** on line 1, then > blockquote reason line ending with → โซน 🔵 Blue"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "executor_duration_seconds": 35.9
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "All 4 assertions passed. The skill correctly identified a single plausible Blue-zone tag, demonstrated subtext reading by inferring listlessness and lack of drive, and used the correct bold-backtick + blockquote format with zone emoji."
+  }
+}

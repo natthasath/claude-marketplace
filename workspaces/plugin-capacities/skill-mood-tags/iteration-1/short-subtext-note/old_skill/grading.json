@@ -1,0 +1,37 @@
+{
+  "expectations": [
+    {
+      "text": "exactly_one_tag — output contains exactly 1 mood tag (not multiple)",
+      "passed": true,
+      "evidence": "**`#mood-unmotivated`** — only one tag present in the entire output"
+    },
+    {
+      "text": "reads_subtext — response reads beyond surface words — analyzes tone, word choice, or what's implied (not just saying 'can't tell from short note')",
+      "passed": true,
+      "evidence": "ไม่อยากทำอะไร ขาดแรงขับ — ทั้งวันนอนอยู่บ้านและดูซีรีส์โดยไม่ได้ลงมือทำอะไรเป็นชิ้นเป็นอัน — identifies lack of drive and elaborates on the implication of passive inaction"
+    },
+    {
+      "text": "plausible_zone — selected zone is plausible (Blue is most reasonable for 'นอนอยู่บ้านทั้งวัน ไม่ได้ทำอะไร')",
+      "passed": true,
+      "evidence": "→ โซน 🔵 Blue — output correctly selects Blue zone"
+    },
+    {
+      "text": "correct_format — uses format **`#mood-{tag}`** followed by > reason line with zone emoji",
+      "passed": true,
+      "evidence": "**`#mood-unmotivated`** on line 1; > reason line ending with 🔵 Blue on line 2"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "executor_duration_seconds": 31.3
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Perfect score. The output selects a single plausible Blue-zone tag, reads subtext well by naming lack of drive and passive inaction, and follows the required format exactly."
+  }
+}

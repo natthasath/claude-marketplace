@@ -8,51 +8,51 @@
   },
   "plugins": [
     {
-      "name": "plugin-capacities",
+      "name": "capacities",
       "description": "Plugin รวม Skills สำหรับ Capacities PKM ครอบคลุม Tags, Collections และ Workflow",
-      "source": "./plugins/plugin-capacities",
+      "source": "./plugins/capacities",
       "category": "productivity",
       "keywords": ["capacities", "pkm", "mood", "tags", "daily-notes"]
     },
     {
-      "name": "plugin-project-masterplan",
+      "name": "masterplan",
       "description": "Plugin รวม Skills สำหรับวางแผนโปรเจกต์ ครอบคลุม Project Masterplan, System Requirement, Database Design และ Architecture",
-      "source": "./plugins/plugin-project-masterplan",
+      "source": "./plugins/masterplan",
       "category": "development",
       "keywords": ["masterplan", "project", "architecture", "database", "requirement", "system-analysis"]
     },
     {
-      "name": "plugin-refactor",
+      "name": "refactor",
       "description": "Plugin รวม Skills สำหรับ Refactor และปรับปรุงโครงสร้างไฟล์ ครอบคลุม Dockerfile, Docker Compose และ Shell Script",
-      "source": "./plugins/plugin-refactor",
+      "source": "./plugins/refactor",
       "category": "development",
       "keywords": ["refactor", "dockerfile", "docker-compose", "shell-script", "devops", "best-practices"]
     },
     {
-      "name": "plugin-roleplay",
+      "name": "roleplay",
       "description": "Plugin รวม Skills สำหรับ Role-Play และการจำลองสถานการณ์ ครอบคลุม การสอบสวน, การสัมภาษณ์งาน และผู้ช่วยยุทธศาสตร์ระดับประเทศ",
-      "source": "./plugins/plugin-roleplay",
+      "source": "./plugins/roleplay",
       "category": "productivity",
       "keywords": ["roleplay", "interview", "investigation", "strategy", "simulation"]
     },
     {
-      "name": "plugin-social-post",
+      "name": "social",
       "description": "Plugin รวม Skills สำหรับสร้างโพสต์โซเชียลมีเดีย ครอบคลุม Facebook และ LinkedIn",
-      "source": "./plugins/plugin-social-post",
+      "source": "./plugins/social",
       "category": "productivity",
       "keywords": ["social-media", "facebook", "linkedin", "content", "post", "thought-leadership"]
     },
     {
-      "name": "plugin-productive",
+      "name": "productive",
       "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม English Mentor, Short Summary และ Meetings Summary",
-      "source": "./plugins/plugin-productive",
+      "source": "./plugins/productive",
       "category": "productivity",
       "keywords": ["productive", "english", "mentor", "translation", "grammar", "summary", "meetings", "mom", "minutes"]
     },
     {
-      "name": "plugin-devops",
+      "name": "devops",
       "description": "Plugin รวม Skills สำหรับ DevOps ครอบคลุม Session Management และ Workflow",
-      "source": "./plugins/plugin-devops",
+      "source": "./plugins/devops",
       "category": "development",
       "keywords": ["devops", "session", "workflow", "context", "management"]
     }

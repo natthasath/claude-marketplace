@@ -1,0 +1,37 @@
+{
+  "expectations": [
+    {
+      "text": "exactly_one_tag — output contains exactly 1 mood tag (not multiple)",
+      "passed": true,
+      "evidence": "**`#mood-excited`** — only one mood tag present in the entire output"
+    },
+    {
+      "text": "correct_zone_yellow — selected zone is Yellow (🟡) since prompt is clearly positive+high energy",
+      "passed": true,
+      "evidence": "→ โซน 🟡 Yellow (at end of reason line, confirming Yellow zone selection)"
+    },
+    {
+      "text": "correct_format — uses format **`#mood-{tag}`** followed by > reason line with zone emoji",
+      "passed": true,
+      "evidence": "**`#mood-excited`** on line 1, then > ตื่นเต้น มีความคาดหวังสูง — ... → โซน 🟡 Yellow as blockquote on line 3"
+    },
+    {
+      "text": "reason_under_one_line — the reason/explanation is at most 1 line",
+      "passed": true,
+      "evidence": "Single blockquote line: > ตื่นเต้น มีความคาดหวังสูง — ได้ยินข่าวโปรโมทที่กำลังจะมาถึง รีบเร่งกลับบ้านเตรียมตัว ความคาดหวังพุ่งสูงชัดเจน → โซน 🟡 Yellow"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "executor_duration_seconds": 39.4
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Perfect score — all 4 assertions passed. Output correctly uses a single #mood-excited tag, selects Yellow zone for a clearly positive+high-energy prompt, follows the required bold-backtick format with a blockquote reason line, and keeps the explanation to one line."
+  }
+}

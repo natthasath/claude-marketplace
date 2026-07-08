@@ -1,0 +1,37 @@
+{
+  "expectations": [
+    {
+      "text": "exactly_one_tag",
+      "passed": true,
+      "evidence": "**`#mood-unsettled`** — only one mood tag present in the output"
+    },
+    {
+      "text": "addresses_mixed_feeling",
+      "passed": true,
+      "evidence": "นอนไม่หลับเพราะคิดเรื่องงาน (sleepless due to work thoughts), ก็โอเค ไม่ดีไม่แย่ (flat/neutral day), ยังมีงานค้างอีกเยอะ (lots of pending work) — all three mixed signals are acknowledged"
+    },
+    {
+      "text": "plausible_zone",
+      "passed": true,
+      "evidence": "โซน 🔵 Blue — Blue is explicitly listed as one of the most reasonable zones for this context"
+    },
+    {
+      "text": "correct_format",
+      "passed": true,
+      "evidence": "Line 1: **`#mood-unsettled`** matches **`#mood-{tag}`**; Line 3: > รู้สึกไม่ลงตัว — ... → โซน 🔵 Blue matches > reason line with zone emoji"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "executor_duration_seconds": 37.0
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "All 4 assertions passed. The output correctly uses a single mood tag, acknowledges all mixed emotional signals (sleeplessness, flat meeting, pending work), selects a plausible Blue zone, and follows the required **`#mood-{tag}`** + > reason format with zone emoji."
+  }
+}

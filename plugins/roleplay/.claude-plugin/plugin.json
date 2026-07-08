@@ -1,0 +1,9 @@
+{
+  "name": "roleplay",
+  "version": "0.1.0",
+  "description": "Plugin รวม Skills สำหรับ Role-Play และการจำลองสถานการณ์ ครอบคลุม การสอบสวน, การสัมภาษณ์งาน และผู้ช่วยยุทธศาสตร์ระดับประเทศ",
+  "author": {
+    "name": "natthasath"
+  },
+  "keywords": ["roleplay", "interview", "investigation", "strategy", "simulation"]
+}

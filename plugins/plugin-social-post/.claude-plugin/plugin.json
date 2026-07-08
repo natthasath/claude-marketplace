@@ -1,9 +1,0 @@
-{
-  "name": "plugin-social-post",
-  "version": "0.1.0",
-  "description": "Plugin รวม Skills สำหรับสร้างโพสต์โซเชียลมีเดีย ครอบคลุม Facebook และ LinkedIn",
-  "author": {
-    "name": "natthasath"
-  },
-  "keywords": ["social-media", "facebook", "linkedin", "content", "post", "thought-leadership"]
-}

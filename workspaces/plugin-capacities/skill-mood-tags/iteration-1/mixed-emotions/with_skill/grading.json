@@ -1,0 +1,37 @@
+{
+  "expectations": [
+    {
+      "text": "exactly_one_tag",
+      "passed": true,
+      "evidence": "**`#mood-drained`** — only one mood tag present in the output"
+    },
+    {
+      "text": "addresses_mixed_feeling",
+      "passed": true,
+      "evidence": "Reason line covers all three aspects: sleeplessness (นอนไม่หลับคืนก่อนเพราะคิดเรื่องงาน), flat day (ผ่านวันมาได้แบบแค่โอเค), and pending work (ยังมีงานค้างอีกเยอะ)"
+    },
+    {
+      "text": "plausible_zone",
+      "passed": true,
+      "evidence": "→ โซน 🔵 Blue — Blue zone selected, which is one of the two most plausible zones (Blue or Red) for sleepless + flat + overloaded context"
+    },
+    {
+      "text": "correct_format",
+      "passed": true,
+      "evidence": "**`#mood-drained`** on line 1 followed by > blockquote reason line with 🔵 zone emoji on line 3 — matches required format"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "executor_duration_seconds": 49.0
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "All 4 assertions passed. The skill correctly selected a single plausible Blue-zone tag, acknowledged all three emotional signals from the prompt, and produced properly formatted output."
+  }
+}

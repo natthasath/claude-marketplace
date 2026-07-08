@@ -1,0 +1,172 @@
+{
+  "metadata": {
+    "skill_name": "skill-mood-tags",
+    "skill_path": "plugins/plugin-capacities/skills/skill-mood-tags",
+    "executor_model": "claude-sonnet-4-6",
+    "analyzer_model": "claude-sonnet-4-6",
+    "timestamp": "2026-07-06T00:00:00Z",
+    "evals_run": ["clear-single-emotion", "mixed-emotions", "short-subtext-note"],
+    "runs_per_configuration": 1
+  },
+
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "clear-single-emotion",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 39.4,
+        "tokens": 25349,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "exactly_one_tag — output contains exactly 1 mood tag (not multiple)", "passed": true, "evidence": "**`#mood-excited`** — only one mood tag present in the entire output"},
+        {"text": "correct_zone_yellow — selected zone is Yellow (🟡) since prompt is clearly positive+high energy", "passed": true, "evidence": "→ โซน 🟡 Yellow (at end of reason line)"},
+        {"text": "correct_format — uses format **`#mood-{tag}`** followed by > reason line with zone emoji", "passed": true, "evidence": "**`#mood-excited`** on line 1, then > blockquote reason on line 3"},
+        {"text": "reason_under_one_line — the reason/explanation is at most 1 line", "passed": true, "evidence": "Single blockquote line with all reasoning"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "clear-single-emotion",
+      "configuration": "old_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 27.0,
+        "tokens": 23880,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "exactly_one_tag — output contains exactly 1 mood tag (not multiple)", "passed": true, "evidence": "**`#mood-excited`** — only one #mood- tag present"},
+        {"text": "correct_zone_yellow — selected zone is Yellow (🟡) since prompt is clearly positive+high energy", "passed": true, "evidence": "Reason line ends with → โซน 🟡 Yellow"},
+        {"text": "correct_format — uses format **`#mood-{tag}`** followed by > reason line with zone emoji", "passed": true, "evidence": "Line 1: **`#mood-excited`**; blockquote reason with emoji"},
+        {"text": "reason_under_one_line — the reason/explanation is at most 1 line", "passed": true, "evidence": "Single blockquote line"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "mixed-emotions",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 49.0,
+        "tokens": 26263,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "exactly_one_tag", "passed": true, "evidence": "**`#mood-drained`** — only one mood tag present"},
+        {"text": "addresses_mixed_feeling", "passed": true, "evidence": "Reason covers: นอนไม่หลับคืนก่อนเพราะคิดเรื่องงาน, ผ่านวันมาได้แบบแค่โอเค, ยังมีงานค้างอีกเยอะ"},
+        {"text": "plausible_zone", "passed": true, "evidence": "→ โซน 🔵 Blue — Blue zone selected, plausible for sleepless+flat+overloaded"},
+        {"text": "correct_format", "passed": true, "evidence": "**`#mood-drained`** on line 1 followed by > blockquote reason with 🔵 emoji"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "mixed-emotions",
+      "configuration": "old_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 37.0,
+        "tokens": 24369,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "exactly_one_tag", "passed": true, "evidence": "**`#mood-unsettled`** — only one mood tag present"},
+        {"text": "addresses_mixed_feeling", "passed": true, "evidence": "All three signals acknowledged: นอนไม่หลับเพราะคิดเรื่องงาน, ก็โอเค ไม่ดีไม่แย่, ยังมีงานค้างอีกเยอะ"},
+        {"text": "plausible_zone", "passed": true, "evidence": "โซน 🔵 Blue — explicitly listed as most reasonable zone"},
+        {"text": "correct_format", "passed": true, "evidence": "Line 1: **`#mood-unsettled`**; Line 3: > reason → โซน 🔵 Blue"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "short-subtext-note",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 35.9,
+        "tokens": 25417,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "exactly_one_tag — output contains exactly 1 mood tag (not multiple)", "passed": true, "evidence": "**`#mood-unmotivated`** — only one tag present"},
+        {"text": "reads_subtext — response reads beyond surface words", "passed": true, "evidence": "Interprets implied listlessness: ขาดแรงขับ, เฉื่อยๆ, ไม่มีแรงดึงดูด"},
+        {"text": "plausible_zone — selected zone is plausible (Blue is most reasonable)", "passed": true, "evidence": "→ โซน 🔵 Blue — matches low-energy, withdrawn tone"},
+        {"text": "correct_format — uses format **`#mood-{tag}`** followed by > reason line with zone emoji", "passed": true, "evidence": "**`#mood-unmotivated`** on line 1, then > blockquote ending with → โซน 🔵 Blue"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "short-subtext-note",
+      "configuration": "old_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "time_seconds": 31.3,
+        "tokens": 24084,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "exactly_one_tag — output contains exactly 1 mood tag (not multiple)", "passed": true, "evidence": "**`#mood-unmotivated`** — only one tag present"},
+        {"text": "reads_subtext — response reads beyond surface words", "passed": true, "evidence": "ขาดแรงขับ — ทั้งวันนอนอยู่บ้านและดูซีรีส์โดยไม่ได้ลงมือทำอะไรเป็นชิ้นเป็นอัน — elaborates on passive inaction"},
+        {"text": "plausible_zone — selected zone is plausible (Blue is most reasonable)", "passed": true, "evidence": "→ โซน 🔵 Blue — correctly selected"},
+        {"text": "correct_format — uses format **`#mood-{tag}`** followed by > reason line with zone emoji", "passed": true, "evidence": "**`#mood-unmotivated`** on line 1; > reason line ending with 🔵 Blue on line 2"}
+      ],
+      "notes": []
+    }
+  ],
+
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 41.4, "stddev": 5.5, "min": 35.9, "max": 49.0},
+      "tokens": {"mean": 25676, "stddev": 416, "min": 25349, "max": 26263}
+    },
+    "old_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 31.8, "stddev": 4.1, "min": 27.0, "max": 37.0},
+      "tokens": {"mean": 24111, "stddev": 201, "min": 23880, "max": 24369}
+    },
+    "delta": {
+      "pass_rate": "+0.00",
+      "time_seconds": "+9.6",
+      "tokens": "+1565"
+    }
+  },
+
+  "notes": [
+    "Both configurations scored 100% pass rate — the assertions cover format compliance and zone correctness but don't capture qualitative differences between skill versions.",
+    "Key qualitative difference on eval-1 (mixed-emotions): new skill selected #mood-drained (emotional exhaustion from sleeplessness+workload) while old skill selected #mood-unsettled (unresolved feeling). New skill's WHY paragraph about 1-tag precision likely guided a more specific choice.",
+    "New skill consistently uses ~1565 more tokens on average — the added edge-case guidance in วิธีวิเคราะห์ section is being read and applied.",
+    "New skill is ~9.6s slower on average — acceptable overhead given richer context about when to use single dominant signal vs holistic read.",
+    "All 3 evals showed consistent zone assignment: Yellow for unambiguous positive/high-energy, Blue for negative/low-energy — both versions handled zone boundaries correctly."
+  ]
+}
