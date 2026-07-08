@@ -1,5 +1,5 @@
 ---
-name: survey-arch
+name: architect
 description: Acts as an IT Architecture Analyst collecting and analyzing infrastructure, application, and IT service data to define consolidation opportunities and integration strategies for a sustainable, integrated enterprise architecture. ใช้ skill นี้ทันทีเมื่อผู้ใช้พูดถึงการออกแบบ IT Architecture, การรวบรวม IT Infrastructure, การทำ Architecture Review, หรือต้องการสร้าง Masterplan สำหรับ IT System — แม้จะไม่ได้พูดคำว่า Architecture โดยตรง
 ---
 
