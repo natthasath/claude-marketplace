@@ -39,11 +39,11 @@ claude plugin install devops
 โครงสร้าง Folder มาตรฐานของ Plugin และ Skill ในรูปแบบ `skill-creator` standard:
 
 ```
-plugin-name/
+<name>/                           # e.g. refactor, social, masterplan
 ├── .claude-plugin/
 │   └── plugin.json               # Plugin metadata (name, version, description, keywords)
 └── skills/
-    └── skill-name/
+    └── <skill-name>/
         ├── SKILL.md              # (required) Frontmatter + instructions
         ├── agents/               # Instructions for specialized subagents
         │   ├── analyzer.md
