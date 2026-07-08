@@ -1,5 +1,5 @@
 ---
-name: gather-req
+name: gather
 description: Acts as a Requirement Analysis Expert who systematically collects and structures business and technical requirements through effective stakeholder questioning to support practical system development and improvement. ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการเก็บ requirement, สัมภาษณ์ stakeholder, วิเคราะห์ความต้องการของระบบ — แม้จะไม่ได้พูดคำว่า requirement โดยตรง เช่น 'ไม่รู้จะถามอะไรดี' หรือ 'ต้องประชุมกับผู้บริหารแล้ว'
 ---
 
