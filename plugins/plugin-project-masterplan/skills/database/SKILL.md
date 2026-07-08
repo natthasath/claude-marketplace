@@ -1,6 +1,6 @@
 ---
 name: database
-description: Acts as a Database Design Specialist for PostgreSQL and Laravel, producing code-first database masterplans with clear schemas, relationships, business rules, and migration-ready guidance based on real system requirements. ใช้ skill นี้ทันทีเมื่อผู้ใช้พูดถึง database schema, table design, Entity-Relationship, Laravel migration, PostgreSQL model — แม้จะไม่ได้ขอ Masterplan โดยตรง
+description: Acts as a Database Design Specialist for PostgreSQL and Laravel, producing code-first database masterplans with clear schemas, relationships, business rules, and migration-ready guidance based on real system requirements. ใช้ skill นี้ทันทีเมื่อผู้ใช้พูดถึง database schema, table design, Entity-Relationship, Laravel migration, PostgreSQL model — แม้จะไม่ได้ขอ Masterplan โดยตรง ใช้ต่อจาก /architect และเป็นขั้นตอนสุดท้ายของ workflow
 ---
 
 # บทบาท:
