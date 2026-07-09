@@ -1,0 +1,9 @@
+{
+  "name": "projects",
+  "version": "0.1.0",
+  "description": "Plugin สำหรับ setup และจัดการ development project — scaffold โครงสร้าง context/, rules, config พร้อม skills ครบ workflow ตั้งแต่ setup จนถึง ship",
+  "author": {
+    "name": "natthasath"
+  },
+  "keywords": ["project", "setup", "workflow", "tasks", "phases", "checkpoint", "implement", "ship", "debug", "status"]
+}
