@@ -17,7 +17,7 @@ Mark task เสร็จแล้ว: $ARGUMENTS
 
 2. อ่าน `phase:` จาก config ด้านบน แล้วเปิด `context/tasks/backlog/phase_<N>_*.md`
    - ถ้าไม่พบ task ใน backlog ของ phase ปัจจุบัน ให้สแกน backlog ทุก phase
-   - เปลี่ยน `**Status:** Backlog` หรือ `**Status:** In Progress` เป็น `**Status:** ✅ Done (YYYY-MM-DD)` โดยใช้วันที่วันนี้
+   - เปลี่ยน `**Status:** Backlog` หรือ `**Status:** 🔄 In Progress` เป็น `**Status:** ✅ Done (YYYY-MM-DD)` โดยใช้วันที่วันนี้
 
 3. แก้ `context/tasks/in_progress/current_sprint.md`
    - **ลบ** entry ทั้งหมดของ task `$ARGUMENTS` ออก (ตั้งแต่ heading ถึง `---` ถัดไป)
@@ -42,6 +42,6 @@ Mark task เสร็จแล้ว: $ARGUMENTS
 
    ```
    ─────────────────────────────────────
-   ถัดไป → /ship $ARGUMENTS
+   ถัดไป → /status
    ─────────────────────────────────────
    ```

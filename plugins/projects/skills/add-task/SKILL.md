@@ -3,6 +3,7 @@ name: add-task
 description: เพิ่ม task ใหม่เข้า backlog พร้อม Acceptance Criteria — ช่วยร่าง, ขอ confirm, แล้วค่อยบันทึก ใช้เมื่อต้องการเพิ่มงานใหม่เข้าโปรเจค
 tools:
   - Read
+  - Write
   - Edit
   - Bash
 ---
