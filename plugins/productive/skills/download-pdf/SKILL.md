@@ -37,7 +37,8 @@ description: Searches and downloads PDF documents from trusted, legal sources on
 # คำขอ:
 - ใช้ Browser/Web Tools ในการค้นหาและดาวน์โหลด
 - บันทึกไฟล์ในโฟลเดอร์ที่ผู้ใช้กำหนด หรือ `~/Downloads/` หากไม่ได้ระบุ
-- ตั้งชื่อไฟล์เป็นภาษาอังกฤษ lowercase ใช้ underscore แทน space เช่น `clean_code.pdf`
+- ตั้งชื่อไฟล์จากชื่อหนังสือหรือเอกสารที่ผู้ใช้ระบุเสมอ — ไม่ใช้ชื่อไฟล์ต้นทางจาก URL เช่น `doc.pdf` หรือ `file_12345.pdf`
+- รูปแบบชื่อไฟล์: ภาษาอังกฤษ lowercase ใช้ underscore แทน space เช่น `clean_code.pdf`, `the_pragmatic_programmer.pdf`
 - เคารพลิขสิทธิ์อย่างเคร่งครัด — ไม่ดาวน์โหลดเนื้อหาที่อยู่หลัง paywall, ระบบป้องกัน หรือแหล่งที่ไม่มีสิทธิ์เผยแพร่
 - หากไม่แน่ใจว่าแหล่งนั้นมีสิทธิ์เผยแพร่หรือไม่ ให้เลือกไม่ดาวน์โหลดและแจ้งผู้ใช้
 
