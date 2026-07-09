@@ -32,7 +32,7 @@ claude plugin install projects
 | `social` | 2 | สร้างโพสต์โซเชียลมีเดีย |
 | `productive` | 5 | เพิ่มประสิทธิภาพการทำงาน English Mentor, Short Summary และ Meetings Summary |
 | `devops` | 1 | จัดการ Session Context และ DevOps Workflow |
-| `projects` | 12 | Setup และจัดการ development project — scaffold ครบ workflow ตั้งแต่ init จนถึง ship |
+| `projects` | 15 | Setup และจัดการ development project — scaffold ครบ workflow ตั้งแต่ init จนถึง ship |
 
 ---
 
@@ -323,6 +323,9 @@ Plugin สำหรับ **Setup และจัดการ Development Projec
 | `debug` | วิเคราะห์และแก้ bug ด้วย root cause analysis รองรับ --hotfix |
 | `status` | แสดงภาพรวมสถานะโปรเจค — phase, sprint, git status |
 | `today` | สรุปงานที่ทำวันนี้ — commits, tasks ที่เสร็จ, และสิ่งที่ค้างอยู่ |
+| `list-task` | แสดง backlog ทั้งหมด แยก In Progress / Backlog (High/Med/Low) / Feature Requests |
+| `list-phase` | แสดง phases ทั้งหมดพร้อม status — ใส่เลข phase เพื่อดู detail |
+| `set-stack` | ตั้งค่า tech stack และ commands — presets: react-vite, python, go, laravel, node-express |
 
 ### การติดตั้ง
 
@@ -346,6 +349,11 @@ claude plugin install projects
 /debug <bug> --hotfix
 /status
 /today
+/list-task
+/list-phase
+/list-phase 1
+/set-stack react-vite
+/set-stack python
 ```
 
 ### Workflow มาตรฐาน
@@ -371,6 +379,11 @@ claude plugin install projects
 # 5. ดูสถานะ
 /status
 /today
+/list-task
+/list-phase
+/list-phase 1
+/set-stack react-vite
+/set-stack python
 ```
 
 ### ไฟล์ที่ /setup สร้าง
@@ -394,6 +407,7 @@ claude plugin install projects
     ├── plans/PLAN.md
     ├── tasks/
     │   ├── backlog/
+    │   │   └── feature_requests.md
     │   ├── in_progress/current_sprint.md
     │   └── completed/archive.md
     ├── memory/

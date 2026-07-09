@@ -51,7 +51,7 @@ Parse $ARGUMENTS เป็น:
              └── performance-rules.md
   📁 สร้าง  context/
              ├── plans/PLAN.md
-             ├── tasks/backlog/
+             ├── tasks/backlog/feature_requests.md
              ├── tasks/in_progress/current_sprint.md
              ├── tasks/completed/archive.md
              ├── memory/
@@ -77,7 +77,7 @@ Parse $ARGUMENTS เป็น:
 
 ## Tech Stack
 
-(รัน /set-stack หรือแก้ไฟล์ `.claude/config/tech-stack.md` เพื่อตั้งค่า)
+(รัน /set-stack เพื่อตั้งค่า — presets: react-vite | python | go | laravel | node-express)
 
 ## Architecture
 
@@ -85,7 +85,7 @@ Parse $ARGUMENTS เป็น:
 
 ## Key Constraints
 
-- (เพิ่ม constraints ที่สำคัญ เช่น ห้าม server-side, offline-first, ฯลฯ)
+- (เพิ่ม constraints ที่สำคัญ)
 
 ## Development Principles
 
@@ -101,6 +101,7 @@ Parse $ARGUMENTS เป็น:
 
 | Skill | ใช้เมื่อ |
 |---|---|
+| `/set-stack <preset>` | ตั้ง tech stack ครั้งแรก |
 | `/checkpoint <task>` | ก่อนให้ Claude ทำงานทุกครั้ง |
 | `/status` | ดูภาพรวมโปรเจค |
 | `/add-phase <name>` | เพิ่ม development phase |
@@ -117,7 +118,7 @@ Parse $ARGUMENTS เป็น:
 
 ```markdown
 ---
-description: Phase ปัจจุบัน — แก้ไขด้วย /add-phase หรือ /done-phase
+description: Phase ปัจจุบัน — อัปเดตอัตโนมัติเมื่อรัน /add-phase หรือ /done-phase
 ---
 
 phase: (ยังไม่มี — รัน /add-phase ก่อน)
@@ -146,22 +147,22 @@ format: phase
 
 ```markdown
 ---
-description: Tech stack และ commands สำหรับ project นี้
+description: Tech stack และ commands สำหรับ project นี้ — ตั้งค่าด้วย /set-stack
 ---
 
 ## Stack
 
-(ระบุ tech stack เช่น "React 19 + TypeScript + Vite" หรือ "Laravel 11 + MySQL")
+(รัน /set-stack <preset> เพื่อตั้งค่า — presets: react-vite | python | go | laravel | node-express)
 
 ## Commands
 
 | Role | Command |
 |---|---|
-| **typecheck** | (เช่น npm run typecheck หรือ php artisan ide-helper:generate) |
-| **lint** | (เช่น npm run lint หรือ ./vendor/bin/phpcs) |
-| **test** | (เช่น npm test -- --run หรือ php artisan test) |
-| **dev** | (เช่น npm run dev หรือ php artisan serve) |
-| **build** | (เช่น npm run build) |
+| **typecheck** | (ยังไม่ได้ตั้งค่า) |
+| **lint** | (ยังไม่ได้ตั้งค่า) |
+| **test** | (ยังไม่ได้ตั้งค่า) |
+| **dev** | (ยังไม่ได้ตั้งค่า) |
+| **build** | (ยังไม่ได้ตั้งค่า) |
 ```
 
 ### 2e. สร้าง .claude/rules/ (อ่านจาก references/ แล้ว copy)
@@ -202,7 +203,7 @@ A phase is "Done" when ALL of the following are true:
 - [ ] Tested manually or E2E
 ```
 
-### 2g. สร้าง directory structure สำหรับ tasks
+### 2g. สร้าง task files และ directories
 
 สร้าง directories:
 - `context/tasks/backlog/`
@@ -210,6 +211,28 @@ A phase is "Done" when ALL of the following are true:
 - `context/tasks/completed/`
 - `context/memory/`
 - `context/docs/`
+
+สร้าง `context/tasks/backlog/feature_requests.md`:
+
+```markdown
+# Feature Requests — <PROJECT_NAME>
+
+## Template
+
+```
+## FR-XXX — <ชื่อ feature>
+
+**Priority:** Low
+**Phase:** Unassigned
+
+**Description:**
+<อธิบาย feature>
+```
+
+## Entries
+
+_(ไม่มี feature requests ในขณะนี้)_
+```
 
 สร้าง `context/tasks/in_progress/current_sprint.md`:
 
@@ -267,6 +290,7 @@ git commit -m "chore: setup project structure — <PROJECT_NAME>"
   ✓ .claude/rules/ — 6 ไฟล์ (git, coding, error, testing, security, performance)
   ✓ context/plans/PLAN.md — พร้อมสำหรับ /add-phase
   ✓ context/tasks/ — backlog/, in_progress/, completed/ พร้อมแล้ว
+  ✓ context/tasks/backlog/feature_requests.md — พร้อมแล้ว
   ✓ context/memory/ — พร้อมแล้ว
   ✓ context/docs/ — พร้อมแล้ว
   ✓ git commit: chore: setup project structure — <PROJECT_NAME>
@@ -280,18 +304,15 @@ git commit -m "chore: setup project structure — <PROJECT_NAME>"
 ─────────────────────────────────────────────────────────────
 ถัดไป → ตั้งค่าโปรเจค (ทำตามลำดับ):
 
-  1. แก้ CLAUDE.md          เติม Architecture + Tech Stack + Constraints
+  1. /set-stack <preset>          ตั้ง tech stack
+                                  presets: react-vite | python | go | laravel | node-express
 
-  2. แก้ .claude/config/tech-stack.md
-                            ใส่ stack และ commands จริงของโปรเจค
+  2. แก้ CLAUDE.md                เติม Architecture + Constraints + Principles
 
-  3. /add-phase <name> [date]
-                            เพิ่ม Phase แรก (เช่น "Phase 1: Foundation")
+  3. /add-phase <name> [date]     เพิ่ม Phase แรก
 
-  4. /add-task <description>
-                            เพิ่ม Tasks แรก
+  4. /add-task <description>      เพิ่ม Tasks แรก
 
-  5. /start-task <TSK-1-001>
-                            เริ่มทำ task แรก
+  5. /start-task <TSK-1-001>      เริ่มทำ task แรก
 ─────────────────────────────────────────────────────────────
 ```

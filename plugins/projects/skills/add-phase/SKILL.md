@@ -95,9 +95,12 @@ _(เพิ่ม deliverables เมื่อวางแผน)_
 _(เพิ่ม tasks ด้วย /add-task)_
 ```
 
-## ขั้นที่ 7 — อัปเดต .claude/config/current-phase.md
+## ขั้นที่ 7 — อัปเดต current-phase config (เฉพาะกรณีแรก)
 
-เขียน `phase: <N>` ลงใน `.claude/config/current-phase.md` เพื่อให้ skills อื่นรู้ว่า phase ปัจจุบันคืออะไร
+อ่าน `.claude/config/current-phase.md` — ถ้า `phase:` ยังเป็น "(ยังไม่มี...)" หรือว่างเปล่า
+ให้เขียน `phase: <N>` ลงไป เพื่อให้ skills อื่นรู้ว่า phase ปัจจุบันคืออะไร
+
+**ถ้ามี phase อื่น In Progress อยู่แล้ว — ไม่ต้องแก้ไข current-phase.md**
 
 ## ขั้นที่ 8 — เพิ่ม section ใน archive
 
@@ -113,7 +116,6 @@ _(จะมี entries เมื่อ tasks เสร็จ)_
 
 ## ขั้นที่ 9 — สรุปผล
 
-แสดง:
 ```
 ✅ Phase <N> — <ชื่อ> สร้างเสร็จแล้ว
 
@@ -122,14 +124,12 @@ _(จะมี entries เมื่อ tasks เสร็จ)_
   ✅ context/plans/phase_<N>_<slug>.md
   ✅ context/tasks/backlog/phase_<N>_backlog.md
   ✅ context/tasks/completed/archive.md
-  ✅ .claude/config/current-phase.md
+  ✅ .claude/config/current-phase.md  (ถ้าเป็น phase แรก)
 ```
-
-แล้วปิดท้ายด้วย:
 
 ```
 ─────────────────────────────────────────────────────
 ถัดไป → /add-task <description>   (เพิ่ม tasks เข้า phase ใหม่)
-         /status                   (ดูภาพรวมโปรเจค)
+         /list-phase               (ดูภาพรวม phases ทั้งหมด)
 ─────────────────────────────────────────────────────
 ```

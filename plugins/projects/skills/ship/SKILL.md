@@ -29,8 +29,8 @@ Task ID (ถ้ามี): $ARGUMENTS
 - ถ้าระบุ task ID ใน $ARGUMENTS ให้เช็ค acceptance criteria ด้วย
 
 **Step 4 — Definition of Done:**
-- [ ] TypeScript errors: ไม่มี
-- [ ] ESLint: zero warnings
+- [ ] TypeScript/type errors: ไม่มี
+- [ ] Linter: zero warnings
 - [ ] Tests: ผ่าน
 - [ ] Acceptance criteria: verified
 
@@ -40,8 +40,16 @@ Task ID (ถ้ามี): $ARGUMENTS
 ```
 ─────────────────────────────────────────────────
 ✅ READY TO MERGE
-ถัดไป → /merge     (merge local → main)
-         /push      แล้ว /open-pr   (เปิด PR บน GitHub)
+
+ตัวเลือก:
+  A) Merge local:
+     git checkout main && git merge <branch> && git push
+
+  B) เปิด Pull Request:
+     git push -u origin <branch>
+     แล้วเปิด PR บน GitHub/GitLab
+
+ถัดไป → /done-task $ARGUMENTS   (mark task เสร็จ)
 ─────────────────────────────────────────────────
 ```
 
