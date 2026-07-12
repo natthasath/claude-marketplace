@@ -44,10 +44,17 @@
     },
     {
       "name": "productive",
-      "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม Short Summary, Meetings Summary และ PDF Downloader",
+      "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม Short Summary, Meetings Summary, PDF Downloader และ Workplace Communication",
       "source": "./plugins/productive",
       "category": "productivity",
-      "keywords": ["productive", "summary", "meetings", "mom", "minutes", "tldr", "perspective", "pdf"]
+      "keywords": ["productive", "summary", "meetings", "mom", "minutes", "tldr", "perspective", "pdf", "workplace", "communication", "professional", "laura-whaley"]
+    },
+    {
+      "name": "projects",
+      "description": "Plugin รวม Skills สำหรับ Setup และจัดการ Development Project ครอบคลุม scaffold โครงสร้าง workflow ตั้งแต่ init จนถึง ship",
+      "source": "./plugins/projects",
+      "category": "development",
+      "keywords": ["projects", "setup", "task", "phase", "implement", "debug", "ship", "checkpoint", "workflow", "development"]
     },
     {
       "name": "devops",
