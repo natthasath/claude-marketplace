@@ -1,5 +1,5 @@
 ---
-name: download-pdf
+name: ebook
 description: Searches and downloads PDF documents from trusted, legal sources on the internet. ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการดาวน์โหลดไฟล์ PDF — ไม่ว่าจะระบุชื่อหนังสือ, ชื่อเอกสาร, หรือแนบ URL มาให้ — เช่น 'หาและดาวน์โหลด Clean Code', 'โหลด PDF นี้ให้หน่อย', หรือแค่วาง URL ลิงก์ PDF มาเลย
 ---
 

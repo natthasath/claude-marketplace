@@ -19,20 +19,22 @@ claude plugin install social
 claude plugin install productive
 claude plugin install devops
 claude plugin install projects
+claude plugin install language
 ```
 
 ## Plugins
 
 | Plugin | Skills | วัตถุประสงค์ |
 |---|---|---|
-| `capacities` | 2 | จัดการ PKM บน Capacities |
+| `capacities` | 1 | จัดการ PKM บน Capacities |
 | `masterplan` | 5 | วางแผนและวิเคราะห์โปรเจกต์ซอฟต์แวร์ |
 | `refactor` | 3 | ปรับปรุงโค้ด Docker และ Shell Script |
 | `roleplay` | 4 | จำลองบทบาทเพื่อฝึกและวิเคราะห์ |
 | `social` | 2 | สร้างโพสต์โซเชียลมีเดีย |
-| `productive` | 5 | เพิ่มประสิทธิภาพการทำงาน English Mentor, Short Summary และ Meetings Summary |
+| `productive` | 5 | เพิ่มประสิทธิภาพการทำงาน Short Summary, Meetings Summary, PDF Downloader และ Workplace Communication |
 | `devops` | 1 | จัดการ Session Context และ DevOps Workflow |
 | `projects` | 15 | Setup และจัดการ development project — scaffold ครบ workflow ตั้งแต่ init จนถึง ship |
+| `language` | 2 | เครื่องมือด้านภาษา — ล่ามแปลภาษาแบบต่อเนื่อง และ English Mentor |
 
 ---
 
@@ -87,7 +89,6 @@ Plugin สำหรับ **Capacities PKM** — ออกแบบ Space, Objec
 
 | Skill | วัตถุประสงค์ |
 |---|---|
-| `capacities` | ออกแบบและปรับปรุงระบบ Capacities ครอบคลุม Object Type, Properties, Tags, Collections, Relations |
 | `mood-tag` | วิเคราะห์อารมณ์จาก Daily Notes และแนะนำ Mood Tag ตาม Yale Mood Meter Framework |
 
 ### การติดตั้ง
@@ -99,7 +100,6 @@ claude plugin install capacities
 ### การเรียกใช้ Skill
 
 ```
-/capacities
 /mood-tag
 ```
 
@@ -243,17 +243,17 @@ claude plugin install social
 
 ## productive
 
-Plugin สำหรับ **เพิ่มประสิทธิภาพการทำงาน** — English Mentor หลายโหมด, Short Summary สำหรับบริการ/เทคโนโลยี และ Meetings Summary
+Plugin สำหรับ **เพิ่มประสิทธิภาพการทำงาน** — Short Summary สำหรับบริการ/เทคโนโลยี, Meetings Summary และ PDF Downloader
 
 ### Skills
 
 | Skill | วัตถุประสงค์ |
 |---|---|
-| `mentor-english` | ครู English ส่วนตัว รองรับ 5 โหมด: แปล, ตรวจแกรมมา, คิดประโยคตอบกลับ, ปรับ tone, คลังคำศัพท์ |
 | `tldr` | สรุปข้อมูลบริการหรือเทคโนโลยีแบบกระชับ พร้อม Key Features และ Real-world Example |
-| `summarize-meeting` | สรุปการประชุมเป็นโครงสร้างมาตรฐาน: Objective, Key Topics, Discussions, Decisions, Action Items และ Next Step |
+| `comeet` | สรุปการประชุมเป็นโครงสร้างมาตรฐาน: Objective, Key Topics, Discussions, Decisions, Action Items และ Next Step |
 | `perspective` | ให้มุมมองและข้อคิดจากหัวข้ออบรม เขียนในเสียงของ Senior Engineer — เจ็บแต่จริง ไม่ใช่สไตล์ HR |
-| `download-pdf` | ค้นหาและดาวน์โหลดไฟล์ PDF จากแหล่งที่น่าเชื่อถือและถูกกฎหมาย รองรับทั้งค้นหาจากชื่อและดาวน์โหลดจาก URL |
+| `ebook` | ค้นหาและดาวน์โหลดไฟล์ PDF จากแหล่งที่น่าเชื่อถือและถูกกฎหมาย รองรับทั้งค้นหาจากชื่อและดาวน์โหลดจาก URL |
+| `laura-whaley` | Workplace communication coach สไตล์ Corporate Laura — แปลงสถานการณ์ในที่ทำงานเป็น script มืออาชีพ พร้อมใช้ได้ทันที |
 
 ### การติดตั้ง
 
@@ -264,15 +264,11 @@ claude plugin install productive
 ### การเรียกใช้ Skill
 
 ```
-/mentor-english --translation
-/mentor-english --grammar
-/mentor-english --reply
-/mentor-english --tone
-/mentor-english --vocab
 /tldr
-/summarize-meeting
+/comeet
 /perspective <หัวข้ออบรม>
-/download-pdf <ชื่อหนังสือหรือ URL>
+/ebook <ชื่อหนังสือหรือ URL>
+/laura-whaley <สถานการณ์ในที่ทำงาน>
 ```
 
 ---
@@ -423,3 +419,42 @@ claude plugin install projects
 | Stage | ก่อนเริ่ม code | หลังตัดสินใจเรื่อง stack แล้ว |
 
 > ใช้ร่วมกัน: `/kickoff` แล้ว `/setup` แล้วเริ่ม implement ได้เลย
+
+---
+
+## language
+
+Plugin สำหรับ **เครื่องมือด้านภาษา** — ล่ามแปลภาษาแบบต่อเนื่อง ไม่มีคำอธิบายพ่วง
+
+### Skills
+
+| Skill | วัตถุประสงค์ |
+|---|---|
+| `translate` | ล่ามแปลภาษาแบบต่อเนื่องระหว่าง 2 ภาษา ตรวจจับภาษาอัตโนมัติ แปลอย่างเดียวไม่มีคำอธิบาย |
+| `mentor-english` | ครู English ส่วนตัว รองรับ 5 โหมด: แปล, ตรวจแกรมมา, คิดประโยคตอบกลับ, ปรับ tone, คลังคำศัพท์ |
+
+### การติดตั้ง
+
+```bash
+claude plugin install language
+```
+
+### การเรียกใช้ Skill
+
+```
+/language:translate
+/language:translate ไทย ↔ ญี่ปุ่น
+/language:mentor-english --translation
+/language:mentor-english --grammar
+/language:mentor-english --reply
+/language:mentor-english --tone
+/language:mentor-english --vocab
+```
+
+### เปรียบเทียบ `translate` vs `mentor-english`
+
+| ด้าน | `/language:translate` | `/language:mentor-english` |
+|---|---|---|
+| เป้าหมาย | แปลอย่างเดียว รวดเร็ว | สอนและอธิบายภาษา |
+| Output | คำแปลเท่านั้น | คำแปล + word choice + ทางเลือก |
+| ใช้เมื่อ | ต้องการล่ามระหว่างสนทนา | ต้องการเรียนรู้ภาษา |

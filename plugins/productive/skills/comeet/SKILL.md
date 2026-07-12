@@ -1,5 +1,5 @@
 ---
-name: summarize-meeting
+name: comeet
 description: >
   Acts as a professional meeting summarizer that transforms raw meeting notes, transcripts,
   or spoken descriptions into a structured summary with Objective, Key Topics, Discussions,

@@ -1,0 +1,9 @@
+{
+  "name": "language",
+  "version": "0.1.0",
+  "description": "Plugin รวม Skills ด้านภาษา ครอบคลุม Translation และ Language Tools",
+  "author": {
+    "name": "natthasath"
+  },
+  "keywords": ["language", "translate", "translation", "แปล", "ล่าม", "interpreter"]
+}

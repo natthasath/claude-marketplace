@@ -44,10 +44,10 @@
     },
     {
       "name": "productive",
-      "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม English Mentor, Short Summary และ Meetings Summary",
+      "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม Short Summary, Meetings Summary และ PDF Downloader",
       "source": "./plugins/productive",
       "category": "productivity",
-      "keywords": ["productive", "english", "mentor", "translation", "grammar", "summary", "meetings", "mom", "minutes"]
+      "keywords": ["productive", "summary", "meetings", "mom", "minutes", "tldr", "perspective", "pdf"]
     },
     {
       "name": "devops",
@@ -55,6 +55,13 @@
       "source": "./plugins/devops",
       "category": "development",
       "keywords": ["devops", "session", "workflow", "context", "management"]
+    },
+    {
+      "name": "language",
+      "description": "Plugin รวม Skills ด้านภาษา ครอบคลุม Translation, English Mentor และ Language Tools",
+      "source": "./plugins/language",
+      "category": "productivity",
+      "keywords": ["language", "translate", "translation", "english", "mentor", "grammar", "vocabulary", "แปล", "ล่าม", "interpreter"]
     }
   ]
 }
