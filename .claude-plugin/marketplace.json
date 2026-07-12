@@ -44,10 +44,10 @@
     },
     {
       "name": "productive",
-      "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม Short Summary, Meetings Summary, PDF Downloader, Workplace Communication และ IT Work Scorecard",
+      "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม Short Summary, Meetings Summary, PDF Downloader, Workplace Communication, IT Work Scorecard และ KPI Designer",
       "source": "./plugins/productive",
       "category": "productivity",
-      "keywords": ["productive", "summary", "meetings", "mom", "minutes", "tldr", "perspective", "pdf", "workplace", "communication", "professional", "laura-whaley", "scorecard", "it", "difficulty", "assessment"]
+      "keywords": ["productive", "summary", "meetings", "mom", "minutes", "tldr", "perspective", "pdf", "workplace", "communication", "professional", "laura-whaley", "scorecard", "it", "difficulty", "assessment", "kpi", "indicator", "action-plan", "measure"]
     },
     {
       "name": "projects",
