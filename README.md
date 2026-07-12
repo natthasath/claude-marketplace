@@ -243,7 +243,7 @@ claude plugin install social
 
 ## productive
 
-Plugin สำหรับ **เพิ่มประสิทธิภาพการทำงาน** — Short Summary สำหรับบริการ/เทคโนโลยี, Meetings Summary และ PDF Downloader
+Plugin สำหรับ **เพิ่มประสิทธิภาพการทำงาน** — Short Summary, Meetings Summary, PDF Downloader และ Workplace Communication Coach
 
 ### Skills
 
@@ -287,7 +287,6 @@ Plugin สำหรับ **DevOps Workflow** — จัดการ Session Con
 
 ```bash
 claude plugin install devops
-claude plugin install projects
 ```
 
 ### การเรียกใช้ Skill
@@ -377,9 +376,6 @@ claude plugin install projects
 /today
 /list-task
 /list-phase
-/list-phase 1
-/set-stack react-vite
-/set-stack python
 ```
 
 ### ไฟล์ที่ /setup สร้าง
