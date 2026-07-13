@@ -1,9 +1,9 @@
 {
   "name": "capacities",
-  "version": "0.3.0",
-  "description": "Plugin รวม Skills สำหรับ Capacities PKM ครอบคลุม Tags, Collections และ Workflow",
+  "version": "0.4.0",
+  "description": "Plugin รวม Skills สำหรับ Capacities PKM ครอบคลุม Tags, Collections, Workflow และ Knowledge Notes",
   "author": {
     "name": "natthasath"
   },
-  "keywords": ["capacities", "pkm", "mood", "tags", "daily-notes", "yale-mood-meter", "movies", "genre", "film", "glossary", "abbreviation", "acronym"]
+  "keywords": ["capacities", "pkm", "mood", "tags", "daily-notes", "yale-mood-meter", "movies", "genre", "film", "glossary", "abbreviation", "acronym", "knowledge", "definition", "note", "concept"]
 }
