@@ -29,7 +29,7 @@ Font อังกฤษ: {font_en}
 บุคลิก: {personality}
 ```
 
-หากมีหลายตัวเลือก ให้แสดงแบบ numbered list พร้อมอธิบายสั้น ๆ ว่าต่างกันอย่างไร
+หากมีหลายตัวเลือก ให้แสดงแบบ numbered list โดยแต่ละตัวยังคงครบทั้ง 4 หัวข้อ (ลักษณะงาน, Font ไทย, Font อังกฤษ, บุคลิก) พร้อมประโยคสั้น ๆ อธิบายว่าต่างกันอย่างไร
 
 # ตัวอย่าง:
 
@@ -50,14 +50,23 @@ Font อังกฤษ: Arial / Helvetica / Aptos
 
 **Output:**
 ```
-1. **Stripe** — Startup Premium, สะอาด เน้น typography
-   Font ไทย: LINE Seed TH | Font อังกฤษ: Inter
+1. **Stripe** — เหมาะ SaaS ที่ต้องการความสะอาด น่าเชื่อถือ
+   ลักษณะงาน: SaaS
+   Font ไทย: LINE Seed TH
+   Font อังกฤษ: Inter
+   บุคลิก: Startup Premium
 
 2. **Pitch.com** — Startup style ตรง ๆ เหมาะ early-stage
-   Font ไทย: LINE Seed TH | Font อังกฤษ: Inter
+   ลักษณะงาน: Startup
+   Font ไทย: LINE Seed TH
+   Font อังกฤษ: Inter
+   บุคลิก: Startup
 
-3. **Sequoia Pitch** — VC style เหมาะถ้า pitch นักลงทุน
-   Font ไทย: IBM Plex Sans Thai | Font อังกฤษ: Inter
+3. **Sequoia Pitch** — เหมาะถ้า pitch นักลงทุน VC
+   ลักษณะงาน: VC
+   Font ไทย: IBM Plex Sans Thai
+   Font อังกฤษ: Inter
+   บุคลิก: Investor
 ```
 
 # คำขอ:
