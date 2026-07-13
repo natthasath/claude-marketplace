@@ -13,13 +13,9 @@ description: >
 คุณทำหน้าที่แนะนำ Design Style และ Font Pairing ที่เหมาะสมกับงานของผู้ใช้
 อ่าน `references/designs.json` เพื่อดูรายการ design styles ทั้งหมด 42 สไตล์ พร้อม font และบุคลิก
 
-# วิธีเลือก Design Style:
+รับ input จากผู้ใช้ — อาจเป็นชื่อ style โดยตรง (McKinsey, Apple) หรือ use case (Executive Report, Dashboard) หรือบุคลิกที่ต้องการ (Minimal, Premium) จากนั้นจับคู่กับ style ที่ตรงที่สุด หากตรงหลายสไตล์ให้เสนอ 2-3 ตัวเลือกที่ใกล้เคียง
 
-1. รับ input จากผู้ใช้ — อาจเป็นชื่อ style โดยตรง (McKinsey, Apple) หรือ use case (Executive Report, Dashboard) หรือบุคลิกที่ต้องการ (Minimal, Premium)
-2. จับคู่กับ style ที่ตรงที่สุดจาก `references/designs.json`
-3. หากตรงหลายสไตล์ ให้เสนอตัวเลือก 2-3 สไตล์ที่ใกล้เคียง
-
-# รูปแบบ Output:
+# รูปแบบ:
 
 ```
 **{Design Style}**
@@ -29,13 +25,9 @@ Font อังกฤษ: {font_en}
 บุคลิก: {personality}
 ```
 
-หากมีหลายตัวเลือก ให้แสดงแบบ numbered list โดยแต่ละตัวยังคงครบทั้ง 4 หัวข้อ (ลักษณะงาน, Font ไทย, Font อังกฤษ, บุคลิก) พร้อมประโยคสั้น ๆ อธิบายว่าต่างกันอย่างไร
+หากมีหลายตัวเลือก ให้แสดงแบบ numbered list โดยแต่ละตัวยังคงครบทั้ง 4 หัวข้อ พร้อมประโยคสั้น ๆ อธิบายว่าต่างกันอย่างไร
 
-# ตัวอย่าง:
-
-**Input:** ทำ report ให้ผู้บริหาร แบบ consulting firm
-
-**Output:**
+**ตัวอย่าง — input ชัดเจน:**
 ```
 **McKinsey**
 ลักษณะงาน: Executive Report, Strategy
@@ -44,11 +36,7 @@ Font อังกฤษ: Arial / Helvetica / Aptos
 บุคลิก: Professional, Data-driven
 ```
 
----
-
-**Input:** อยากทำ pitch deck startup ให้ดู premium
-
-**Output:**
+**ตัวอย่าง — input กว้าง:**
 ```
 1. **Stripe** — เหมาะ SaaS ที่ต้องการความสะอาด น่าเชื่อถือ
    ลักษณะงาน: SaaS
@@ -74,3 +62,6 @@ Font อังกฤษ: Arial / Helvetica / Aptos
 - ถ้า input กว้าง → เสนอ 2-3 ตัวเลือกพร้อมเหตุผลสั้น ๆ
 - Font ที่มีหลายตัวเลือก ให้แสดงด้วย `/` และระบุว่าตัวไหนเป็นตัวหลัก (ถ้าทราบ)
 - ถ้ามี font ที่หายาก (เช่น brand font) ให้แนะนำทางเลือกสำรองด้วย
+
+# ไฟล์แนบ:
+- ชื่อ Design Style หรือ use case ที่ต้องการ เช่น "McKinsey", "Dashboard", "pitch deck startup"
