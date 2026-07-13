@@ -1,9 +1,9 @@
 {
   "name": "productive",
-  "version": "0.7.0",
-  "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม Short Summary, Meetings Summary, PDF Downloader, Workplace Communication, IT Work Scorecard และ Indicator Designer",
+  "version": "0.8.0",
+  "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม Isolate (Tech Explainer), Meetings Summary, PDF Downloader, Workplace Communication, IT Work Scorecard และ Indicator Designer",
   "author": {
     "name": "natthasath"
   },
-  "keywords": ["productive", "summary", "meetings", "mom", "minutes", "tldr", "perspective", "pdf", "workplace", "communication", "professional", "scorecard", "it", "difficulty", "assessment", "indicator", "kpi", "action-plan", "measure", "smart", "success-criteria", "design", "font", "presentation", "slide", "aphrodite", "typography", "athena", "note-taking", "cornell", "zettelkasten", "para", "outline", "meeting-notes"]
+  "keywords": ["productive", "summary", "meetings", "mom", "minutes", "isolate", "tldr", "perspective", "technology", "explainer", "compare", "pdf", "workplace", "communication", "professional", "scorecard", "it", "difficulty", "assessment", "indicator", "kpi", "action-plan", "measure", "smart", "success-criteria", "design", "font", "presentation", "slide", "aphrodite", "typography", "athena", "note-taking", "cornell", "zettelkasten", "para", "outline", "meeting-notes"]
 }
