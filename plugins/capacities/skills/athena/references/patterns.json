@@ -1,0 +1,17 @@
+[
+  { "pattern": "Outline Method",         "template": "Topic → Main Idea → Subtopic → Detail",           "use_case": "เรียน, ประชุม, หนังสือ",       "strength": "เข้าใจลำดับชั้น",          "limitation": "ไม่เห็นความสัมพันธ์ข้ามหัวข้อ" },
+  { "pattern": "Cornell Notes",          "template": "Cue (Keyword) / Note / Summary",                   "use_case": "เรียน, เตรียมสอบ",            "strength": "ทบทวนง่าย",                "limitation": "ต้องสรุปภายหลัง" },
+  { "pattern": "Mind Map",               "template": "Central Topic → Branch → Sub-branch",              "use_case": "Brainstorm, วางแผน",          "strength": "เห็นภาพรวม",               "limitation": "รายละเอียดเยอะไม่เหมาะ" },
+  { "pattern": "Flow Notes",             "template": "Idea → Connection → Question → Insight",           "use_case": "อ่านหนังสือ, Research",       "strength": "เข้าใจเชิงลึก",            "limitation": "ค้นหาย้อนหลังยาก" },
+  { "pattern": "Chart / Table Method",   "template": "Attribute เป็นคอลัมน์",                           "use_case": "เปรียบเทียบสินค้า, Framework","strength": "เปรียบเทียบง่าย",          "limitation": "ใช้กับเรื่องที่เปรียบเทียบไม่ได้ยาก" },
+  { "pattern": "Sentence Method",        "template": "Bullet ต่อประโยค",                                 "use_case": "Lecture, Meeting",            "strength": "จดเร็ว",                   "limitation": "ไม่มีโครงสร้าง" },
+  { "pattern": "Zettelkasten",           "template": "ID / Title / Idea / Reference / Links",            "use_case": "Knowledge Base",              "strength": "เชื่อมความรู้ระยะยาว",     "limitation": "ต้องมีวินัยสูง" },
+  { "pattern": "PARA Notes",             "template": "Project / Area / Resource / Archive",              "use_case": "PKM, Notion, Obsidian",       "strength": "จัดเก็บง่าย",              "limitation": "ไม่ใช่วิธีสรุปเนื้อหา" },
+  { "pattern": "Evergreen Notes",        "template": "Concept / Explanation / Example / Links",          "use_case": "สร้างคลังความรู้",           "strength": "นำกลับมาใช้ซ้ำง่าย",      "limitation": "ใช้เวลาสรุป" },
+  { "pattern": "Meeting Notes",          "template": "Agenda / Discussion / Decision / Action / Owner",  "use_case": "ประชุม",                      "strength": "Action ชัด",               "limitation": "ไม่เหมาะกับการเรียน" },
+  { "pattern": "Journal / Daily Log",    "template": "Date / Events / Reflection / Tomorrow",            "use_case": "บันทึกชีวิต",                "strength": "ติดตามพัฒนาการ",           "limitation": "ค้นหาหัวข้อยาก" },
+  { "pattern": "Research Notes",         "template": "Question / Method / Result / Insight / Citation",  "use_case": "งานวิจัย",                   "strength": "ครบถ้วน",                  "limitation": "ใช้เวลามาก" },
+  { "pattern": "Problem Solving Notes",  "template": "Problem / Cause / Option / Decision / Next Step",  "use_case": "Debug, Incident",             "strength": "แก้ปัญหาเป็นระบบ",        "limitation": "ไม่เหมาะกับการเรียนทั่วไป" },
+  { "pattern": "Q&A Notes",             "template": "Question / Answer / Example",                      "use_case": "เรียน, FAQ",                  "strength": "ทบทวนง่าย",               "limitation": "ไม่เห็นภาพรวม" },
+  { "pattern": "Kanban Notes",           "template": "Todo / Doing / Done",                              "use_case": "งานและ Task",                 "strength": "ติดตามงานง่าย",           "limitation": "ไม่เก็บองค์ความรู้" }
+]
