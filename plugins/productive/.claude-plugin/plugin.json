@@ -1,9 +1,9 @@
 {
   "name": "productive",
-  "version": "0.9.0",
-  "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม Isolate (Tech Explainer), Meetings Summary, PDF Downloader, Workplace Communication, IT Work Scorecard และ Indicator Designer",
+  "version": "1.0.0",
+  "description": "Plugin รวม Skills เพิ่มประสิทธิภาพการทำงาน ครอบคลุม Isolate (Tech Explainer), Meetings Summary, PDF Downloader, Workplace Communication, IT Work Scorecard, Indicator Designer และ Flashcard",
   "author": {
     "name": "natthasath"
   },
-  "keywords": ["productive", "summary", "meetings", "mom", "minutes", "isolate", "tldr", "perspective", "technology", "explainer", "compare", "pdf", "workplace", "communication", "professional", "scorecard", "it", "difficulty", "assessment", "indicator", "kpi", "action-plan", "measure", "smart", "success-criteria"]
+  "keywords": ["productive", "summary", "meetings", "mom", "minutes", "isolate", "tldr", "perspective", "technology", "explainer", "compare", "pdf", "workplace", "communication", "professional", "scorecard", "it", "difficulty", "assessment", "indicator", "kpi", "action-plan", "measure", "smart", "success-criteria", "flashcard", "vocabulary", "lexi", "word", "learn", "language", "quiz"]
 }

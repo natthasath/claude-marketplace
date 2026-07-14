@@ -1,0 +1,28 @@
+{
+  "category": "สนามบิน (Airport)",
+  "language": "อังกฤษ",
+  "difficulty": "beginner",
+  "lang_code": "en-US",
+  "words": [
+    { "word": "airport", "translation": "สนามบิน", "phonetic": "ˈeərpɔːrt", "pos": "noun", "example": "We arrived at the airport two hours early.", "synonyms": ["airfield"] },
+    { "word": "boarding pass", "translation": "บัตรขึ้นเครื่อง", "phonetic": "ˈbɔːrdɪŋ pæs", "pos": "noun", "example": "Please have your boarding pass ready at the gate.", "synonyms": ["ticket"] },
+    { "word": "passport", "translation": "หนังสือเดินทาง", "phonetic": "ˈpæspɔːrt", "pos": "noun", "example": "Don't forget to bring your passport for international flights.", "synonyms": ["travel document"] },
+    { "word": "check-in", "translation": "เช็คอิน / ลงทะเบียน", "phonetic": "ˈtʃek ɪn", "pos": "noun", "example": "Check-in closes 45 minutes before departure.", "synonyms": ["registration"] },
+    { "word": "luggage", "translation": "สัมภาระ", "phonetic": "ˈlʌɡɪdʒ", "pos": "noun", "example": "My luggage was too heavy for the flight.", "synonyms": ["baggage"] },
+    { "word": "carry-on", "translation": "กระเป๋าถือขึ้นเครื่อง", "phonetic": "ˈkæri ɒn", "pos": "noun", "example": "Only one carry-on bag is allowed per passenger.", "synonyms": ["hand luggage"] },
+    { "word": "gate", "translation": "ประตูขึ้นเครื่อง", "phonetic": "ɡeɪt", "pos": "noun", "example": "Our flight departs from gate 12.", "synonyms": ["boarding gate"] },
+    { "word": "departure", "translation": "ขาออก / การออกเดินทาง", "phonetic": "dɪˈpɑːrtʃər", "pos": "noun", "example": "Check the departure board for any schedule updates.", "synonyms": ["takeoff"] },
+    { "word": "arrival", "translation": "ขาเข้า / การมาถึง", "phonetic": "əˈraɪvəl", "pos": "noun", "example": "The arrival hall was very crowded this morning.", "synonyms": ["landing"] },
+    { "word": "terminal", "translation": "อาคารผู้โดยสาร", "phonetic": "ˈtɜːrmɪnəl", "pos": "noun", "example": "International flights leave from Terminal 2.", "synonyms": ["concourse"] },
+    { "word": "security check", "translation": "จุดตรวจความปลอดภัย", "phonetic": "sɪˈkjʊərəti tʃek", "pos": "noun", "example": "We waited in line at the security check for twenty minutes.", "synonyms": ["screening"] },
+    { "word": "customs", "translation": "ศุลกากร", "phonetic": "ˈkʌstəmz", "pos": "noun", "example": "You must declare certain items at customs.", "synonyms": [] },
+    { "word": "immigration", "translation": "ตรวจคนเข้าเมือง", "phonetic": "ˌɪmɪˈɡreɪʃən", "pos": "noun", "example": "The immigration line moved quickly today.", "synonyms": ["passport control"] },
+    { "word": "flight attendant", "translation": "พนักงานต้อนรับบนเครื่องบิน", "phonetic": "flaɪt əˈtendənt", "pos": "noun", "example": "The flight attendant offered us drinks and snacks.", "synonyms": ["cabin crew"] },
+    { "word": "runway", "translation": "รันเวย์", "phonetic": "ˈrʌnweɪ", "pos": "noun", "example": "The plane sped down the runway before takeoff.", "synonyms": ["airstrip"] },
+    { "word": "baggage claim", "translation": "จุดรับกระเป๋า", "phonetic": "ˈbæɡɪdʒ kleɪm", "pos": "noun", "example": "Meet me at baggage claim after we land.", "synonyms": ["carousel"] },
+    { "word": "layover", "translation": "การแวะพักเปลี่ยนเครื่อง", "phonetic": "ˈleɪoʊvər", "pos": "noun", "example": "We had a three-hour layover in Tokyo.", "synonyms": ["stopover"] },
+    { "word": "delay", "translation": "ความล่าช้า", "phonetic": "dɪˈleɪ", "pos": "noun", "example": "The flight was delayed due to bad weather.", "synonyms": ["postponement"] },
+    { "word": "boarding gate", "translation": "ประตูขึ้นเครื่อง", "phonetic": "ˈbɔːrdɪŋ ɡeɪt", "pos": "noun", "example": "Head to the boarding gate as soon as it's announced.", "synonyms": ["departure gate"] },
+    { "word": "duty-free", "translation": "ปลอดภาษี", "phonetic": "ˈdjuːti friː", "pos": "adjective", "example": "She bought perfume at the duty-free shop.", "synonyms": ["tax-free"] }
+  ]
+}
