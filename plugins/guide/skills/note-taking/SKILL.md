@@ -1,5 +1,5 @@
 ---
-name: athena
+name: note-taking
 description: >
   แนะนำรูปแบบการจดบันทึก (Note-taking Pattern) ที่เหมาะสมกับ context ของผู้ใช้
   โดยอิงจาก 15 patterns ที่พิสูจน์แล้ว เช่น Cornell Notes, Zettelkasten, PARA, Mind Map และอื่น ๆ

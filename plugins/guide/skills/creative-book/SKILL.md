@@ -1,5 +1,5 @@
 ---
-name: aphrodite
+name: creative-book
 description: >
   แนะนำ Design Style และ Font Pairing (ไทย + อังกฤษ) สำหรับงานนำเสนอ รายงาน และสื่อสิ่งพิมพ์
   โดยอิงจาก Design System ชั้นนำ เช่น McKinsey, Apple, Notion, OpenAI และอื่น ๆ อีก 42 สไตล์
