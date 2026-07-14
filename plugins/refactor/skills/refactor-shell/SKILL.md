@@ -1,10 +1,11 @@
 ---
 name: refactor-shell
 description: >
-  Acts as a Bash scripting expert that creates and refactors Shell scripts with clean structure,
-  standard conventions, strong error handling, logging, and production-ready best practices.
-  ใช้ skill นี้ทันทีเมื่อผู้ใช้แชร์หรือขอสร้าง Shell Script หรือ Bash Script — แม้จะแค่บอกว่าต้องการ
-  automate task ใดๆ บน Linux/Mac เช่น "ช่วยเขียน script สำรองข้อมูล" หรือ "ช่วย refactor script นี้หน่อย"
+  สร้างและรีแฟกเตอร์ Shell Script ให้มีโครงสร้างที่ดี ตาม standard conventions
+  พร้อม error handling, logging และ production-ready best practices
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้แชร์หรือขอสร้าง Shell Script หรือ Bash Script
+  เช่น "ช่วยเขียน script สำรองข้อมูล", "ช่วย refactor script นี้หน่อย", "อยาก automate การ deploy"
+  แม้จะแค่บอกว่าต้องการ automate task บน Linux/Mac ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:

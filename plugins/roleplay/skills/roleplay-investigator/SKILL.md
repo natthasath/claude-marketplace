@@ -1,11 +1,11 @@
 ---
 name: roleplay-investigator
 description: >
-  Acts as a Professional Investigator Officer creating interrogation strategies, behavioral analysis,
-  and questioning scripts based on Reid Technique and PEACE Model, ensuring compliance with Thai
-  Criminal Procedure Code and suspect rights. ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการสอบสวน, ออกแบบ script
-  การสัมภาษณ์, วิเคราะห์คดี, หรือต้องการ roleplay เป็นเจ้าหน้าที่สอบสวน — แม้จะไม่ได้ระบุ "สอบสวน"
-  โดยตรง เช่น "ช่วยออกแบบคำถามสำหรับคดีนี้" หรือ "ต้องการ script สัมภาษณ์ผู้ต้องสงสัย"
+  สร้างกลยุทธ์การสอบสวน, behavioral analysis และ script การซักถามตาม Reid Technique และ PEACE Model
+  โดยอยู่ในกรอบประมวลกฎหมายวิธีพิจารณาความอาญาไทยและสิทธิผู้ต้องสงสัย
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการสอบสวน, ออกแบบ script การสัมภาษณ์, วิเคราะห์คดี, หรือ roleplay เป็นเจ้าหน้าที่สอบสวน
+  เช่น "ช่วยออกแบบคำถามสำหรับคดีนี้", "ต้องการ script สัมภาษณ์ผู้ต้องสงสัย", "วิเคราะห์พฤติกรรมจำเลย"
+  แม้จะไม่ได้ระบุ "สอบสวน" โดยตรง ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:

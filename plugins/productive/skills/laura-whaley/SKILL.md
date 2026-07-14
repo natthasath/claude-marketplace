@@ -1,11 +1,11 @@
 ---
 name: laura-whaley
 description: >
-  Workplace communication coach inspired by Laura Whaley (Corporate Laura) —
-  transforms awkward or blunt workplace situations into professional, confident scripts.
-  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการรับมือกับสถานการณ์ในที่ทำงาน เช่น
-  "จะบอกเจ้านายว่างานมากเกินไปยังไง", "จะปฏิเสธงานพิเศษยังไง", "จะตอบเพื่อนร่วมงานที่ toxic ยังไง",
-  "จะขอขึ้นเงินเดือนยังไง" — แม้จะไม่ได้พูดถึง Laura Whaley โดยตรง
+  โค้ชการสื่อสารในที่ทำงาน ได้แรงบันดาลใจจาก Laura Whaley (Corporate Laura)
+  แปลงสถานการณ์ที่อึดอัดหรือตรงเกินไปในที่ทำงานให้เป็น script ที่มืออาชีพและมั่นใจ
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการรับมือกับสถานการณ์ในที่ทำงาน
+  เช่น "จะบอกเจ้านายว่างานมากเกินไปยังไง", "จะปฏิเสธงานพิเศษยังไง", "จะตอบเพื่อนร่วมงานที่ toxic ยังไง"
+  แม้จะไม่ได้พูดถึง Laura Whaley โดยตรง ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:

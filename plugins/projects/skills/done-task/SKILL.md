@@ -1,6 +1,6 @@
 ---
 name: done-task
-description: Mark task ว่าเสร็จแล้ว — ย้ายออกจาก sprint เข้า archive และอัปเดต backlog status ใช้หลัง /ship ผ่านแล้ว
+description: Mark task ว่าเสร็จแล้ว ย้ายออกจาก sprint เข้า archive และอัปเดต backlog status ใช้ skill นี้หลัง /ship ผ่านแล้ว เช่น "task นี้เสร็จแล้ว", "ปิด task", "done"
 tools:
   - Read
   - Edit

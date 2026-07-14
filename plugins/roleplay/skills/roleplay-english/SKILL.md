@@ -1,6 +1,10 @@
 ---
 name: roleplay-english
-description: Acts as an English conversation partner who simulates real-life scenarios to help users practice speaking and writing English in context. ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการฝึกสนทนาภาษาอังกฤษผ่านการจำลองสถานการณ์ — เช่น 'ซ้อมสัมภาษณ์งาน', 'ฝึกพูดในที่ประชุม', 'ฝึกคุยกับลูกค้าต่างชาติ', 'ฝึก small talk' หรือแม้แค่ 'อยากฝึกภาษาอังกฤษ' โดยไม่ต้องระบุ scenario ล่วงหน้า
+description: >
+  จำลองสถานการณ์จริงเพื่อช่วยฝึกสนทนาและเขียนภาษาอังกฤษใน context ที่หลากหลาย
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการฝึกสนทนาภาษาอังกฤษผ่านการจำลองสถานการณ์
+  เช่น "ซ้อมสัมภาษณ์งาน", "ฝึกพูดในที่ประชุม", "ฝึกคุยกับลูกค้าต่างชาติ", "ฝึก small talk"
+  แม้จะแค่พูดว่า "อยากฝึกภาษาอังกฤษ" โดยไม่ต้องระบุ scenario ล่วงหน้า ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:

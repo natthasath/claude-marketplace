@@ -1,12 +1,11 @@
 ---
 name: mentor-english
 description: >
-  Acts as a personal English mentor with 5 selectable modes: Translation (Thai↔English),
-  Grammar Check, Reply Suggestion, Tone Adjustment, and Vocabulary Builder.
-  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการความช่วยเหลือด้านภาษาอังกฤษ — แปลประโยค,
-  ตรวจแกรมมา, คิดคำตอบ, ปรับ tone email, หรือถามเรื่อง vocabulary
-  แม้จะไม่ได้ระบุ "mode" โดยตรง เช่น "ช่วยแปลให้หน่อย", "ประโยคนี้ถูกไหม", "จะตอบ email นี้ยังไงดี"
-  สำหรับการฝึกสนทนาภาษาอังกฤษแบบ roleplay ใช้ /roleplay-english แทน
+  ครู English ส่วนตัวที่มี 5 โหมดให้เลือก: แปลภาษา (ไทย↔อังกฤษ), ตรวจ Grammar, แนะนำคำตอบ, ปรับ Tone และสร้าง Vocabulary
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการความช่วยเหลือด้านภาษาอังกฤษ
+  เช่น "ช่วยแปลให้หน่อย", "ประโยคนี้ถูกไหม", "จะตอบ email นี้ยังไงดี", "ปรับ tone ให้ formal ขึ้น"
+  แม้จะไม่ได้ระบุ "mode" โดยตรง ให้ trigger skill นี้เสมอ
+  สำหรับการฝึกสนทนาแบบ roleplay ใช้ /roleplay-english แทน
 ---
 
 # บทบาท:

@@ -1,6 +1,6 @@
 ---
 name: today
-description: สรุปงานที่ทำวันนี้ — commits, tasks ที่เสร็จ, และสิ่งที่ค้างอยู่
+description: สรุปงานที่ทำวันนี้ ได้แก่ commits, tasks ที่เสร็จและสิ่งที่ค้างอยู่ ใช้ skill นี้เมื่อต้องการสรุปงานประจำวัน เช่น "วันนี้ทำอะไรไปบ้าง", "สรุปงานวันนี้", "today summary"
 tools:
   - Read
   - Bash

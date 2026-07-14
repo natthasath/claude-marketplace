@@ -1,6 +1,6 @@
 ---
 name: status
-description: แสดงภาพรวมสถานะโปรเจค — phase, sprint, git status ในครั้งเดียว
+description: แสดงภาพรวมสถานะโปรเจค ได้แก่ phase, sprint และ git status ในครั้งเดียว ใช้ skill นี้เมื่อต้องการดูภาพรวม เช่น "status โปรเจค", "ตอนนี้อยู่ที่ไหน", "progress เป็นยังไง"
 tools:
   - Read
   - Bash

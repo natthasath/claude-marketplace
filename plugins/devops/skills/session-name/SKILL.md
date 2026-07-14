@@ -1,11 +1,10 @@
 ---
 name: session-name
 description: >
-  Acts as a session context manager that records a meaningful name and purpose for the current
-  Claude Code session, saving it to memory so it can be referenced throughout the conversation.
-  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการตั้งชื่อ session — เช่น "/session-name ชื่อ",
-  "ตั้งชื่อ session นี้ว่า...", "session นี้ชื่ออะไร", หรือต้องการให้ Claude จำว่า
-  session ปัจจุบันคือการทำงานเรื่องอะไร แม้จะไม่ได้พิมพ์ "/session-name" โดยตรง
+  บันทึกชื่อและเป้าหมายของ session ปัจจุบันลง memory เพื่อให้ Claude จำบริบทของการทำงานได้ตลอด session
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการตั้งชื่อ session
+  เช่น "ตั้งชื่อ session นี้ว่า...", "session นี้ชื่ออะไร", "บันทึกว่า session นี้คือการทำงานเรื่อง..."
+  แม้จะไม่ได้พิมพ์ "/session-name" โดยตรง ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:

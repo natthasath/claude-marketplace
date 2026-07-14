@@ -1,12 +1,12 @@
 {
   "conversations": [
     {
-      "id": "845348cc-ab29-4a3b-b326-0e61377724b8",
-      "title": "Goal: Test setup name of session for this project / Don't do anything",
-      "description": "The current session is associated with the project at `E:\\code\\prod\\claude-marketplace`, with the memory namespace `E--code-prod-claude-marketplace`. No actions taken.",
+      "id": "de8bb6e2-db43-4d4a-b415-26b8fa98ba5b",
+      "title": "Untitled Conversation",
+      "description": "Let me read the reference files first to match the correct tone and structure.",
       "category": "task",
       "status": "in-progress",
-      "lastMessage": "- `/lookup Docker`, `/lookup AWS S3` อ่านเป็นธรรมชาติมาก\nเปลี่ยนเป็น `lookup` เลยไหม หรือต้องการชื่ออื่น?",
+      "lastMessage": "แก้ ebook แล้ว commit + push",
       "agents": [
         {
           "id": "claude-main",
@@ -22,17 +22,86 @@
       "isRateLimited": false,
       "lastActivity": {
         "toolName": "Edit",
+        "summary": "E:\\code\\prod\\claude-marketplace\\plugins\\productive\\skills\\ebook\\SKILL.md",
+        "outputHint": "The file E:\\code\\prod\\claude-marketplace\\plugins\\productive\\skills\\ebook\\SKILL.md has been updated s...",
+        "status": "completed"
+      },
+      "createdAt": "2026-07-13T01:38:05.518Z",
+      "updatedAt": "2026-07-14T03:54:20.599Z",
+      "filePath": "c:\\Users\\natthasath.sak\\.claude\\projects\\E--code-prod-claude-marketplace\\de8bb6e2-db43-4d4a-b415-26b8fa98ba5b.jsonl",
+      "workspacePath": "E:\\code\\prod\\claude-marketplace",
+      "provider": "claude-code",
+      "shortId": "T-47",
+      "previousStatus": "in-review"
+    },
+    {
+      "id": "9c30f3ed-ca8f-458b-8e5c-5388bb1af9f3",
+      "title": "Untitled Conversation",
+      "description": "## Mode 1: แปล (Translation)",
+      "category": "task",
+      "status": "in-review",
+      "lastMessage": "[...] t เร็วแต่ไม่ได้ root cause จริง MTTR จะดูดีแต่ปัญหาจะวนซ้ำ — ควรเพิ่ม \"Recurrence Rate\" ด้วยถ้าต้องการวัดผลระยะยาว",
+      "agents": [
+        {
+          "id": "claude-main",
+          "name": "Claude",
+          "avatar": "",
+          "isActive": false
+        }
+      ],
+      "gitBranch": "main",
+      "hasError": false,
+      "isInterrupted": false,
+      "hasQuestion": false,
+      "isRateLimited": false,
+      "lastActivity": {
+        "toolName": "Edit",
         "summary": "E:\\code\\prod\\claude-marketplace\\README.md",
         "outputHint": "The file E:\\code\\prod\\claude-marketplace\\README.md has been updated successfully. (file state is cur...",
         "status": "completed"
       },
-      "createdAt": "2026-07-07T06:54:48.054Z",
-      "updatedAt": "2026-07-08T13:06:14.843Z",
-      "filePath": "c:\\Users\\natthasath.sak\\.claude\\projects\\E--code-prod-claude-marketplace\\845348cc-ab29-4a3b-b326-0e61377724b8.jsonl",
+      "createdAt": "2026-07-10T10:51:47.634Z",
+      "updatedAt": "2026-07-12T13:49:27.531Z",
+      "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\9c30f3ed-ca8f-458b-8e5c-5388bb1af9f3.jsonl",
       "workspacePath": "E:\\code\\prod\\claude-marketplace",
       "provider": "claude-code",
+      "shortId": "T-46",
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%2228.5%22%20y%3D%2211.5%22%20width%3D%2217%22%20height%3D%2217%22%20fill%3D%22hsl(331%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2220%2C41%2026%2C53%2014%2C53%22%20fill%3D%22hsl(331%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Ccircle%20cx%3D%2247%22%20cy%3D%2230%22%20r%3D%229.5%22%20fill%3D%22hsl(331%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2223%22%20y%3D%226%22%20width%3D%2214%22%20height%3D%2214%22%20fill%3D%22hsl(331%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
+    },
+    {
+      "id": "845348cc-ab29-4a3b-b326-0e61377724b8",
+      "title": "Goal: Test setup name of session for this project / Don't do anything",
+      "description": "The current session is associated with the project at `E:\\code\\prod\\claude-marketplace`, with the memory namespace `E--code-prod-claude-marketplace`. No actions taken.",
+      "category": "task",
+      "status": "in-review",
+      "lastMessage": "---\nต้องการแปลประโยคอื่น หรือสลับ mode ได้เลยครับ",
+      "agents": [
+        {
+          "id": "claude-main",
+          "name": "Claude",
+          "avatar": "",
+          "isActive": false
+        }
+      ],
+      "gitBranch": "main",
+      "hasError": false,
+      "isInterrupted": false,
+      "hasQuestion": false,
+      "isRateLimited": false,
+      "lastActivity": {
+        "toolName": "Bash",
+        "summary": "for f in \"E:\\claude\\pomodoro-app\\.claude\\skills\\build-feature\\SKILL.md\" \\\n   ...",
+        "outputHint": "38 lines of output",
+        "status": "completed"
+      },
+      "createdAt": "2026-07-07T06:54:48.054Z",
+      "updatedAt": "2026-07-10T10:48:35.521Z",
+      "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\845348cc-ab29-4a3b-b326-0e61377724b8.jsonl",
+      "workspacePath": "E:\\code\\prod\\claude-marketplace",
+      "provider": "claude-code",
+      "previousStatus": "needs-input",
       "shortId": "T-45",
-      "previousStatus": "in-review"
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpolygon%20points%3D%2231%2C46.5%2036.5%2C57.5%2025.5%2C57.5%22%20fill%3D%22hsl(281%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Ccircle%20cx%3D%2252%22%20cy%3D%2229%22%20r%3D%228%22%20fill%3D%22hsl(281%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2224.5%22%20y%3D%2245.5%22%20width%3D%229%22%20height%3D%229%22%20fill%3D%22hsl(281%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2250%2C20%2057%2C34%2043%2C34%22%20fill%3D%22hsl(281%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Ccircle%20cx%3D%2227%22%20cy%3D%2248%22%20r%3D%229.5%22%20fill%3D%22hsl(281%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
     },
     {
       "id": "be8b7010-7759-4f06-9f88-2831769ec450",
@@ -46,7 +115,7 @@
           "id": "claude-main",
           "name": "Claude",
           "avatar": "",
-          "isActive": true
+          "isActive": false
         }
       ],
       "gitBranch": "main",
@@ -56,10 +125,11 @@
       "isRateLimited": false,
       "createdAt": "2026-07-07T06:52:44.277Z",
       "updatedAt": "2026-07-07T06:52:48.473Z",
-      "filePath": "c:\\Users\\natthasath.sak\\.claude\\projects\\E--code-prod-claude-marketplace\\be8b7010-7759-4f06-9f88-2831769ec450.jsonl",
+      "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\be8b7010-7759-4f06-9f88-2831769ec450.jsonl",
       "workspacePath": "E:\\code\\prod\\claude-marketplace",
       "provider": "claude-code",
-      "shortId": "T-44"
+      "shortId": "T-44",
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2235%22%20cy%3D%2216%22%20r%3D%225.5%22%20fill%3D%22hsl(345%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2212%22%20y%3D%2237%22%20width%3D%228%22%20height%3D%228%22%20fill%3D%22hsl(345%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2241%2C13.5%2049.5%2C30.5%2032.5%2C30.5%22%20fill%3D%22hsl(345%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
     },
     {
       "id": "44e4b7a6-c698-432f-a650-0f6effaa7ea3",
@@ -73,7 +143,7 @@
           "id": "claude-main",
           "name": "Claude",
           "avatar": "",
-          "isActive": true
+          "isActive": false
         }
       ],
       "gitBranch": "main",
@@ -83,10 +153,11 @@
       "isRateLimited": false,
       "createdAt": "2026-07-07T06:45:50.020Z",
       "updatedAt": "2026-07-07T06:45:56.837Z",
-      "filePath": "c:\\Users\\natthasath.sak\\.claude\\projects\\E--code-prod-claude-marketplace\\44e4b7a6-c698-432f-a650-0f6effaa7ea3.jsonl",
+      "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\44e4b7a6-c698-432f-a650-0f6effaa7ea3.jsonl",
       "workspacePath": "E:\\code\\prod\\claude-marketplace",
       "provider": "claude-code",
-      "shortId": "T-43"
+      "shortId": "T-43",
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%2310b981%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2223%22%20cy%3D%2236%22%20r%3D%225.5%22%20fill%3D%22hsl(321%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2232%22%20y%3D%2245%22%20width%3D%228%22%20height%3D%228%22%20fill%3D%22hsl(321%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2249%2C9.5%2057.5%2C26.5%2040.5%2C26.5%22%20fill%3D%22hsl(321%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
     },
     {
       "id": "1b6edade-5b16-43eb-a347-e32dfaff4d56",
@@ -116,10 +187,11 @@
       },
       "createdAt": "2026-07-07T04:10:51.143Z",
       "updatedAt": "2026-07-07T04:32:26.560Z",
-      "filePath": "c:\\Users\\natthasath.sak\\.claude\\projects\\E--code-prod-claude-marketplace\\1b6edade-5b16-43eb-a347-e32dfaff4d56.jsonl",
+      "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\1b6edade-5b16-43eb-a347-e32dfaff4d56.jsonl",
       "workspacePath": "E:\\code\\prod\\claude-marketplace",
       "provider": "claude-code",
-      "shortId": "T-42"
+      "shortId": "T-42",
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2213%22%20cy%3D%2216%22%20r%3D%228.5%22%20fill%3D%22hsl(111%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2212%22%20y%3D%2215%22%20width%3D%228%22%20height%3D%228%22%20fill%3D%22hsl(111%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2219%2C16.5%2024.5%2C27.5%2013.5%2C27.5%22%20fill%3D%22hsl(111%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
     },
     {
       "id": "edb300f2-7d07-4b8c-9f2f-344b4c2a10d5",
@@ -149,10 +221,11 @@
       },
       "createdAt": "2026-07-07T04:06:00.716Z",
       "updatedAt": "2026-07-07T04:09:35.141Z",
-      "filePath": "c:\\Users\\natthasath.sak\\.claude\\projects\\E--code-prod-claude-marketplace\\edb300f2-7d07-4b8c-9f2f-344b4c2a10d5.jsonl",
+      "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\edb300f2-7d07-4b8c-9f2f-344b4c2a10d5.jsonl",
       "workspacePath": "E:\\code\\prod\\claude-marketplace",
       "provider": "claude-code",
-      "shortId": "T-41"
+      "shortId": "T-41",
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpolygon%20points%3D%2221%2C23.5%2029.5%2C40.5%2012.5%2C40.5%22%20fill%3D%22hsl(251%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Ccircle%20cx%3D%2232%22%20cy%3D%2243%22%20r%3D%228%22%20fill%3D%22hsl(251%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2235.5%22%20y%3D%222.5%22%20width%3D%2215%22%20height%3D%2215%22%20fill%3D%22hsl(251%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2210%2C14%2017%2C28%203%2C28%22%20fill%3D%22hsl(251%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Ccircle%20cx%3D%2221%22%20cy%3D%2232%22%20r%3D%226.5%22%20fill%3D%22hsl(251%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
     },
     {
       "id": "e6d00024-4047-476f-a241-3d5acb15fc28",
@@ -166,7 +239,7 @@
           "id": "claude-main",
           "name": "Claude",
           "avatar": "",
-          "isActive": true
+          "isActive": false
         }
       ],
       "gitBranch": "main",
@@ -182,11 +255,12 @@
       },
       "createdAt": "2026-07-07T04:05:13.523Z",
       "updatedAt": "2026-07-07T04:05:39.941Z",
-      "filePath": "c:\\Users\\natthasath.sak\\.claude\\projects\\E--code-prod-claude-marketplace\\e6d00024-4047-476f-a241-3d5acb15fc28.jsonl",
+      "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\e6d00024-4047-476f-a241-3d5acb15fc28.jsonl",
       "workspacePath": "E:\\code\\prod\\claude-marketplace",
       "provider": "claude-code",
+      "previousStatus": "todo",
       "shortId": "T-40",
-      "previousStatus": "todo"
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpolygon%20points%3D%2226%2C38%2030%2C46%2022%2C46%22%20fill%3D%22hsl(152%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2214%22%20r%3D%228%22%20fill%3D%22hsl(152%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%228%22%20y%3D%2224%22%20width%3D%2212%22%20height%3D%2212%22%20fill%3D%22hsl(152%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2230%2C42%2034%2C50%2026%2C50%22%20fill%3D%22hsl(152%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Ccircle%20cx%3D%2246%22%20cy%3D%2218%22%20r%3D%228%22%20fill%3D%22hsl(152%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
     },
     {
       "id": "db2c833c-6858-4136-adc6-ffb282f00578",
@@ -200,7 +274,7 @@
           "id": "claude-main",
           "name": "Claude",
           "avatar": "",
-          "isActive": true
+          "isActive": false
         }
       ],
       "gitBranch": "main",
@@ -216,11 +290,12 @@
       },
       "createdAt": "2026-07-03T08:58:48.525Z",
       "updatedAt": "2026-07-07T04:04:40.539Z",
-      "filePath": "c:\\Users\\natthasath.sak\\.claude\\projects\\E--code-prod-claude-marketplace\\db2c833c-6858-4136-adc6-ffb282f00578.jsonl",
+      "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\db2c833c-6858-4136-adc6-ffb282f00578.jsonl",
       "workspacePath": "E:\\code\\prod\\claude-marketplace",
       "provider": "claude-code",
+      "previousStatus": "in-review",
       "shortId": "T-37",
-      "previousStatus": "in-review"
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2243%22%20cy%3D%2232%22%20r%3D%225.5%22%20fill%3D%22hsl(153%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2228%22%20y%3D%2217%22%20width%3D%228%22%20height%3D%228%22%20fill%3D%22hsl(153%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2221%2C1.5%2029.5%2C18.5%2012.5%2C18.5%22%20fill%3D%22hsl(153%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
     },
     {
       "id": "dee13efc-a386-4307-b171-e2e90cb8ef8a",
@@ -234,7 +309,7 @@
           "id": "claude-main",
           "name": "Claude",
           "avatar": "",
-          "isActive": true
+          "isActive": false
         }
       ],
       "gitBranch": "main",
@@ -250,11 +325,12 @@
       },
       "createdAt": "2026-07-07T04:00:19.385Z",
       "updatedAt": "2026-07-07T04:00:43.597Z",
-      "filePath": "c:\\Users\\natthasath.sak\\.claude\\projects\\E--code-prod-claude-marketplace\\dee13efc-a386-4307-b171-e2e90cb8ef8a.jsonl",
+      "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\dee13efc-a386-4307-b171-e2e90cb8ef8a.jsonl",
       "workspacePath": "E:\\code\\prod\\claude-marketplace",
       "provider": "claude-code",
+      "previousStatus": "todo",
       "shortId": "T-39",
-      "previousStatus": "todo"
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2241%22%20cy%3D%2228%22%20r%3D%228.5%22%20fill%3D%22hsl(315%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2224%22%20y%3D%2211%22%20width%3D%228%22%20height%3D%228%22%20fill%3D%22hsl(315%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2215%2C40.5%2020.5%2C51.5%209.5%2C51.5%22%20fill%3D%22hsl(315%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
     },
     {
       "id": "a36f0e18-c60c-446e-a928-064865a007c5",
@@ -268,7 +344,7 @@
           "id": "claude-main",
           "name": "Claude",
           "avatar": "",
-          "isActive": true
+          "isActive": false
         }
       ],
       "gitBranch": "main",
@@ -284,11 +360,12 @@
       },
       "createdAt": "2026-07-07T03:59:41.399Z",
       "updatedAt": "2026-07-07T03:59:57.766Z",
-      "filePath": "c:\\Users\\natthasath.sak\\.claude\\projects\\E--code-prod-claude-marketplace\\a36f0e18-c60c-446e-a928-064865a007c5.jsonl",
+      "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\a36f0e18-c60c-446e-a928-064865a007c5.jsonl",
       "workspacePath": "E:\\code\\prod\\claude-marketplace",
       "provider": "claude-code",
+      "previousStatus": "todo",
       "shortId": "T-38",
-      "previousStatus": "todo"
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2228%22%20cy%3D%2246%22%20r%3D%227%22%20fill%3D%22hsl(42%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2242%22%20y%3D%2216%22%20width%3D%228%22%20height%3D%228%22%20fill%3D%22hsl(42%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2220%2C31%2027%2C45%2013%2C45%22%20fill%3D%22hsl(42%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
     },
     {
       "id": "0ad933ef-1d73-4011-b708-a343e1e5b3d7",
@@ -302,7 +379,7 @@
           "id": "claude-main",
           "name": "Claude",
           "avatar": "",
-          "isActive": true
+          "isActive": false
         }
       ],
       "gitBranch": "main",
@@ -318,11 +395,12 @@
       },
       "createdAt": "2026-07-03T03:15:34.968Z",
       "updatedAt": "2026-07-03T08:53:30.141Z",
-      "filePath": "c:\\Users\\natthasath.sak\\.claude\\projects\\E--code-prod-claude-marketplace\\0ad933ef-1d73-4011-b708-a343e1e5b3d7.jsonl",
+      "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\0ad933ef-1d73-4011-b708-a343e1e5b3d7.jsonl",
       "workspacePath": "E:\\code\\prod\\claude-marketplace",
       "provider": "claude-code",
+      "previousStatus": "in-review",
       "shortId": "T-36",
-      "previousStatus": "in-review"
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2246%22%20r%3D%224%22%20fill%3D%22hsl(264%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2242%22%20y%3D%2238%22%20width%3D%228%22%20height%3D%228%22%20fill%3D%22hsl(264%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2242%2C34%2046%2C42%2038%2C42%22%20fill%3D%22hsl(264%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
     },
     {
       "id": "637a17b0-20cc-46e4-918e-c794111d637d",
@@ -355,9 +433,9 @@
       "filePath": "C:\\Users\\natthasath.sak\\.claude\\projects\\e--code-prod-claude-marketplace\\637a17b0-20cc-46e4-918e-c794111d637d.jsonl",
       "workspacePath": "E:\\code\\prod\\claude-marketplace",
       "provider": "claude-code",
-      "shortId": "T-65",
-      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpolygon%20points%3D%2243%2C26.5%2048.5%2C37.5%2037.5%2C37.5%22%20fill%3D%22hsl(77%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Ccircle%20cx%3D%2232%22%20cy%3D%2221%22%20r%3D%228%22%20fill%3D%22hsl(77%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2216.5%22%20y%3D%225.5%22%20width%3D%229%22%20height%3D%229%22%20fill%3D%22hsl(77%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2210%2C36%2017%2C50%203%2C50%22%20fill%3D%22hsl(77%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Ccircle%20cx%3D%2243%22%20cy%3D%2232%22%20r%3D%229.5%22%20fill%3D%22hsl(77%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E"
+      "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%236b7280%22%20opacity%3D%220.1%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpolygon%20points%3D%2243%2C26.5%2048.5%2C37.5%2037.5%2C37.5%22%20fill%3D%22hsl(77%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Ccircle%20cx%3D%2232%22%20cy%3D%2221%22%20r%3D%228%22%20fill%3D%22hsl(77%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Crect%20x%3D%2216.5%22%20y%3D%225.5%22%20width%3D%229%22%20height%3D%229%22%20fill%3D%22hsl(77%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Cpolygon%20points%3D%2210%2C36%2017%2C50%203%2C50%22%20fill%3D%22hsl(77%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%3Ccircle%20cx%3D%2243%22%20cy%3D%2232%22%20r%3D%229.5%22%20fill%3D%22hsl(77%2C%2060%25%2C%2050%25)%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E",
+      "shortId": "T-65"
     }
   ],
-  "lastUpdated": "2026-07-08T13:06:15.329Z"
+  "lastUpdated": "2026-07-14T03:54:21.109Z"
 }

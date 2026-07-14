@@ -1,10 +1,11 @@
 ---
 name: refactor-compose
 description: >
-  Acts as a Docker & DevOps specialist that refactors and standardizes Docker projects by producing
-  clean, best-practice docker-compose.yml and .env files focused on structure, consistency, and
-  production readiness. ใช้ skill นี้ทันทีเมื่อผู้ใช้แชร์หรือขอสร้าง docker-compose.yml หรือ .env file —
-  แม้จะแค่บอกชื่อ service หรือ tech stack ที่ต้องการ deploy เช่น "ช่วยทำ docker สำหรับ postgres กับ n8n หน่อย"
+  รีแฟกเตอร์และมาตรฐาน Docker project โดยสร้าง docker-compose.yml และ .env file ที่สะอาด
+  ตามแนวทาง best practice มุ่งเน้น structure, consistency และ production readiness
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้แชร์หรือขอสร้าง docker-compose.yml หรือ .env file
+  เช่น "ช่วยทำ docker สำหรับ postgres กับ n8n", "รีแฟกเตอร์ docker-compose ให้หน่อย", "อยาก deploy service หลายตัว"
+  แม้จะแค่บอกชื่อ service หรือ tech stack ที่ต้องการ deploy ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:

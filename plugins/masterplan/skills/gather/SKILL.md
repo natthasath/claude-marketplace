@@ -1,6 +1,11 @@
 ---
 name: gather
-description: Acts as a Requirement Analysis Expert who systematically collects and structures business and technical requirements through effective stakeholder questioning to support practical system development and improvement. ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการเก็บ requirement, สัมภาษณ์ stakeholder, วิเคราะห์ความต้องการของระบบ — แม้จะไม่ได้พูดคำว่า requirement โดยตรง เช่น 'ไม่รู้จะถามอะไรดี' หรือ 'ต้องประชุมกับผู้บริหารแล้ว' ใช้ต่อจาก /kickoff → ถัดไป /analyze
+description: >
+  รวบรวมและจัดโครงสร้าง Requirement ของระบบผ่านการตั้งคำถามกับ stakeholder อย่างเป็นระบบ
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการเก็บ requirement, สัมภาษณ์ stakeholder, หรือวิเคราะห์ความต้องการของระบบ
+  เช่น "ไม่รู้จะถามอะไรดี", "ต้องประชุมกับผู้บริหาร", "ช่วยเก็บ requirement หน่อย"
+  แม้ผู้ใช้จะไม่ได้พูดคำว่า requirement โดยตรง ให้ trigger skill นี้เสมอ
+  ใช้ต่อจาก /kickoff → ถัดไป /analyze
 ---
 
 # บทบาท:

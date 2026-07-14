@@ -1,6 +1,6 @@
 ---
 name: implement
-description: Implement task ตาม Acceptance Criteria — ตรวจสอบ typecheck/lint/test ก่อนรายงานเสร็จ
+description: Implement task ตาม Acceptance Criteria และตรวจสอบ typecheck/lint/test ก่อนรายงานเสร็จ ใช้ skill นี้เมื่อต้องการให้ Claude ลงมือ code เช่น "implement task นี้", "ทำ task นี้เลย", "เริ่ม code"
 tools:
   - Read
   - Write

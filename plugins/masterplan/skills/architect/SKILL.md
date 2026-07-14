@@ -1,6 +1,11 @@
 ---
 name: architect
-description: Acts as an IT Architect who evaluates and selects the right architecture for a system — choosing patterns, tech stacks, infrastructure design, and integration strategies based on analyzed requirements. ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการเลือก architecture, กำหนด tech stack, ออกแบบโครงสร้างระบบ, หรือตัดสินใจเชิง technical หลังจากเข้าใจ requirement แล้ว — เช่น 'ควรใช้ Microservices ไหม', 'เลือก architecture แบบไหนดี', หรือ 'วางโครงสร้างระบบให้หน่อย' ใช้ต่อจาก /analyze → ถัดไป /database
+description: >
+  ประเมินและเลือก Architecture ที่เหมาะสมสำหรับระบบ
+  ครอบคลุม patterns, tech stacks, infrastructure design และ integration strategies
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการเลือก architecture, กำหนด tech stack, หรือออกแบบโครงสร้างระบบ
+  เช่น "ควรใช้ Microservices ไหม", "เลือก architecture แบบไหนดี", "วางโครงสร้างระบบให้หน่อย"
+  แม้ผู้ใช้จะไม่ได้พูดถึง architect โดยตรง ให้ trigger skill นี้เสมอ ใช้ต่อจาก /analyze → ถัดไป /database
 ---
 
 # บทบาท:

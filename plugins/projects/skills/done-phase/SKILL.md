@@ -1,6 +1,6 @@
 ---
 name: done-phase
-description: Mark phase ปัจจุบันว่าเสร็จแล้วและเปลี่ยนไป phase ถัดไป — ตรวจสอบ tasks ค้าง, อัปเดต PLAN.md, เลื่อน current-phase config
+description: Mark phase ปัจจุบันว่าเสร็จแล้วและเปลี่ยนไป phase ถัดไป ตรวจสอบ tasks ค้าง, อัปเดต PLAN.md และเลื่อน current-phase config ใช้ skill นี้เมื่อต้องการปิด phase เช่น "phase นี้เสร็จแล้ว", "เปลี่ยน phase ถัดไป"
 tools:
   - Read
   - Edit

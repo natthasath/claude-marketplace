@@ -1,6 +1,11 @@
 ---
 name: analyze
-description: Acts as a System Analyst delivering clear and structured System Requirement Masterplans, translating business needs into scalable functional and technical system requirements to support effective development and decision-making. ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการจัดทำ System Requirement, วิเคราะห์ระบบ, หรือต้องการเอกสาร spec ของระบบ — แม้จะพูดแค่ว่า 'ต้องการเอกสาร' หรือ 'ช่วยวิเคราะห์ระบบนี้หน่อย' ใช้ต่อจาก /gather → ถัดไป /architect
+description: >
+  วิเคราะห์ระบบและจัดทำ System Requirement Masterplan ที่ชัดเจนเป็นระบบ
+  แปลง business needs เป็น functional และ technical requirements ที่นำไปพัฒนาได้จริง
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการจัดทำ System Requirement, วิเคราะห์ระบบ, หรือต้องการเอกสาร spec
+  เช่น "ต้องการเอกสารระบบ", "ช่วยวิเคราะห์ระบบนี้หน่อย", "เขียน requirement ให้"
+  แม้จะพูดแค่ว่า "ต้องการเอกสาร" ให้ trigger skill นี้เสมอ ใช้ต่อจาก /gather → ถัดไป /architect
 ---
 
 # บทบาท:

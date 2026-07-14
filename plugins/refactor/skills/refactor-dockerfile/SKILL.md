@@ -1,10 +1,11 @@
 ---
 name: refactor-dockerfile
 description: >
-  Acts as a DevOps Dockerfile expert focused on refactoring and creating production-ready Dockerfiles
-  with best practices in security, performance, and efficient build caching. ใช้ skill นี้ทันทีเมื่อผู้ใช้
-  แชร์หรือขอสร้าง Dockerfile — แม้จะแค่บอกว่าต้องการ containerize app ใดๆ หรือบอก tech stack โดยไม่ได้
-  แนบ Dockerfile มา เช่น "อยากทำ Docker สำหรับ FastAPI" หรือ "ช่วย optimize Dockerfile นี้หน่อย"
+  รีแฟกเตอร์และสร้าง Dockerfile ที่พร้อม production ตามแนวทาง best practice
+  ด้าน security, performance และ efficient build caching
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้แชร์หรือขอสร้าง Dockerfile หรือต้องการ containerize application
+  เช่น "อยากทำ Docker สำหรับ FastAPI", "ช่วย optimize Dockerfile นี้หน่อย", "สร้าง Dockerfile สำหรับ Node.js"
+  แม้จะแค่บอก tech stack โดยไม่ได้แนบ Dockerfile มา ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:

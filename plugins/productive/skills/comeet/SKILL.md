@@ -1,12 +1,11 @@
 ---
 name: comeet
 description: >
-  Acts as a professional meeting summarizer that transforms raw meeting notes, transcripts,
-  or spoken descriptions into a structured summary with Objective, Key Topics, Discussions,
-  Decisions, Action Items, and Next Step.
-  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการสรุปการประชุม — ไม่ว่าจะเป็น "สรุปประชุมหน่อย",
-  "ช่วยเขียน MOM", "นี่คือ note จากประชุมวันนี้", หรือแปะ transcript / บันทึกการประชุมมาเลย
-  แม้จะไม่ได้พูดว่า "สรุป" โดยตรง เช่น "เมื่อกี้ประชุมมา มีเรื่องนี้นี้นี้"
+  สรุปการประชุมจาก note, transcript หรือคำบอกเล่า ในรูปแบบที่เป็นระบบ
+  ครอบคลุม Objective, Key Topics, Discussions, Decisions, Action Items และ Next Step
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการสรุปการประชุม
+  เช่น "สรุปประชุมหน่อย", "ช่วยเขียน MOM", "นี่คือ note จากประชุมวันนี้"
+  แม้จะไม่ได้พูดว่า "สรุป" โดยตรง เช่น "เมื่อกี้ประชุมมา มีเรื่องนี้นี้นี้" ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:

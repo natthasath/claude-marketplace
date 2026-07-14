@@ -1,6 +1,6 @@
 ---
 name: add-task
-description: เพิ่ม task ใหม่เข้า backlog พร้อม Acceptance Criteria — ช่วยร่าง, ขอ confirm, แล้วค่อยบันทึก ใช้เมื่อต้องการเพิ่มงานใหม่เข้าโปรเจค
+description: เพิ่ม task ใหม่เข้า backlog พร้อม Acceptance Criteria โดยร่าง, ขอ confirm แล้วค่อยบันทึก ใช้ skill นี้เมื่อต้องการเพิ่มงานใหม่เข้าโปรเจค เช่น "เพิ่ม task", "อยากทำเรื่อง...", "บันทึก feature ใหม่"
 tools:
   - Read
   - Write

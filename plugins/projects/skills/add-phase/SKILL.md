@@ -1,6 +1,6 @@
 ---
 name: add-phase
-description: เพิ่ม development phase ใหม่เข้าโปรเจค — สร้าง phase plan, backlog file, และ archive section พร้อมกัน ใช้เมื่อต้องการแบ่งโปรเจคเป็นช่วงๆ
+description: เพิ่ม development phase ใหม่เข้าโปรเจค พร้อมสร้าง phase plan, backlog file และ archive section ใช้ skill นี้เมื่อต้องการแบ่งโปรเจคเป็นช่วงๆ เช่น "เพิ่ม phase ใหม่", "เริ่ม phase ถัดไป"
 tools:
   - Read
   - Write

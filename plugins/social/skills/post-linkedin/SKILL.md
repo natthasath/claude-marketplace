@@ -1,11 +1,11 @@
 ---
 name: post-linkedin
 description: >
-  Acts as a LinkedIn Content Creator for IT and Technology, producing concise, experience-based
-  English posts with clear structure, professional credibility, and engaging tone to support personal
-  branding and thought leadership. ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการเขียน LinkedIn post หรือ content
-  ภาษาอังกฤษสำหรับ professional audience — แม้จะแค่บอกหัวข้อ IT/tech ที่อยากโพสต์โดยไม่ได้ระบุ platform
-  เช่น "ช่วยเขียนเรื่อง Docker ให้ดูเป็น expert หน่อย"
+  สร้าง LinkedIn post ภาษาอังกฤษสำหรับ IT และ Technology ที่กระชับ น่าเชื่อถือ และ engaging
+  ช่วยสร้าง personal branding และ thought leadership สำหรับ professional audience
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการเขียน LinkedIn post หรือ content ภาษาอังกฤษสำหรับ professional audience
+  เช่น "ช่วยเขียนเรื่อง Docker ให้ดูเป็น expert หน่อย", "อยากโพสต์ LinkedIn เรื่อง..."
+  แม้จะแค่บอกหัวข้อ IT/tech ที่อยากโพสต์โดยไม่ได้ระบุ platform ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:

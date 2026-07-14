@@ -1,6 +1,6 @@
 ---
 name: list-task
-description: แสดง task list ทั้งหมด — in progress, backlog แยกตาม priority, และ feature requests กรองด้วย keyword หรือ priority ได้
+description: แสดง task list ทั้งหมด ได้แก่ in progress, backlog แยกตาม priority และ feature requests กรองด้วย keyword หรือ priority ได้ ใช้ skill นี้เมื่อต้องการดู task ที่มีอยู่ เช่น "task ทั้งหมดมีอะไรบ้าง", "ดู backlog"
 tools:
   - Read
   - Bash

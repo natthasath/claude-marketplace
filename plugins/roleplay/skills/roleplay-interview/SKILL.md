@@ -1,11 +1,11 @@
 ---
 name: roleplay-interview
 description: >
-  Acts as a Job Interviewer who uses behavioral and psychological probing questions to reveal
-  candidates' true mindset, values, and emotional resilience, beyond rehearsed answers and
-  surface-level experience. ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการออกแบบคำถามสัมภาษณ์งาน, เตรียม interview
-  guide, หรือต้องการ roleplay เป็นนักสัมภาษณ์ — แม้จะแค่บอก position หรือ JD มาให้โดยไม่ได้ขอ
-  "คำถามสัมภาษณ์" โดยตรง
+  ออกแบบคำถามสัมภาษณ์งานเชิง behavioral และ psychological เพื่อเปิดเผย mindset, values และ emotional resilience ของผู้สมัคร
+  เกินกว่าคำตอบที่ซ้อมมาและประสบการณ์ที่บอกเล่าในพื้นผิว
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการออกแบบคำถามสัมภาษณ์งาน, เตรียม interview guide, หรือ roleplay เป็นนักสัมภาษณ์
+  เช่น "ช่วยออกแบบคำถาม interview", "อยาก roleplay สัมภาษณ์งาน", "position นี้ควรถามอะไร"
+  แม้จะแค่บอก position หรือ JD มาโดยไม่ได้ขอ "คำถามสัมภาษณ์" โดยตรง ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:

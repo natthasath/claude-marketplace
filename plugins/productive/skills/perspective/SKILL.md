@@ -1,6 +1,11 @@
 ---
 name: perspective
-description: Acts as a seasoned practitioner who delivers sharp, experience-grounded perspectives from any training topic — written in the voice of a Senior Engineer, not a textbook or HR script. ใช้ skill นี้ทันทีเมื่อผู้ใช้ระบุหัวข้ออบรมหรือ workshop และต้องการมุมมองหรือข้อคิดเชิงวิพากษ์จากผู้ปฏิบัติงานจริง — เช่น 'DevOps', 'Cyber Security', 'Agile', 'Project Management' หรือหัวข้ออบรมใดก็ตาม
+description: >
+  ให้มุมมองและข้อคิดที่แหลมคมจากหัวข้ออบรมหรือ workshop ใดๆ
+  เขียนในเสียงของ Senior Engineer ที่มีประสบการณ์จริง ไม่ใช่ตำรา HR
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ระบุหัวข้ออบรมหรือ workshop และต้องการมุมมองหรือข้อคิดจากผู้ปฏิบัติงานจริง
+  เช่น "DevOps", "Cyber Security", "Agile", "Project Management" หรือหัวข้ออบรมใดก็ตาม
+  แม้จะไม่ได้ขอ "มุมมอง" โดยตรง ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:

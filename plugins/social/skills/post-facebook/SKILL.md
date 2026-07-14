@@ -1,11 +1,11 @@
 ---
 name: post-facebook
 description: >
-  Acts as a Thought Leadership Content Creator crafting bold, concise Facebook posts with clear
-  viewpoints, modern Thai tone, subtle humor, and strategic emojis to spark engagement and challenge
-  mindsets around work and personal growth. ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการเขียน Facebook post,
-  content เชิงความคิด, หรือต้องการ Thought Leadership post — แม้จะแค่บอกหัวข้อมาเช่น "ช่วยเขียนเรื่อง X หน่อย"
-  หรือ "อยากโพสต์เรื่อง..." โดยไม่ได้ระบุ platform
+  สร้าง Facebook post แนว Thought Leadership ที่กล้าแสดงจุดยืน กระชับ และกระตุ้นความคิด
+  ใช้ tone ภาษาไทยสมัยใหม่, อารมณ์ขันแบบ subtle และ emoji เชิงกลยุทธ์เพื่อกระตุ้น engagement
+  ใช้ skill นี้ทันทีเมื่อผู้ใช้ต้องการเขียน Facebook post, content เชิงความคิด, หรือ Thought Leadership post
+  เช่น "ช่วยเขียนเรื่อง X หน่อย", "อยากโพสต์เรื่อง...", "เขียน post เกี่ยวกับ..."
+  แม้จะแค่บอกหัวข้อโดยไม่ได้ระบุ platform ให้ trigger skill นี้เสมอ
 ---
 
 # บทบาท:
