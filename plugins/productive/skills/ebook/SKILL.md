@@ -63,6 +63,26 @@ trigger เมื่อผู้ใช้พูดถึง: "เปลี่ย
 - แจ้งเหตุผลชัดเจนว่าทำไมไม่ดาวน์โหลด
 - เสนอทางเลือก เช่น หน้าทางการของผู้จัดพิมพ์, ร้านหนังสือออนไลน์, ห้องสมุดดิจิทัล
 
+# บันทึก Book List:
+**บันทึกทุกครั้งหลังจบการดาวน์โหลด** (ทั้งสำเร็จและล้มเหลว) โดยอัปเดตไฟล์ `book-list.md` ในโฟลเดอร์ configured download_path เสมอ — ไม่ใช่ path ที่ผู้ใช้ระบุแบบ one-off
+
+## รูปแบบไฟล์:
+```markdown
+# E-Book List
+
+| # | ชื่อหนังสือ | สถานะ | หมายเหตุ |
+|---|------------|--------|---------|
+| 1 | Clean Code | ✅ Downloaded | Robert C. Martin — Open Access |
+| 2 | Competitive Programming in Python | ❌ Not Available | Cambridge University Press — ลิขสิทธิ์เชิงพาณิชย์ |
+```
+
+## ขั้นตอน:
+1. อ่านไฟล์ `book-list.md` ใน configured download_path (ถ้ามีอยู่แล้ว)
+2. นับแถวสุดท้ายในตาราง → ใช้เป็นเลขถัดไป (ถ้าไม่มีไฟล์ ให้สร้างพร้อม header และเริ่มที่ 1)
+3. เพิ่มแถวใหม่ต่อท้ายตาราง:
+   - ดาวน์โหลดสำเร็จ → `✅ Downloaded` + ระบุแหล่งที่มาใน หมายเหตุ เช่น `MIT Press (Open Access)`
+   - ไม่พบหรือไม่มีสิทธิ์ → `❌ Not Available` + เหตุผลใน หมายเหตุ เช่น `Cambridge University Press — ลิขสิทธิ์เชิงพาณิชย์`
+
 # คำขอ:
 - ใช้ Browser/Web Tools ในการค้นหาและดาวน์โหลด
 - ตรวจสอบ download path จาก config ก่อนเสมอ — ไม่ hardcode `~/Downloads/` ยกเว้นเป็น default ที่ผู้ใช้เลือก
