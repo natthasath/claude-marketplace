@@ -76,6 +76,13 @@
       "source": "./plugins/guide",
       "category": "productivity",
       "keywords": ["guide", "recommend", "design", "font", "creative", "presentation", "slide", "note-taking", "cornell", "zettelkasten", "para", "outline", "pattern"]
+    },
+    {
+      "name": "document",
+      "description": "ชุดทักษะสำหรับงานเอกสารภาษาไทย รวมถึงการตรวจสอบ ปรับปรุง และร่างหนังสือราชการตามระเบียบสารบรรณ",
+      "source": "./plugins/document",
+      "category": "productivity",
+      "keywords": ["document", "saraban", "สารบรรณ", "หนังสือราชการ", "ภาษาราชการ", "official", "thai", "government", "letter", "memo", "formal"]
     }
   ]
 }
