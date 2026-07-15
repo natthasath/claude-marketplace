@@ -1,7 +1,7 @@
 {
   "name": "document",
   "description": "ชุดทักษะสำหรับงานเอกสารภาษาไทย รวมถึงการตรวจสอบและปรับปรุงภาษาราชการตามระเบียบสารบรรณ",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "natthasath.sak",
     "email": "natthasath.sak@gmail.com"
