@@ -1,7 +1,7 @@
 {
   "name": "document",
-  "description": "ชุดทักษะสำหรับงานเอกสารภาษาไทย รวมถึงการตรวจสอบและปรับปรุงภาษาราชการตามระเบียบสารบรรณ",
-  "version": "1.0.3",
+  "description": "ชุดทักษะสำหรับงานเอกสารภาษาไทย รวมถึงการตรวจสอบและปรับปรุงภาษาราชการตามระเบียบสารบรรณ และการ blind ข้อมูล sensitive ด้วย pseudonymization",
+  "version": "1.1.0",
   "author": {
     "name": "natthasath.sak",
     "email": "natthasath.sak@gmail.com"
