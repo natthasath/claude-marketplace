@@ -102,23 +102,49 @@
   .mode-panel{display:none;}
   .mode-panel.active{display:block;}
 
-  /* ---------- Flashcard ---------- */
-  .flashcard-stage{display:flex; flex-direction:column; align-items:center; gap:var(--sp-lg);}
-  .flip-card{
-    width:100%; max-width:420px; height:480px; perspective:1400px; cursor:pointer;
+  /* ---------- Flashcard (swipeable stack) ---------- */
+  :root{
+    --card-bg-default:linear-gradient(135deg,#FFFFFF,#F8FAFC);
+    --card-bg-forgot:linear-gradient(135deg,#FEE2E2,#FCA5A5);
+    --card-bg-remembered:linear-gradient(135deg,#DCFCE7,#86EFAC);
+    --card-bg-favorite:linear-gradient(135deg,#FEF9C3,#FCD34D);
+    --card-bg-skip:linear-gradient(135deg,#F1F5F9,#CBD5E1);
   }
+  [data-theme="dark"]{
+    --card-bg-default:linear-gradient(135deg,#1E293B,#0F172A);
+    --card-bg-forgot:linear-gradient(135deg,#7F1D1D,#450A0A);
+    --card-bg-remembered:linear-gradient(135deg,#14532D,#052E13);
+    --card-bg-favorite:linear-gradient(135deg,#78350F,#451A03);
+    --card-bg-skip:linear-gradient(135deg,#334155,#1E293B);
+  }
+  .flashcard-stage{display:flex; flex-direction:column; align-items:center; gap:var(--sp-lg);}
+  .swipe-hint-row{text-align:center; font-size:12px; color:var(--text-secondary); font-weight:600;}
+
+  .card-stack{position:relative; width:100%; max-width:420px; height:480px; margin:0 auto;}
+  .stack-card{
+    position:absolute; inset:0; border-radius:32px; cursor:pointer;
+    touch-action:pan-y; user-select:none; -webkit-user-select:none;
+    transition:transform .32s cubic-bezier(.34,1.15,.64,1), opacity .32s ease;
+    perspective:1400px;
+  }
+  .stack-card:not(.is-top){cursor:default;}
   .flip-card-inner{
     position:relative; width:100%; height:100%; text-align:center;
     transition:transform .6s cubic-bezier(.4,.2,.2,1); transform-style:preserve-3d;
   }
-  .flip-card.flipped .flip-card-inner{transform:rotateY(180deg);}
+  .stack-card.flipped .flip-card-inner{transform:rotateY(180deg);}
   .card-face{
-    position:absolute; inset:0; border-radius:var(--radius-card); backface-visibility:hidden;
-    background:var(--surface); box-shadow:var(--shadow-card); border:1px solid var(--border);
+    position:absolute; inset:0; border-radius:32px; backface-visibility:hidden;
+    background:var(--card-bg-default); box-shadow:0 20px 60px rgba(15,23,42,.12); border:1px solid var(--border);
+    backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
     display:flex; flex-direction:column; align-items:center; justify-content:center;
-    padding:var(--sp-xl); gap:var(--sp-sm);
+    padding:var(--sp-xl); gap:var(--sp-sm); overflow:hidden;
   }
   .card-face.back{transform:rotateY(180deg); justify-content:flex-start; padding-top:var(--sp-xl); gap:var(--sp-md);}
+  .card-tint{
+    position:absolute; inset:0; border-radius:32px; z-index:4; pointer-events:none;
+    background:transparent;
+  }
   .card-tag{
     font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.08em;
     color:var(--secondary); background:rgba(139,92,246,0.12); padding:6px 14px; border-radius:var(--radius-button);
@@ -131,6 +157,18 @@
   .card-face.back .section-text{align-self:flex-start; font-size:15px; line-height:1.6;}
   .synonym-row{display:flex; gap:8px; flex-wrap:wrap; align-self:flex-start;}
   .synonym-chip{background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-button); padding:6px 12px; font-size:13px; font-weight:600;}
+  .favorite-mark{position:absolute; top:16px; right:16px; font-size:18px; z-index:5; opacity:0;}
+  .stack-card.is-favorite .favorite-mark{opacity:1;}
+
+  .swipe-badge{
+    position:absolute; z-index:6; padding:8px 16px; border-radius:12px;
+    font-weight:800; font-size:14px; border:3px solid; opacity:0; pointer-events:none;
+    letter-spacing:.02em; background:var(--surface);
+  }
+  .badge-forgot{top:24px; left:24px; color:#EF4444; border-color:#EF4444; transform:rotate(-8deg);}
+  .badge-remembered{top:24px; right:24px; color:#22C55E; border-color:#22C55E; transform:rotate(8deg);}
+  .badge-favorite{top:24px; left:50%; margin-left:-58px; color:#FBBF24; border-color:#FBBF24;}
+  .badge-skip{bottom:24px; left:50%; margin-left:-38px; color:#64748B; border-color:#94A3B8;}
 
   .audio-controls{display:flex; gap:var(--sp-sm);}
   .icon-btn{
@@ -140,12 +178,13 @@
   }
   .icon-btn:hover{background:var(--primary); color:#fff; border-color:var(--primary); transform:translateY(-2px);}
 
-  .card-nav{display:flex; align-items:center; justify-content:center; gap:var(--sp-md); width:100%; max-width:420px;}
+  .card-nav{display:flex; align-items:center; justify-content:center; width:100%; max-width:420px;}
   .rate-row{display:flex; gap:var(--sp-sm); width:100%; max-width:420px;}
-  .rate-btn{flex:1; padding:14px; border-radius:var(--radius-input); border:1.5px solid var(--border); background:var(--surface); font-weight:700; font-size:13px; cursor:pointer; transition:all .2s ease; color:var(--text-primary);}
-  .rate-btn.easy:hover{background:var(--success); border-color:var(--success); color:#fff;}
-  .rate-btn.medium:hover{background:var(--warning); border-color:var(--warning); color:#fff;}
-  .rate-btn.hard:hover{background:var(--error); border-color:var(--error); color:#fff;}
+  .rate-btn{flex:1; padding:14px 4px; border-radius:var(--radius-input); border:1.5px solid var(--border); background:var(--surface); font-weight:700; font-size:12px; cursor:pointer; transition:all .2s ease; color:var(--text-primary);}
+  .rate-btn.remembered:hover{background:#22C55E; border-color:#22C55E; color:#fff;}
+  .rate-btn.favorite:hover{background:#FBBF24; border-color:#FBBF24; color:#fff;}
+  .rate-btn.skip:hover{background:#94A3B8; border-color:#94A3B8; color:#fff;}
+  .rate-btn.forgot:hover{background:#EF4444; border-color:#EF4444; color:#fff;}
 
   .btn{
     border:none; border-radius:var(--radius-button); font-weight:700; font-size:15px; cursor:pointer;
@@ -201,7 +240,7 @@
       min-width:48px; min-height:48px; cursor:pointer;
     }
     .bottom-nav button.active{color:var(--primary);}
-    .flip-card{height:420px;}
+    .card-stack{height:420px;}
     .card-word{font-size:30px;}
   }
 </style>
@@ -218,7 +257,8 @@
     </nav>
     <div class="sidebar-footer">
       <div class="keyboard-hint">
-        <kbd>←</kbd> <kbd>→</kbd> เลื่อนการ์ด<br>
+        <kbd>←</kbd> จำไม่ได้ &nbsp; <kbd>→</kbd> จำได้<br>
+        <kbd>↑</kbd> Favorite &nbsp; <kbd>↓</kbd> Skip<br>
         <kbd>Space</kbd> พลิกการ์ด
       </div>
       <button class="theme-toggle" id="themeToggle">
@@ -262,39 +302,31 @@
       <!-- Flashcard mode -->
       <div class="mode-panel active" id="panel-flashcard">
         <div class="flashcard-stage">
-          <div class="flip-card" id="flipCard">
-            <div class="flip-card-inner">
-              <div class="card-face front">
-                <div class="card-tag" id="cardPos">noun</div>
-                <div class="card-word" id="cardWord">word</div>
-                <div class="card-phonetic" id="cardPhonetic">/wɜːd/</div>
-                <div class="card-translation" id="cardTranslation">คำแปล</div>
-                <div class="card-hint">แตะการ์ดหรือกด Space เพื่อดูรายละเอียด</div>
-              </div>
-              <div class="card-face back">
-                <div class="section-label">ตัวอย่างประโยค</div>
-                <div class="section-text" id="cardExample">Example sentence.</div>
-                <div class="section-label">คำใกล้เคียง</div>
-                <div class="synonym-row" id="cardSynonyms"></div>
-              </div>
-            </div>
+          <div class="swipe-hint-row">❌ ปัดซ้าย จำไม่ได้ &nbsp;·&nbsp; ✅ ปัดขวา จำได้ &nbsp;·&nbsp; ⭐ ปัดขึ้น Favorite &nbsp;·&nbsp; ⏭ ปัดลง Skip</div>
+
+          <div class="card-stack" id="cardStack"></div>
+
+          <div class="summary-card" id="sessionCompleteCard" style="display:none;">
+            <div class="question-eyebrow">จบเซสชันแล้ว 🎉</div>
+            <div class="score-big" id="completeEmoji">🌸</div>
+            <p style="color:var(--text-secondary); font-weight:600; margin-top:8px;">จำได้ครบทุกคำในรอบนี้แล้ว</p>
+            <button class="btn btn-primary" style="margin-top:24px;" id="restartFlashcardBtn">เริ่มรอบใหม่</button>
           </div>
 
-          <div class="audio-controls">
+          <div class="audio-controls" id="audioControls">
             <button class="icon-btn" id="speakWordBtn" title="ออกเสียงคำศัพท์">🔊</button>
             <button class="icon-btn" id="speakSentenceBtn" title="อ่านตัวอย่างประโยค">📖</button>
           </div>
 
-          <div class="rate-row">
-            <button class="rate-btn hard" data-rate="hard">ยังไม่คุ้น</button>
-            <button class="rate-btn medium" data-rate="medium">คุ้นๆ</button>
-            <button class="rate-btn easy" data-rate="easy">จำได้แล้ว</button>
+          <div class="rate-row" id="rateRow">
+            <button class="rate-btn forgot" data-action="forgot">❌ จำไม่ได้</button>
+            <button class="rate-btn skip" data-action="skip">⏭ Skip</button>
+            <button class="rate-btn favorite" data-action="favorite">⭐ Favorite</button>
+            <button class="rate-btn remembered" data-action="remembered">✅ จำได้</button>
           </div>
 
-          <div class="card-nav">
-            <button class="btn btn-outline" id="prevBtn">← ก่อนหน้า</button>
-            <span id="cardProgress" style="font-weight:700; color:var(--text-secondary); font-size:14px;">1 / 20</span>
-            <button class="btn btn-outline" id="nextBtn">ถัดไป →</button>
+          <div class="card-nav" id="cardNav">
+            <span id="cardProgress" style="font-weight:700; color:var(--text-secondary); font-size:14px;">เหลือ 20 คำ · จำได้แล้ว 0/20</span>
           </div>
         </div>
       </div>
@@ -316,9 +348,9 @@
 
 <script>
 (function(){
-  // Vocabulary data injected by the flashcard skill
-  // Replace __VOCAB_DATA__ with the generated JSON object
-  const VOCAB_DATA = __VOCAB_DATA__;
+  // Vocabulary data injected by the flashcard skill.
+  // Replace VOCAB_DATA_PLACEHOLDER with the generated JSON object.
+  const VOCAB_DATA = VOCAB_DATA_PLACEHOLDER;
 
   // ---------------- State ----------------
   const state = {
@@ -327,8 +359,9 @@
     difficulty: VOCAB_DATA.difficulty,
     lang_code: VOCAB_DATA.lang_code || 'en-US',
     words: VOCAB_DATA.words,
-    index: 0,
+    queue: VOCAB_DATA.words.map((_, i) => i),
     mastered: new Set(),
+    favorites: new Set(),
     xp: 0,
     quiz: null
   };
@@ -370,10 +403,10 @@
   const DIFFICULTY_LABEL = { beginner:'ง่าย', intermediate:'กลาง', advanced:'ยาก' };
 
   function renderSessionHeader(){
-    document.title = `LexiCard — ${state.category}`;
+    document.title = 'LexiCard — ' + state.category;
     document.getElementById('sessionCategory').textContent = state.category;
     const diffLabel = DIFFICULTY_LABEL[state.difficulty] || state.difficulty;
-    document.getElementById('sessionMeta').textContent = `ภาษา${state.language} · ระดับ${diffLabel} · ${state.words.length} คำ`;
+    document.getElementById('sessionMeta').textContent = 'ภาษา' + state.language + ' · ระดับ' + diffLabel + ' · ' + state.words.length + ' คำ';
     updateStats();
   }
   function updateStats(){
@@ -382,63 +415,293 @@
     const pct = state.words.length ? state.mastered.size / state.words.length : 0;
     bloomRing.style.strokeDashoffset = CIRCUMFERENCE * (1 - pct);
     const scale = 0.7 + pct * 0.6;
-    bloomCenter.style.transform = `scale(${scale.toFixed(2)})`;
+    bloomCenter.style.transform = 'scale(' + scale.toFixed(2) + ')';
     bloomCenter.textContent = pct >= 1 ? '🌸' : pct >= 0.5 ? '🌿' : '🌱';
   }
 
-  // ---------------- Flashcard mode ----------------
-  const flipCard = document.getElementById('flipCard');
-  flipCard.addEventListener('click', () => flipCard.classList.toggle('flipped'));
+  // ---------------- Flashcard mode (swipeable stack) ----------------
+  // swipe left  = forgot     (re-queued, ask again)      swipe right = remembered (leaves queue for good)
+  // swipe up    = favorite   (bookmarked, re-queued)      swipe down  = skip       (re-queued, neutral)
+  const cardStack        = document.getElementById('cardStack');
+  const sessionComplete  = document.getElementById('sessionCompleteCard');
+  const audioControls    = document.getElementById('audioControls');
+  const rateRow          = document.getElementById('rateRow');
+  const cardNav          = document.getElementById('cardNav');
+  const cardProgress     = document.getElementById('cardProgress');
 
-  function renderFlashcard(){
-    const w = state.words[state.index];
-    flipCard.classList.remove('flipped');
-    document.getElementById('cardPos').textContent = w.pos || '—';
-    document.getElementById('cardWord').textContent = w.word;
-    document.getElementById('cardPhonetic').textContent = w.phonetic ? `/${w.phonetic.replace(/\//g,'')}/` : '';
-    document.getElementById('cardTranslation').textContent = w.translation;
-    document.getElementById('cardExample').textContent = w.example || '—';
-    const synWrap = document.getElementById('cardSynonyms');
+  const SWIPE_THRESHOLD_X = 90;
+  const SWIPE_THRESHOLD_Y = 80;
+  const SLOT_TRANSFORM = ['translateY(0px) scale(1)', 'translateY(10px) scale(0.96)', 'translateY(20px) scale(0.92)'];
+  const ACTION_META = {
+    forgot:     { overlay: 'rgba(239,68,68,',   badgeClass: '.badge-forgot' },
+    remembered: { overlay: 'rgba(34,197,94,',   badgeClass: '.badge-remembered' },
+    favorite:   { overlay: 'rgba(251,191,36,',  badgeClass: '.badge-favorite' },
+    skip:       { overlay: 'rgba(148,163,184,', badgeClass: '.badge-skip' }
+  };
+
+  function buildStackCardHTML(){
+    return '<div class="card-tint"></div>' +
+      '<div class="favorite-mark">⭐</div>' +
+      '<div class="swipe-badge badge-forgot">❌ จำไม่ได้</div>' +
+      '<div class="swipe-badge badge-remembered">✅ จำได้</div>' +
+      '<div class="swipe-badge badge-favorite">⭐ FAVORITE</div>' +
+      '<div class="swipe-badge badge-skip">SKIP</div>' +
+      '<div class="flip-card-inner">' +
+        '<div class="card-face front">' +
+          '<div class="card-tag js-pos">noun</div>' +
+          '<div class="card-word js-word">word</div>' +
+          '<div class="card-phonetic js-phonetic">/wɜːd/</div>' +
+          '<div class="card-translation js-translation">คำแปล</div>' +
+          '<div class="card-hint">แตะการ์ดหรือกด Space เพื่อดูรายละเอียด</div>' +
+        '</div>' +
+        '<div class="card-face back">' +
+          '<div class="section-label">ตัวอย่างประโยค</div>' +
+          '<div class="section-text js-example">Example sentence.</div>' +
+          '<div class="section-label">คำใกล้เคียง</div>' +
+          '<div class="synonym-row js-synonyms"></div>' +
+        '</div>' +
+      '</div>';
+  }
+
+  const stackEls = [0, 1, 2].map(() => {
+    const el = document.createElement('div');
+    el.className = 'stack-card';
+    el.innerHTML = buildStackCardHTML();
+    cardStack.appendChild(el);
+    return el;
+  });
+  let order = [0, 1, 2]; // order[slot] -> index into stackEls currently occupying that slot
+  let isAnimating = false;
+  let dragState = null;
+
+  function elAt(slot){ return stackEls[order[slot]]; }
+  function currentWord(){ return state.queue.length ? state.words[state.queue[0]] : null; }
+
+  function clearBadges(el){ el.querySelectorAll('.swipe-badge').forEach(b => b.style.opacity = 0); }
+  function clearTint(el){ el.querySelector('.card-tint').style.background = 'transparent'; }
+
+  function populateCardContent(el, word){
+    if(!word) return;
+    el.querySelector('.js-pos').textContent = word.pos || '—';
+    el.querySelector('.js-word').textContent = word.word;
+    el.querySelector('.js-phonetic').textContent = word.phonetic ? '/' + word.phonetic.replace(/\//g,'') + '/' : '';
+    el.querySelector('.js-translation').textContent = word.translation;
+    el.querySelector('.js-example').textContent = word.example || '—';
+    const synWrap = el.querySelector('.js-synonyms');
     synWrap.innerHTML = '';
-    (w.synonyms || []).forEach(s => {
+    (word.synonyms || []).forEach(s => {
       const chip = document.createElement('span');
       chip.className = 'synonym-chip'; chip.textContent = s;
       synWrap.appendChild(chip);
     });
-    document.getElementById('cardProgress').textContent = `${state.index + 1} / ${state.words.length}`;
+    el.classList.toggle('is-favorite', state.favorites.has(word.word));
   }
 
-  document.getElementById('prevBtn').addEventListener('click', () => {
-    state.index = (state.index - 1 + state.words.length) % state.words.length;
-    renderFlashcard();
+  function layoutStack(instant){
+    [0, 1, 2].forEach(slot => {
+      const el = elAt(slot);
+      const hasWord = state.queue[slot] !== undefined;
+      el.style.transition = instant ? 'none' : '';
+      el.style.zIndex = 3 - slot;
+      el.style.transform = SLOT_TRANSFORM[slot];
+      el.style.opacity = hasWord ? '1' : '0';
+      el.classList.toggle('is-top', slot === 0);
+      el.classList.remove('flipped');
+      clearBadges(el);
+      clearTint(el);
+      if(instant){
+        void el.offsetWidth;
+        el.style.transition = '';
+      }
+    });
+  }
+
+  function showStack(show){
+    cardStack.style.display    = show ? '' : 'none';
+    audioControls.style.display = show ? '' : 'none';
+    rateRow.style.display       = show ? '' : 'none';
+    cardNav.style.display       = show ? '' : 'none';
+    sessionComplete.style.display = show ? 'none' : 'block';
+  }
+
+  function renderFlashcard(){
+    if(!state.queue.length){ showStack(false); return; }
+    showStack(true);
+    for(let slot = 0; slot < 3; slot++){
+      const idx  = state.queue[slot];
+      const word = idx !== undefined ? state.words[idx] : null;
+      if(word) populateCardContent(elAt(slot), word);
+    }
+    layoutStack(true);
+    cardProgress.textContent = 'เหลือ ' + state.queue.length + ' คำ · จำได้แล้ว ' + state.mastered.size + '/' + state.words.length;
+  }
+
+  function applyQueueMutation(action, idx, word){
+    state.queue.shift();
+    if(action === 'remembered'){
+      state.mastered.add(word.word);
+      state.xp += 10;
+    } else if(action === 'forgot'){
+      state.mastered.delete(word.word);
+      state.xp += 2;
+      state.queue.push(idx); // re-queue to ask again
+    } else if(action === 'favorite'){
+      state.favorites.add(word.word);
+      state.xp += 3;
+      state.queue.push(idx);
+    } else if(action === 'skip'){
+      state.queue.push(idx);
+    }
+  }
+
+  function flyTop(el, action){
+    let tx = 0, ty = 0, rot = 0;
+    if(action === 'remembered')     { tx = 700;  rot = 20; }
+    else if(action === 'forgot')    { tx = -700; rot = -20; }
+    else if(action === 'favorite')  { ty = -700; }
+    else if(action === 'skip')      { ty = 700; }
+    const meta = ACTION_META[action];
+    el.querySelector(meta.badgeClass).style.opacity = 1;
+    el.querySelector('.card-tint').style.background = meta.overlay + '0.35)';
+    el.style.transition = 'transform .32s ease, opacity .32s ease';
+    el.style.transform = 'translate(' + tx + 'px, ' + ty + 'px) rotate(' + rot + 'deg)';
+    el.style.opacity = '0';
+  }
+
+  function promoteBackCards(){
+    const el1 = elAt(1), el2 = elAt(2);
+    el1.style.transition = '';
+    el1.style.transform = SLOT_TRANSFORM[0];
+    el1.style.zIndex = 3;
+    el2.style.transition = '';
+    el2.style.transform = SLOT_TRANSFORM[1];
+    el2.style.zIndex = 2;
+  }
+
+  function commitAction(action){
+    if(isAnimating || !state.queue.length) return;
+    isAnimating = true;
+    const topEl = elAt(0);
+    const idx   = state.queue[0];
+    const word  = state.words[idx];
+
+    if(navigator.vibrate) navigator.vibrate(25);
+    flyTop(topEl, action);
+    promoteBackCards();
+
+    setTimeout(() => {
+      applyQueueMutation(action, idx, word);
+      updateStats();
+      order = [order[1], order[2], order[0]]; // recycle the flown-out card to the back of the stack
+      renderFlashcard();
+      isAnimating = false;
+    }, 320);
+  }
+
+  document.querySelectorAll('.rate-btn').forEach(btn => {
+    btn.addEventListener('click', () => commitAction(btn.dataset.action));
   });
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    state.index = (state.index + 1) % state.words.length;
+
+  document.getElementById('restartFlashcardBtn').addEventListener('click', () => {
+    state.queue = state.words.map((_, i) => i);
+    state.mastered.clear();
+    updateStats();
     renderFlashcard();
   });
 
-  document.querySelectorAll('.rate-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const level = btn.dataset.rate;
-      const w = state.words[state.index];
-      if(level === 'easy'){ state.mastered.add(w.word); state.xp += 10; }
-      else if(level === 'medium'){ state.xp += 5; }
-      else { state.mastered.delete(w.word); state.xp += 2; }
-      updateStats();
-      state.index = (state.index + 1) % state.words.length;
-      renderFlashcard();
-    });
+  // ---- Drag / swipe (pointer events cover touch + mouse + pen) ----
+  function resolveSwipeAction(dx, dy){
+    if(Math.abs(dx) > Math.abs(dy)){
+      if(dx > SWIPE_THRESHOLD_X)  return 'remembered';
+      if(dx < -SWIPE_THRESHOLD_X) return 'forgot';
+    } else {
+      if(dy < -SWIPE_THRESHOLD_Y) return 'favorite';
+      if(dy > SWIPE_THRESHOLD_Y)  return 'skip';
+    }
+    return null;
+  }
+
+  function updateLiveFeedback(el, dx, dy){
+    let dir, progress;
+    if(Math.abs(dx) > Math.abs(dy)){
+      dir = dx > 0 ? 'remembered' : 'forgot';
+      progress = Math.min(Math.abs(dx) / SWIPE_THRESHOLD_X, 1);
+    } else {
+      dir = dy < 0 ? 'favorite' : 'skip';
+      progress = Math.min(Math.abs(dy) / SWIPE_THRESHOLD_Y, 1);
+    }
+    clearBadges(el);
+    const meta = ACTION_META[dir];
+    el.querySelector(meta.badgeClass).style.opacity = progress;
+    el.querySelector('.card-tint').style.background = meta.overlay + (progress * 0.35) + ')';
+  }
+
+  cardStack.addEventListener('pointerdown', (e) => {
+    if(isAnimating || !state.queue.length) return;
+    const el = e.target.closest('.stack-card');
+    if(!el || !el.classList.contains('is-top')) return;
+    dragState = { el, startX: e.clientX, startY: e.clientY, dx: 0, dy: 0, dragging: false };
+    el.setPointerCapture(e.pointerId);
+  });
+
+  cardStack.addEventListener('pointermove', (e) => {
+    if(!dragState) return;
+    const dx = e.clientX - dragState.startX;
+    const dy = e.clientY - dragState.startY;
+    if(!dragState.dragging && (Math.abs(dx) > 8 || Math.abs(dy) > 8)){
+      dragState.dragging = true;
+    }
+    if(dragState.dragging){
+      dragState.dx = dx; dragState.dy = dy;
+      const el = dragState.el;
+      const rot = Math.max(-15, Math.min(15, dx / 12));
+      el.style.transition = 'none';
+      el.style.transform = 'translate(' + dx + 'px, ' + dy + 'px) rotate(' + rot + 'deg)';
+      updateLiveFeedback(el, dx, dy);
+    }
+  });
+
+  cardStack.addEventListener('pointerup', () => {
+    if(!dragState) return;
+    const { el, dragging, dx, dy } = dragState;
+    dragState = null;
+    if(!dragging){
+      el.classList.toggle('flipped');
+      return;
+    }
+    const action = resolveSwipeAction(dx, dy);
+    if(action){
+      commitAction(action);
+    } else {
+      el.style.transition = 'transform .18s cubic-bezier(.34,1.56,.64,1)';
+      el.style.transform = SLOT_TRANSFORM[0];
+      clearBadges(el);
+      clearTint(el);
+    }
+  });
+
+  cardStack.addEventListener('pointercancel', () => {
+    if(!dragState) return;
+    const el = dragState.el;
+    dragState = null;
+    el.style.transition = 'transform .18s cubic-bezier(.34,1.56,.64,1)';
+    el.style.transform = SLOT_TRANSFORM[0];
+    clearBadges(el);
+    clearTint(el);
   });
 
   // ---------------- Keyboard navigation ----------------
   document.addEventListener('keydown', e => {
     const tag = document.activeElement.tagName;
     if(tag === 'INPUT' || tag === 'TEXTAREA') return;
-    if(e.key === 'ArrowLeft')  document.getElementById('prevBtn').click();
-    if(e.key === 'ArrowRight') document.getElementById('nextBtn').click();
+    if(!document.getElementById('panel-flashcard').classList.contains('active')) return;
+    if(e.key === 'ArrowLeft')  commitAction('forgot');
+    if(e.key === 'ArrowRight') commitAction('remembered');
+    if(e.key === 'ArrowUp'){ e.preventDefault(); commitAction('favorite'); }
+    if(e.key === 'ArrowDown'){ e.preventDefault(); commitAction('skip'); }
     if(e.key === ' ' || e.key === 'Spacebar'){
       e.preventDefault();
-      flipCard.click();
+      if(currentWord()) elAt(0).classList.toggle('flipped');
     }
   });
 
@@ -452,18 +715,18 @@
     window.speechSynthesis.speak(utter);
   }
   document.getElementById('speakWordBtn').addEventListener('click', () => {
-    speak(state.words[state.index].word);
+    const w = currentWord(); if(w) speak(w.word);
   });
   document.getElementById('speakSentenceBtn').addEventListener('click', () => {
-    speak(state.words[state.index].example);
+    const w = currentWord(); if(w) speak(w.example);
   });
 
   // ---------------- Quiz mode ----------------
   const quizStage = document.getElementById('quizStage');
 
   function startQuiz(){
-    const order = shuffle([...state.words.keys()]);
-    state.quiz = { order, current:0, score:0, mistakes:[], answered:false };
+    const ord = shuffle([...state.words.keys()]);
+    state.quiz = { order: ord, current:0, score:0, mistakes:[], answered:false };
     renderQuizQuestion();
   }
 
@@ -485,17 +748,17 @@
     const distractors = shuffle(state.words.filter((_, i) => i !== wordIdx)).slice(0, 3).map(w => w.translation);
     const options = shuffle([word.translation, ...distractors]);
 
-    quizStage.innerHTML = `
-      <div class="quiz-progress-track">
-        <div class="quiz-progress-fill" style="width:${(q.current / q.order.length) * 100}%"></div>
-      </div>
-      <div class="question-card">
-        <div class="question-eyebrow">ข้อ ${q.current + 1} / ${q.order.length} · คะแนน ${q.score}</div>
-        <div class="question-word">${word.word}</div>
-        <div class="question-phonetic">${word.phonetic ? '/' + word.phonetic.replace(/\//g,'') + '/' : ''}</div>
-      </div>
-      <div class="options-grid" id="optionsGrid"></div>
-    `;
+    quizStage.innerHTML =
+      '<div class="quiz-progress-track">' +
+        '<div class="quiz-progress-fill" style="width:' + (q.current / q.order.length * 100) + '%"></div>' +
+      '</div>' +
+      '<div class="question-card">' +
+        '<div class="question-eyebrow">ข้อ ' + (q.current + 1) + ' / ' + q.order.length + ' · คะแนน ' + q.score + '</div>' +
+        '<div class="question-word">' + word.word + '</div>' +
+        '<div class="question-phonetic">' + (word.phonetic ? '/' + word.phonetic.replace(/\//g,'') + '/' : '') + '</div>' +
+      '</div>' +
+      '<div class="options-grid" id="optionsGrid"></div>';
+
     const grid = document.getElementById('optionsGrid');
     options.forEach(opt => {
       const btn = document.createElement('button');
@@ -530,19 +793,18 @@
     const pct = Math.round((q.score / q.order.length) * 100);
     let mistakesHtml = '';
     if(q.mistakes.length){
-      mistakesHtml = `<div class="mistake-list">` + q.mistakes.map(m =>
-        `<div class="mistake-item"><b>${m.word}</b> — เฉลย: ${m.correct} (คุณตอบ: ${m.chosen})</div>`
-      ).join('') + `</div>`;
+      mistakesHtml = '<div class="mistake-list">' + q.mistakes.map(m =>
+        '<div class="mistake-item"><b>' + m.word + '</b> — เฉลย: ' + m.correct + ' (คุณตอบ: ' + m.chosen + ')</div>'
+      ).join('') + '</div>';
     }
-    quizStage.innerHTML = `
-      <div class="summary-card">
-        <div class="question-eyebrow">สรุปผลการทดสอบ</div>
-        <div class="score-big">${pct}%</div>
-        <p style="color:var(--text-secondary); font-weight:600; margin-top:8px;">ตอบถูก ${q.score} จาก ${q.order.length} ข้อ</p>
-        ${mistakesHtml}
-        <button class="btn btn-primary" style="margin-top:24px;" id="retryQuizBtn">ทำแบบทดสอบใหม่</button>
-      </div>
-    `;
+    quizStage.innerHTML =
+      '<div class="summary-card">' +
+        '<div class="question-eyebrow">สรุปผลการทดสอบ</div>' +
+        '<div class="score-big">' + pct + '%</div>' +
+        '<p style="color:var(--text-secondary); font-weight:600; margin-top:8px;">ตอบถูก ' + q.score + ' จาก ' + q.order.length + ' ข้อ</p>' +
+        mistakesHtml +
+        '<button class="btn btn-primary" style="margin-top:24px;" id="retryQuizBtn">ทำแบบทดสอบใหม่</button>' +
+      '</div>';
     state.quiz = null;
     document.getElementById('retryQuizBtn').addEventListener('click', startQuiz);
   }
