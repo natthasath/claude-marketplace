@@ -1,0 +1,9 @@
+{
+  "name": "utility",
+  "version": "0.1.0",
+  "description": "Plugin รวม Skills สำหรับ Utility ครอบคลุมการจัดการ OS Setup, Config Snapshot และการตั้งค่าระบบ",
+  "author": {
+    "name": "natthasath"
+  },
+  "keywords": ["utility", "os", "setup", "config", "snapshot", "windows", "macos", "linux", "naming-convention"]
+}
