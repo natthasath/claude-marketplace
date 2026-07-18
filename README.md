@@ -20,6 +20,7 @@ claude plugin install productive
 claude plugin install devops
 claude plugin install projects
 claude plugin install language
+claude plugin install utility
 ```
 
 ## Plugins
@@ -35,6 +36,7 @@ claude plugin install language
 | `devops` | 1 | จัดการ Session Context และ DevOps Workflow |
 | `projects` | 15 | Setup และจัดการ development project — scaffold ครบ workflow ตั้งแต่ init จนถึง ship |
 | `language` | 2 | เครื่องมือด้านภาษา — ล่ามแปลภาษาแบบต่อเนื่อง และ English Mentor |
+| `utility` | 2 | จัดการ OS Setup และ Config Snapshot — รองรับ Windows 11, macOS, Linux Ubuntu |
 
 ---
 
@@ -460,3 +462,56 @@ claude plugin install language
 | เป้าหมาย | แปลอย่างเดียว รวดเร็ว | สอนและอธิบายภาษา |
 | Output | คำแปลเท่านั้น | คำแปล + word choice + ทางเลือก |
 | ใช้เมื่อ | ต้องการล่ามระหว่างสนทนา | ต้องการเรียนรู้ภาษา |
+
+---
+
+## utility
+
+Plugin สำหรับ **จัดการ OS Setup และ Config Snapshot** — บันทึกโครงสร้างระบบส่วนตัว และ export การตั้งค่าโปรแกรม รองรับ Windows 11, macOS (Mac Mini M4) และ Linux Ubuntu Desktop 24.04
+
+### Skills
+
+| Skill | วัตถุประสงค์ |
+|---|---|
+| `os-design` | สัมภาษณ์ผู้ใช้และสร้าง `os-profile.md` — บันทึก drive layout, paths, naming convention, software และ shared conventions ครบทุก OS |
+| `snapshot-config` | Export และ snapshot การตั้งค่าโปรแกรม พร้อมแนะนำการตั้งค่าที่เหมาะสมตาม OS และ workflow ของผู้ใช้ |
+
+### การติดตั้ง
+
+```bash
+claude plugin install utility
+```
+
+### การเรียกใช้ Skill
+
+```
+/utility:os-design
+/utility:snapshot-config <ชื่อโปรแกรม>
+```
+
+### Workflow มาตรฐาน
+
+```
+# 1. บันทึกโครงสร้าง OS ครั้งแรก (หรืออัปเดตเมื่อ setup เปลี่ยน)
+/utility:os-design
+
+# 2. Snapshot config โปรแกรมที่ต้องการ
+/utility:snapshot-config VSCode
+/utility:snapshot-config Git
+/utility:snapshot-config Windows Terminal
+```
+
+### ไฟล์ที่ skill สร้าง
+
+```
+plugins/utility/
+├── references/
+│   └── os-profile.md              ← โครงสร้าง OS ส่วนตัว (สร้างโดย os-design)
+└── snapshots/
+    └── <program-name>/
+        └── <YYYY-MM-DD>/
+            ├── snapshot.md        ← สรุป config + คำแนะนำ
+            ├── settings.json      ← config จริง (ถ้าเข้าถึงได้)
+            ├── extensions.txt     ← รายการ extensions (ถ้ามี)
+            └── restore-guide.md   ← วิธี restore บนเครื่องใหม่
+```
