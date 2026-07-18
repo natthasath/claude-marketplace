@@ -83,6 +83,13 @@
       "source": "./plugins/document",
       "category": "productivity",
       "keywords": ["document", "saraban", "สารบรรณ", "หนังสือราชการ", "ภาษาราชการ", "official", "thai", "government", "letter", "memo", "formal"]
+    },
+    {
+      "name": "utility",
+      "description": "Plugin รวม Skills สำหรับจัดการ OS Setup และ Config Snapshot รองรับ Windows 11, macOS และ Linux Ubuntu",
+      "source": "./plugins/utility",
+      "category": "development",
+      "keywords": ["utility", "os", "setup", "config", "snapshot", "windows", "macos", "linux", "naming-convention", "backup", "export"]
     }
   ]
 }
