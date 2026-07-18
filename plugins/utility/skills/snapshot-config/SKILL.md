@@ -71,9 +71,11 @@ trigger เมื่อผู้ใช้พูดถึง: "เปลี่ย
 > 3. Linux Ubuntu
 > 4. ทั้งหมดที่มีโปรแกรมนี้"
 
-### Step 4: ค้นหา Config Path
+### Step 4: ค้นหา Config Path และ Install Path
 
-อ่าน `references/config-paths.md` เพื่อหา config location ของโปรแกรมนั้น
+อ่านไฟล์ reference ทั้งสองพร้อมกัน:
+- `references/config-paths.md` — หา config file location ของโปรแกรมนั้น
+- `references/install-paths.md` — หา recommended installation path สำหรับ OS ที่ใช้
 
 ถ้าไม่พบในรายการ → ใช้ความรู้ทั่วไปหา config path แล้วแจ้งผู้ใช้ว่าอนุมานจากความรู้ทั่วไป
 
@@ -155,7 +157,7 @@ _Version: <program version ถ้าทราบ>_
 
 เมื่อแนะนำการตั้งค่า ให้คำนึงถึง:
 
-- **Installation Path** — ตรวจสอบว่า binary/SDK ติดตั้งอยู่ในตำแหน่งที่เหมาะสมสำหรับโปรแกรมประเภทนั้น เช่น อยู่ใน root drive ไหม, ต้องการ admin ในการ update ไหม, มี space ใน path ไหม — แนะนำตำแหน่งที่ดีกว่าพร้อม move command เสมอถ้าพบปัญหา
+- **Installation Path** — อ่าน `references/install-paths.md` เพื่อตรวจสอบว่า binary/SDK ติดตั้งอยู่ในตำแหน่งที่เหมาะสมสำหรับโปรแกรมและ OS นั้นๆ ครอบคลุม Windows, macOS, Ubuntu — เช่น อยู่ใน root drive ไหม, ต้องการ admin ในการ update ไหม, มีช่องว่างใน path ไหม — แนะนำตำแหน่งที่ดีกว่าพร้อม move/reinstall command เสมอถ้าพบปัญหา
 - **Performance** — ค่าที่ช่วยให้โปรแกรมทำงานเร็วขึ้นบน hardware ของผู้ใช้
 - **Workflow** — ค่าที่เข้ากับ naming convention และ path จาก os-profile.md
 - **Cross-platform consistency** — ถ้าใช้หลาย OS ให้แนะนำค่าที่ sync ได้ง่าย
