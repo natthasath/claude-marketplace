@@ -492,6 +492,9 @@ claude plugin install utility
 ### Workflow มาตรฐาน
 
 ```
+# ครั้งแรก: skill จะถามตั้งค่า path ก่อนอัตโนมัติ
+# (os-profile.md บันทึกที่ไหน, snapshots บันทึกที่ไหน)
+
 # 1. บันทึกโครงสร้าง OS ครั้งแรก (หรืออัปเดตเมื่อ setup เปลี่ยน)
 /utility:os-design
 
@@ -504,14 +507,17 @@ claude plugin install utility
 ### ไฟล์ที่ skill สร้าง
 
 ```
-plugins/utility/
-├── references/
-│   └── os-profile.md              ← โครงสร้าง OS ส่วนตัว (สร้างโดย os-design)
-└── snapshots/
-    └── <program-name>/
-        └── <YYYY-MM-DD>/
-            ├── snapshot.md        ← สรุป config + คำแนะนำ
-            ├── settings.json      ← config จริง (ถ้าเข้าถึงได้)
-            ├── extensions.txt     ← รายการ extensions (ถ้ามี)
-            └── restore-guide.md   ← วิธี restore บนเครื่องใหม่
+~/.config/claude-utility/
+└── settings.json                  ← Path config (สร้างครั้งแรกอัตโนมัติ)
+
+<os_profile_path>/                 ← default: plugins/utility/references/os-profile.md
+└── os-profile.md                  ← โครงสร้าง OS ส่วนตัว (สร้างโดย os-design)
+
+<snapshots_base_path>/             ← default: plugins/utility/snapshots/
+└── <program-name>/
+    └── <YYYY-MM-DD>/
+        ├── snapshot.md            ← สรุป config + คำแนะนำ
+        ├── settings.json          ← config จริง (ถ้าเข้าถึงได้)
+        ├── extensions.txt         ← รายการ extensions (ถ้ามี)
+        └── restore-guide.md       ← วิธี restore บนเครื่องใหม่
 ```

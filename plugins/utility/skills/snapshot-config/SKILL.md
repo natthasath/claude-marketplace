@@ -21,9 +21,39 @@ description: >
 ถ้าผู้ใช้ยังไม่ได้บอกชื่อโปรแกรม ให้ถาม:
 > "ต้องการ snapshot config ของโปรแกรมอะไร?"
 
-### Step 2: โหลด Context
+### Step 2: ตรวจสอบ Path + โหลด Context
 
-อ่าน `plugins/utility/references/os-profile.md` เพื่อทำความเข้าใจ:
+## Config File
+บันทึก path ที่ผู้ใช้กำหนดไว้ที่: `~/.config/claude-utility/settings.json`
+
+รูปแบบ:
+```json
+{
+  "snapshots_base_path": "/path/to/snapshots/",
+  "os_profile_path": "/path/to/os-profile.md"
+}
+```
+
+## ขั้นตอนตรวจสอบ path (ทำก่อนดาวน์โหลดทุกครั้ง)
+1. อ่านไฟล์ `~/.config/claude-utility/settings.json`
+2. ถ้า **ไม่มีไฟล์** (ใช้ครั้งแรก) → ถามผู้ใช้ว่าต้องการบันทึก snapshot ที่ folder ไหน พร้อมบอก default ว่า `plugins/utility/snapshots/` แล้ว **สร้าง config file** บันทึก path ที่เลือก จากนั้นดำเนินการต่อ
+3. ถ้า **มีไฟล์แล้ว** → ใช้ `snapshots_base_path` จาก config โดยตรง ไม่ต้องถามซ้ำ
+4. ถ้าผู้ใช้ระบุ path ในข้อความ (เช่น "snapshot ไปไว้ที่ D:/Backup") → ใช้ path นั้นสำหรับครั้งนี้เท่านั้น ไม่ overwrite config
+
+## เปลี่ยน Snapshot Path
+trigger เมื่อผู้ใช้พูดถึง: "เปลี่ยน path", "บันทึก snapshot ที่อื่น", "set snapshot path", "ย้าย folder snapshot" หรือคล้ายกัน
+
+ขั้นตอน:
+1. แสดง path ปัจจุบันจาก config (ถ้ามี)
+2. ถามว่าต้องการเปลี่ยนเป็น path ใด
+3. อัปเดต `~/.config/claude-utility/settings.json` ด้วย path ใหม่
+4. ยืนยันว่าเปลี่ยนสำเร็จและแสดง path ใหม่
+
+---
+
+## โหลด OS Context
+
+อ่าน os-profile.md จาก `os_profile_path` ใน config (ถ้ามี) เพื่อทำความเข้าใจ:
 - ผู้ใช้ใช้ OS อะไรบ้าง
 - Path สำคัญของแต่ละ OS
 - Software ที่ติดตั้งอยู่
@@ -76,7 +106,8 @@ description: >
 
 ### Step 7: บันทึก Snapshot
 
-บันทึกผลลัพธ์ที่ `plugins/utility/snapshots/<program-name>/<YYYY-MM-DD>/`
+บันทึกผลลัพธ์ที่ `<snapshots_base_path>/<program-name>/<YYYY-MM-DD>/`
+โดย `snapshots_base_path` อ่านจาก `~/.config/claude-utility/settings.json` — ไม่ hardcode path ยกเว้นเป็น default ที่ผู้ใช้เลือก
 
 โครงสร้างไฟล์ใน snapshot:
 ```
@@ -124,6 +155,7 @@ _Version: <program version ถ้าทราบ>_
 
 ## หลักการสำคัญ
 
+- **ตรวจสอบ config ก่อนเสมอ** — อ่าน `~/.config/claude-utility/settings.json` ทุกครั้ง ไม่ hardcode `plugins/utility/snapshots/` ยกเว้นเป็น default ที่ผู้ใช้เลือก
 - **ถามก่อนถ้าไม่รู้โปรแกรม** — อย่าเดาชื่อโปรแกรม
 - **อธิบายเหตุผลทุกคำแนะนำ** — ไม่แนะนำแบบ "ควรตั้งค่านี้" โดยไม่มีเหตุผล
 - **แยก must / nice-to-have** — บอกชัดว่าอันไหนสำคัญ อันไหนแล้วแต่ preference

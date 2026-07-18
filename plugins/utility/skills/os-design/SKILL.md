@@ -16,6 +16,34 @@ description: >
 
 ## ขั้นตอนการทำงาน
 
+### Step 0: ตรวจสอบ Save Path
+
+## Config File
+บันทึก path ที่ผู้ใช้กำหนดไว้ที่: `~/.config/claude-utility/settings.json`
+
+รูปแบบ:
+```json
+{
+  "os_profile_path": "/path/to/os-profile.md"
+}
+```
+
+## ขั้นตอนตรวจสอบ path (ทำก่อนทุกครั้ง)
+1. อ่านไฟล์ `~/.config/claude-utility/settings.json`
+2. ถ้า **ไม่มีไฟล์** (ใช้ครั้งแรก) → ถามผู้ใช้ว่าต้องการบันทึก `os-profile.md` ที่ folder ไหน พร้อมบอก default ว่า `plugins/utility/references/os-profile.md` แล้ว **สร้าง config file** บันทึก path ที่เลือก จากนั้นดำเนินการต่อ
+3. ถ้า **มีไฟล์แล้ว** → ใช้ `os_profile_path` จาก config โดยตรง ไม่ต้องถามซ้ำ
+
+## เปลี่ยน Save Path
+trigger เมื่อผู้ใช้พูดถึง: "เปลี่ยน path", "บันทึกที่อื่น", "set profile path", "ย้าย os-profile" หรือคล้ายกัน
+
+ขั้นตอน:
+1. แสดง path ปัจจุบันจาก config (ถ้ามี)
+2. ถามว่าต้องการเปลี่ยนเป็น path ใด
+3. อัปเดต `~/.config/claude-utility/settings.json` ด้วย path ใหม่
+4. ยืนยันว่าเปลี่ยนสำเร็จและแสดง path ใหม่
+
+---
+
 ### Step 1: ตรวจสอบสถานะ
 
 ก่อนเริ่ม ให้ตรวจสอบว่า `plugins/utility/references/os-profile.md` มีอยู่แล้วหรือไม่
@@ -211,7 +239,7 @@ Projects/Code อยู่ที่ path ไหนในแต่ละ OS?
 
 ## Step 3: สร้าง my-setup.md
 
-หลังจากถามครบทุก Phase ที่ผู้ใช้เลือกแล้ว สร้างไฟล์ที่ `plugins/utility/references/os-profile.md`
+หลังจากถามครบทุก Phase ที่ผู้ใช้เลือกแล้ว สร้างไฟล์ที่ `<os_profile_path จาก Step 0>`
 โดยใช้โครงสร้างนี้:
 
 ```markdown
