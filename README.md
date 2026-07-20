@@ -27,7 +27,7 @@ claude plugin install utility
 
 | Plugin | Skills | วัตถุประสงค์ |
 |---|---|---|
-| `capacities` | 1 | จัดการ PKM บน Capacities |
+| `capacities` | 5 | จัดการ PKM บน Capacities — Tags, Knowledge Notes และ Text Formatting |
 | `masterplan` | 5 | วางแผนและวิเคราะห์โปรเจกต์ซอฟต์แวร์ |
 | `refactor` | 3 | ปรับปรุงโค้ด Docker และ Shell Script |
 | `roleplay` | 4 | จำลองบทบาทเพื่อฝึกและวิเคราะห์ |
@@ -85,13 +85,17 @@ Skills ใช้ระบบโหลด 3 ระดับ:
 
 ## capacities
 
-Plugin สำหรับ **Capacities PKM** — ออกแบบ Space, Object Types, Tags, Collections และ Workflow
+Plugin สำหรับ **Capacities PKM** — ออกแบบ Space, Object Types, Tags, Collections, Knowledge Notes และ Text Formatting
 
 ### Skills
 
 | Skill | วัตถุประสงค์ |
 |---|---|
 | `mood-tag` | วิเคราะห์อารมณ์จาก Daily Notes และแนะนำ Mood Tag ตาม Yale Mood Meter Framework |
+| `movies-tag` | วิเคราะห์ genre/theme ของหนัง และแนะนำ Genre Tags สำหรับ Capacities |
+| `glossary` | อธิบายความหมายตัวย่อหรือศัพท์เทคนิค (Abbreviations / Acronyms) แบบ 1 paragraph |
+| `knowledge` | สร้าง Knowledge Note พร้อม frontmatter และ sections ที่เป็นระบบ |
+| `highlight` | แปลงข้อความธรรมดาให้อ่านง่ายขึ้นด้วย bold, italic, code, highlight, underline |
 
 ### การติดตั้ง
 
@@ -103,6 +107,10 @@ claude plugin install capacities
 
 ```
 /mood-tag
+/movies-tag
+/glossary
+/knowledge
+/highlight
 ```
 
 ### Yale Mood Meter Zones
@@ -113,6 +121,16 @@ claude plugin install capacities
 | 🔴 Red | ลบ | สูง | `#mood-stressed`, `#mood-frustrated` |
 | 🟢 Green | บวก | ต่ำ | `#mood-calm`, `#mood-reflective` |
 | 🔵 Blue | ลบ | ต่ำ | `#mood-sad`, `#mood-unsettled` |
+
+### Highlight Formatting Guide
+
+| Formatting | Markdown | ใช้เมื่อ |
+|---|---|---|
+| **ตัวหนา** | `**text**` | คำสำคัญ, แนวคิดหลัก, ชื่อที่ต้องจำ |
+| *ตัวเอียง* | `*text*` | ชื่อสื่อ, คำต่างชาติ, นิยามครั้งแรก |
+| `code` | `` `text` `` | command, path, ค่า technical |
+| ==highlight== | `==text==` | คำเตือน, deadline, ห้ามพลาด (🟡 เหลือง) |
+| <u>underline</u> | `<u>text</u>` | คำที่กำลัง define, proper noun พิเศษ |
 
 ---
 
