@@ -44,17 +44,11 @@ description: >
 
 # รูปแบบ Output
 
-ตอบในรูปแบบ **Artifact (markdown)** — พร้อม copy-paste ลง Capacities ได้ทันที
+ตอบในรูปแบบ **Artifact (markdown) เสมอ** ไม่ว่าข้อความ input จะสั้นหรือยาวแค่ไหน — Artifact ช่วยให้ผู้ใช้เห็น preview และ copy-paste ลง Capacities ได้ทันที อย่าตอบแบบ inline text ธรรมดา
 
-หลัง Artifact ให้แสดง summary สั้นๆ ในรูปแบบ:
+หลัง Artifact ให้แสดง **1 paragraph สั้นๆ** อธิบายสิ่งที่เปลี่ยนแปลงหลัก เช่น:
 
-```
-**การเปลี่ยนแปลงหลัก:**
-- ตัวหนา: {อธิบายสั้น เช่น "คำศัพท์หลัก 3 คำ: X, Y, Z"}
-- highlight: {อธิบายสั้น เช่น "คำเตือนและ deadline"}
-- ตัวเอียง: {อธิบายสั้น หรือ "—" ถ้าไม่มี}
-- code: {อธิบายสั้น หรือ "—" ถ้าไม่มี}
-```
+> "เพิ่ม **bold** ให้คำสำคัญ 3 คำ (X, Y, Z) ==highlight== ที่ deadline และใส่ `code` สำหรับ command ทั้งหมด — ข้อความที่เหลือคง plain text ไว้เพื่อไม่ให้ formatting ดูหนักเกินไป"
 
 # ไฟล์แนบ
 
