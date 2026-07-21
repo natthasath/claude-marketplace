@@ -20,6 +20,7 @@ claude plugin install productive
 claude plugin install devops
 claude plugin install projects
 claude plugin install language
+claude plugin install guide
 claude plugin install utility
 ```
 
@@ -36,6 +37,7 @@ claude plugin install utility
 | `devops` | 1 | จัดการ Session Context และ DevOps Workflow |
 | `projects` | 15 | Setup และจัดการ development project — scaffold ครบ workflow ตั้งแต่ init จนถึง ship |
 | `language` | 2 | เครื่องมือด้านภาษา — ล่ามแปลภาษาแบบต่อเนื่อง และ English Mentor |
+| `guide` | 3 | แนะนำ Design Style, Font Pairing, Web Design และ Note-taking Pattern |
 | `utility` | 2 | จัดการ OS Setup และ Config Snapshot — รองรับ Windows 11, macOS, Linux Ubuntu |
 
 ---
@@ -480,6 +482,53 @@ claude plugin install language
 | เป้าหมาย | แปลอย่างเดียว รวดเร็ว | สอนและอธิบายภาษา |
 | Output | คำแปลเท่านั้น | คำแปล + word choice + ทางเลือก |
 | ใช้เมื่อ | ต้องการล่ามระหว่างสนทนา | ต้องการเรียนรู้ภาษา |
+
+---
+
+## guide
+
+Plugin สำหรับ **ให้คำแนะนำและจับคู่ตัวเลือกที่เหมาะสม** — Design Style, Font Pairing, Web Design และ Note-taking Pattern
+
+### Skills
+
+| Skill | วัตถุประสงค์ |
+|---|---|
+| `creative-book` | แนะนำ Design Style + Font Pairing (ไทย/อังกฤษ) สำหรับ presentation, report, สื่อสิ่งพิมพ์ — 42 สไตล์ |
+| `creative-web` | แนะนำ Design Style สำหรับเว็บไซต์ พร้อม Font, Color Palette (hex) และเว็บอ้างอิงจริง — 20 สไตล์ |
+| `note-taking` | แนะนำ Pattern การจดโน้ตที่เหมาะกับงาน เช่น Cornell, Zettelkasten, PARA, Outline |
+
+### การติดตั้ง
+
+```bash
+claude plugin install guide
+```
+
+### การเรียกใช้ Skill
+
+```
+/guide:creative-book
+/guide:creative-web
+/guide:note-taking
+```
+
+### เปรียบเทียบ `creative-book` vs `creative-web`
+
+| ด้าน | `/guide:creative-book` | `/guide:creative-web` |
+|---|---|---|
+| เป้าหมาย | งานสิ่งพิมพ์/นำเสนอ (slide, report) | เว็บไซต์ (landing page, web UI) |
+| Output | Design Style + Font Pairing | Design Style + Font + Color Palette (hex) + เว็บอ้างอิง |
+| ใช้เมื่อ | ทำ slide/report/pitch deck | ออกแบบเว็บให้เห็นภาพจากเว็บจริง |
+
+### Web Design Styles (บางส่วน)
+
+| Style | เหมาะกับ | เว็บอ้างอิง |
+|---|---|---|
+| Minimal | Portfolio, Startup, Blog | [Apple](https://apple.com) |
+| Modern SaaS | SaaS, AI, Dashboard | [Stripe](https://stripe.com) |
+| Glassmorphism | AI, Creative, Portfolio | [Linear](https://linear.app) |
+| Dark Modern | Dashboard, AI | [Vercel](https://vercel.com) |
+| Luxury | Jewelry, Hotel | [Rolex](https://www.rolex.com) |
+| E-commerce | Shopping | [Nike](https://www.nike.com) |
 
 ---
 

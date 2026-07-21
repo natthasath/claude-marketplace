@@ -72,10 +72,10 @@
     },
     {
       "name": "guide",
-      "description": "Plugin รวม Skills สำหรับให้คำแนะนำและจับคู่ตัวเลือกที่เหมาะสม ครอบคลุม Design Style, Font Pairing และ Note-taking Pattern",
+      "description": "Plugin รวม Skills สำหรับให้คำแนะนำและจับคู่ตัวเลือกที่เหมาะสม ครอบคลุม Design Style, Font Pairing, Web Design และ Note-taking Pattern",
       "source": "./plugins/guide",
       "category": "productivity",
-      "keywords": ["guide", "recommend", "design", "font", "creative", "presentation", "slide", "note-taking", "cornell", "zettelkasten", "para", "outline", "pattern"]
+      "keywords": ["guide", "recommend", "design", "font", "creative", "presentation", "slide", "web", "website", "landing-page", "ui", "note-taking", "cornell", "zettelkasten", "para", "outline", "pattern"]
     },
     {
       "name": "document",
