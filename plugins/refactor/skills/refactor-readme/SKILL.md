@@ -9,52 +9,89 @@ description: >
   "README ดูรก ช่วยจัดใหม่" — แม้จะแค่แปะเนื้อหา README หรือบอกแค่ชื่อโปรเจกต์ ให้ trigger skill นี้เสมอ
 ---
 
-# บทบาท:
-คุณทำหน้าที่รีแฟกเตอร์ไฟล์ `README.md` ให้เป็นมาตรฐานเดียวกันทุกโปรเจกต์ — อ่านง่าย ดู minimal และให้อารมณ์เหมือน repo open-source คุณภาพดีบน GitHub
+# Role
 
-README คือหน้าแรกที่คนเจอเมื่อเปิด repo — มันตัดสินใน 5 วินาทีแรกว่าโปรเจกต์นี้ดูน่าเชื่อถือและใช้งานง่ายไหม README ที่มีโครงสร้างสม่ำเสมอทำให้คนสแกนหาสิ่งที่ต้องการเจอเร็ว และทำให้ทุกโปรเจกต์ในองค์กรดูเป็นชุดเดียวกัน
+Refactor `README.md` files to a consistent standard — clean, minimal, and professional like a well-maintained open-source repo on GitHub.
 
-ก่อน generate ให้อ่าน 2 ไฟล์นี้เสมอ:
-- `references/emoji.md` — mapping ระหว่าง section กับ emoji ที่ต้องใช้ และ badges มาตรฐาน
-- `references/example.md` — ตัวอย่าง README ที่ refactor แล้ว ใช้เป็น benchmark ของ tone และโครงสร้าง
+README is the first thing people see when they open a repo. It decides in the first 5 seconds whether a project looks trustworthy and easy to use. A consistent structure lets readers scan for what they need quickly, and makes every project in a collection feel like it belongs together.
 
-# รูปแบบ:
+Before generating, read all 3 reference files:
+- `references/emoji.md` — emoji mapping for section headers and standard badges
+- `references/structure.md` — section order, language rules, and progressive disclosure guidance
+- `references/example.md` — a refactored README example to calibrate tone and density
 
-ตอบเป็น **Artifact (markdown)** เพื่อให้ผู้ใช้ copy กลับไปวางเป็น `README.md` ได้ทันที
+# Output Format
 
-โครงของ README มาตรฐาน:
+Respond with an **Artifact (markdown)** so the user can copy it directly into their `README.md`.
+
+Standard README shape:
 
 ```
 # 🎉 {Project Title}
 
-{intro paragraph — 1-3 ประโยค บอกว่าโปรเจกต์คืออะไร แก้ปัญหาอะไร}
+{intro paragraph — 1-3 sentences in English describing what this is and what problem it solves}
 
 ![version](...) ![rating](...) ![uptime](...)
 
 ### {emoji} {Section}
-{เนื้อหา — code block / table / bullet}
+{content — code block / table / bullet}
 
 ### {emoji} {Section}
 ...
 ```
 
-หลักการจัดโครงสร้าง:
-1. **Title** — `# 🎉 {ชื่อโปรเจกต์}` เสมอ
-2. **Intro** — ย่อหน้าสั้นใต้ title อธิบายว่ามันคืออะไร (ดู tone จาก example)
-3. **Badges** — วาง shields.io ใต้ intro (version / rating / uptime หรือปรับตามจริง)
-4. **Sections** — ใช้ `### {emoji} {ชื่อ}` โดยเลือก emoji จาก `references/emoji.md` ตามความหมายของ section เสมอ ไม่สุ่ม
-5. **เรียง section** ตาม flow ของคนเพิ่งเจอ repo: Features → Requirements → Configuration → Setup → Run → Try it out → Fix Error → Document (ดูลำดับเต็มใน example.md)
+# Language Rules
 
-# คำขอ:
-- **รักษาเนื้อหาเดิมทั้งหมด** — จัดระเบียบและเปลี่ยนรูปแบบ ไม่ใช่ลบข้อมูลจริงทิ้ง ถ้าเนื้อหาเดิมมี command, endpoint, config ต้องคงไว้ครบ
-- เลือก emoji จาก mapping ใน `references/emoji.md` ตามหน้าที่ของ section — ความสม่ำเสมอสำคัญกว่าความสวย
-- code block ระบุภาษาเสมอ (` ```shell `, ` ```python `, ` ```yaml `) เพื่อให้ syntax highlight ทำงาน
-- แปลงข้อมูลที่มี structure (เปรียบเทียบ, list ค่า) เป็น table หรือ bullet ให้ scan ได้เร็ว
-- endpoint และ external tool ทำเป็น clickable link เสมอ
-- **minimal** — ตัดคำฟุ่มเฟือย, ตัด section ที่ไม่มีเนื้อหาจริงทิ้ง, ไม่ต้องใส่ Table of Contents ถ้า README สั้น
-- ถ้ามีข้อมูลไม่ครบ (เช่น ไม่รู้ version หรือ setup) ให้ใส่ placeholder ที่ชัดเจนพร้อมหมายเหตุสั้น ๆ ว่าผู้ใช้ต้องเติมอะไร แทนที่จะเดามั่ว
-- หลัง Artifact ให้สรุป 1-2 บรรทัดว่าปรับอะไรไปบ้าง (เช่น "จัด 4 section เข้า pattern, เพิ่ม emoji ตาม convention, แปลง config เป็น table")
+**These rules exist because headers and descriptions are the first things GitHub visitors read — English makes repos look professional and accessible to a broader audience.**
 
-# ไฟล์แนบ:
-- README เดิมที่ต้องการ refactor — จัดใหม่ตาม pattern โดยคงเนื้อหาครบ
-- หากมีแค่ชื่อโปรเจกต์หรือ tech stack (เช่น "โปรเจกต์ FastAPI + Keycloak") ให้สร้าง README template ตามโครงมาตรฐานได้เลย โดยใส่ placeholder ในส่วนที่ยังไม่รู้ ไม่ต้องถามเพิ่ม
+- **Section headers** (`### emoji Title`): English only, no Thai
+- **Project description** (intro paragraph under `# 🎉 Title`): English only — describe what the project is and what problem it solves
+- **Table content / bullets**: use the project's natural language (Thai or English is fine)
+- **Code blocks / commands**: always use the target language's syntax
+
+# Structure
+
+Follow the section order in `references/structure.md`. Only include sections that have real content — skip empty ones rather than adding placeholder text.
+
+Recommended section flow: Features → Installation → Usage → Configuration → API Reference → Screenshots → Folder Structure → Contributing → License → Contact
+
+Choose emoji from `references/emoji.md` based on what the section *does*, not by preference. Consistency matters more than variety.
+
+# Progressive Disclosure
+
+When a README section would become very long because of detailed sub-components (e.g., a plugin with 10+ skills, a monorepo with multiple services, a tool with many modules), split the detail out:
+
+1. Keep **main README** lean — one summary line per component with a clickable link
+2. Put **detailed content** in `README.md` inside the component's own folder
+3. GitHub renders subfolder README files automatically when someone browses to that folder
+
+**Signs it's time to split:**
+- A skills/module list has 5+ items that each need their own usage, workflow, or reference tables
+- The main README has repeated blocks of the same structure for multiple components
+- Scrolling past one component's detail takes more than a screenful
+
+**Example — main README link pattern:**
+```markdown
+| [`capacities`](plugins/capacities/README.md) | 5 | Capacities PKM — Tags, Notes, Formatting |
+```
+
+**Example — subfolder README covers:**
+- Full skills table with descriptions
+- Usage commands (especially if namespaced or have arguments)
+- Workflow examples
+- Reference/comparison tables specific to that component
+
+# Rules
+
+- **Preserve all content** — reorganize and reformat, never delete real data. If the original has commands, endpoints, or configs, they must survive
+- Code blocks must specify language (` ```shell `, ` ```python `, ` ```yaml `) for syntax highlighting
+- Convert structured data (comparisons, config values) to tables or bullets for scannability
+- Endpoints and external tools should be clickable links
+- **Minimal** — cut filler words, cut sections with no real content, skip Table of Contents for short READMEs
+- If information is missing (e.g., version number, setup steps), insert a clear placeholder with a short note explaining what the user needs to fill in — don't guess
+- After the Artifact, summarize in 1-2 lines what was changed (e.g., "restructured 4 sections, added emoji convention, converted config to table, moved plugin details to subfolder links")
+
+# Input
+
+- A README file to refactor — reorganize to the standard pattern while keeping all content
+- If only a project name or tech stack is provided (e.g., "FastAPI + Keycloak project"), generate a template with placeholders for unknown parts — no need to ask first

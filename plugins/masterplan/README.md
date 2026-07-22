@@ -1,0 +1,24 @@
+# 🎉 masterplan
+
+Plugin สำหรับ **วางแผนและวิเคราะห์โปรเจกต์ซอฟต์แวร์** — ครอบคลุมตั้งแต่ Requirement จนถึง Architecture และ Database Design ให้พร้อม implement
+
+### ⭐ Skills
+
+| Skill | วัตถุประสงค์ |
+|---|---|
+| `kickoff` | ช่วยนักพัฒนาวางแผนไอเดียแอปผ่านการสนทนา และสร้าง `masterplan.md` |
+| `gather` | เก็บรวบรวม Business และ Technical Requirements จาก Stakeholders อย่างเป็นระบบ |
+| `analyze` | แปลง Business Needs เป็น Functional และ Technical System Requirements |
+| `architect` | เลือกและกำหนด IT Architecture ที่จะใช้ ครอบคลุม Infrastructure, Application และ Integration Strategy |
+| `database` | ออกแบบ Database Schema สำหรับ PostgreSQL และ Laravel พร้อม Migration-ready guidance |
+
+### 💎 /kickoff vs /init
+
+| ด้าน | `/kickoff` | `/init` (Claude Code built-in) |
+|---|---|---|
+| **Input** | Idea ในหัว ยังไม่มีโค้ด | Codebase ที่มีอยู่แล้ว |
+| **Output** | `masterplan.md` (blueprint สำหรับ developer) | `CLAUDE.md` (ให้ Claude เข้าใจ repo) |
+| **Stage** | ก่อนเริ่ม code เลย | หลัง project มีอยู่แล้ว |
+| **วัตถุประสงค์** | วางแผน project ใหม่จากศูนย์ | Document codebase ที่มี |
+
+> `/kickoff` คือสิ่งที่ทำ **ก่อน** `/init` — เปลี่ยน idea ให้เป็นแผน แล้วค่อย init repo
