@@ -12,6 +12,8 @@ tools:
 
 วิเคราะห์และแก้ bug: $ARGUMENTS
 
+อ่าน `plugins/projects/references/commit-emoji.md` เพื่อดู emoji convention ก่อน commit
+
 ---
 
 ## โหมด --hotfix (Production Emergency)
@@ -23,7 +25,7 @@ tools:
 1. **Branch** — สร้าง `hotfix/<slug>` จาก main ทันที: `git checkout -b hotfix/<slug> main`
 2. **Fix** — แก้เฉพาะจุดที่พัง ห้ามแตะโค้ดอื่น ถ้า fix เกิน ~50 บรรทัดให้หยุดและบอกฉัน
 3. **Test** — รันเฉพาะ test ที่เกี่ยวข้องโดยตรง ไม่รัน full suite
-4. **Commit** — `fix(<scope>): <สิ่งที่แก้> [hotfix]`
+4. **Commit** — `🚑️ fix(<scope>): <สิ่งที่แก้> [hotfix]`
 5. **ยืนยันก่อนทำ** — แสดง branch name + commit message ให้ฉัน approve ก่อนทุกครั้ง
 
 > ⚠️ ห้าม force push, ห้าม refactor, ห้ามแก้ปัญหาอื่นที่เห็นระหว่างทาง
@@ -54,4 +56,4 @@ tools:
 - รัน **test** command (จาก tech-stack.md ด้านบน) หลังแก้
 
 **ขั้นที่ 5 — Document:**
-- อธิบายว่าแก้อะไรและทำไม (สำหรับ commit message)
+- อธิบายว่าแก้อะไรและทำไม (สำหรับ commit message รูปแบบ `🐛 fix(<scope>): <คำอธิบาย>`)

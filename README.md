@@ -1,10 +1,27 @@
 # 🎉 natthasath-marketplace
 
-Claude Code plugin marketplace ที่รวม **11 plugins** และ **51 skills** ครอบคลุมงาน PKM, การวางแผนโปรเจกต์, DevOps, การเขียน content, ภาษา, การออกแบบ และ productivity — ติดตั้งผ่านคำสั่งเดียว แล้วเรียกใช้ผ่าน slash command ได้ทันที
+A Claude Code plugin marketplace bundling 12 plugins and 54 skills across PKM, project planning, DevOps, content writing, language, design, and productivity — install with a single command and start using slash commands right away.
 
-![plugins](https://img.shields.io/badge/plugins-11-blue)
-![skills](https://img.shields.io/badge/skills-51-brightgreen)
+![plugins](https://img.shields.io/badge/plugins-12-blue)
+![skills](https://img.shields.io/badge/skills-54-brightgreen)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-marketplace-8A63D2)
+
+### ✨ Plugins
+
+| Plugin | Skills | วัตถุประสงค์ |
+|---|---|---|
+| [`capacities`](plugins/capacities/README.md) | 5 | จัดการ PKM บน Capacities — Tags, Knowledge Notes และ Text Formatting |
+| [`devops`](plugins/devops/README.md) | 1 | จัดการ Session Context — ตั้งชื่อและบันทึกจุดประสงค์ของ session |
+| [`document`](plugins/document/README.md) | 2 | จัดการเอกสารภาษาไทย — ตรวจสอบหนังสือราชการ และ blind ข้อมูล sensitive |
+| [`guide`](plugins/guide/README.md) | 3 | แนะนำแนวทางออกแบบ — Design Style, Font Pairing, Web Design และ Note-taking |
+| [`language`](plugins/language/README.md) | 2 | จัดการงานด้านภาษา — ล่ามแปลต่อเนื่อง และ English Mentor |
+| [`masterplan`](plugins/masterplan/README.md) | 5 | วางแผนโปรเจกต์ซอฟต์แวร์ — Requirement, Architecture และ Database Design |
+| [`productive`](plugins/productive/README.md) | 9 | เพิ่มประสิทธิภาพการทำงาน — สรุปประชุม, ดาวน์โหลด PDF, ประเมินงาน IT และสร้าง Flashcard |
+| [`projects`](plugins/projects/README.md) | 15 | จัดการ development project — scaffold workflow ตั้งแต่ setup จนถึง ship |
+| [`refactor`](plugins/refactor/README.md) | 4 | ปรับปรุงโครงสร้างไฟล์ — Docker, Shell Script และ README |
+| [`roleplay`](plugins/roleplay/README.md) | 4 | จำลองบทบาทเพื่อฝึกทักษะ — สัมภาษณ์งาน, สอบสวน, กลยุทธ์ และภาษาอังกฤษ |
+| [`social`](plugins/social/README.md) | 2 | สร้างโพสต์โซเชียลมีเดีย — Facebook และ LinkedIn |
+| [`utility`](plugins/utility/README.md) | 2 | จัดการระบบปฏิบัติการ — OS Setup และ Config Snapshot |
 
 ### 🚀 Install
 
@@ -14,30 +31,15 @@ Claude Code plugin marketplace ที่รวม **11 plugins** และ **51 
 
 # 2. ติดตั้ง plugin ที่ต้องการ
 /plugin install capacities@natthasath-marketplace
+/plugin install devops@natthasath-marketplace
+/plugin install document@natthasath-marketplace
+/plugin install guide@natthasath-marketplace
+/plugin install language@natthasath-marketplace
 /plugin install masterplan@natthasath-marketplace
+/plugin install productive@natthasath-marketplace
+/plugin install projects@natthasath-marketplace
 /plugin install refactor@natthasath-marketplace
 /plugin install roleplay@natthasath-marketplace
 /plugin install social@natthasath-marketplace
-/plugin install productive@natthasath-marketplace
-/plugin install devops@natthasath-marketplace
-/plugin install projects@natthasath-marketplace
-/plugin install language@natthasath-marketplace
-/plugin install guide@natthasath-marketplace
 /plugin install utility@natthasath-marketplace
 ```
-
-### ⭐ Plugins
-
-| Plugin | Skills | วัตถุประสงค์ |
-|---|---|---|
-| [`capacities`](plugins/capacities/README.md) | 5 | จัดการ PKM บน Capacities — Tags, Knowledge Notes และ Text Formatting |
-| [`masterplan`](plugins/masterplan/README.md) | 5 | วางแผนและวิเคราะห์โปรเจกต์ซอฟต์แวร์ |
-| [`refactor`](plugins/refactor/README.md) | 4 | ปรับปรุงโค้ด Docker, Shell Script และ README |
-| [`roleplay`](plugins/roleplay/README.md) | 4 | จำลองบทบาทเพื่อฝึกและวิเคราะห์ |
-| [`social`](plugins/social/README.md) | 2 | สร้างโพสต์โซเชียลมีเดีย |
-| [`productive`](plugins/productive/README.md) | 8 | Short Summary, Meetings, PDF Downloader, Workplace Communication, IT Scorecard, KPI และ Activity Report |
-| [`devops`](plugins/devops/README.md) | 1 | จัดการ Session Context และ DevOps Workflow |
-| [`projects`](plugins/projects/README.md) | 15 | Setup และจัดการ development project — scaffold ครบ workflow ตั้งแต่ init จนถึง ship |
-| [`language`](plugins/language/README.md) | 2 | ล่ามแปลภาษาแบบต่อเนื่อง และ English Mentor |
-| [`guide`](plugins/guide/README.md) | 3 | แนะนำ Design Style, Font Pairing, Web Design และ Note-taking Pattern |
-| [`utility`](plugins/utility/README.md) | 2 | จัดการ OS Setup และ Config Snapshot — รองรับ Windows 11, macOS, Linux Ubuntu |

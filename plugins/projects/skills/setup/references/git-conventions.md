@@ -30,7 +30,7 @@ git checkout -b feature/ชื่อ-feature
 
 # ขั้นที่ 5ก: โอเค → commit + merge
 git add src/ tests/
-git commit -m "feat(scope): add feature name"
+git commit -m "✨ feat(scope): add feature name"
 
 # ขั้นที่ 5ข: พัง → ย้อนกลับ
 git checkout .          # ทิ้งการแก้ไขทุกไฟล์
@@ -61,21 +61,32 @@ chore/<task>                   # tooling, dependencies, CI
 ## Commit Message Format
 
 ```
-<type>(<scope>): <imperative summary>
+<emoji> <type>(<scope>): <imperative summary>
 
 [Optional body — อธิบาย WHY ไม่ใช่ WHAT]
 ```
 
-**Types:** `feat` | `fix` | `refactor` | `test` | `docs` | `chore` | `perf`
+**Types:**
+
+| Emoji | Type | Emoji | Type |
+|---|---|---|---|
+| ✨ | feat | ✅ | test |
+| 🐛 | fix | 📦 | build |
+| 📝 | docs | 👷 | ci |
+| 💄 | style | 🔧 | chore |
+| ♻️ | refactor | ⚡ | perf |
+
 **Scope:** กำหนดเองตามโปรเจค เช่น `api` | `ui` | `auth` | `db` | `config`
 **Summary:** max 72 chars, imperative mood, ไม่มีจุดท้าย
 
 ```
-feat(api): add JWT authentication middleware
-fix(ui): resolve button focus trap on modal close
-refactor(db): extract query builder to separate module
-test(auth): add token expiry edge cases
+✨ feat(api): add JWT authentication middleware
+🐛 fix(ui): resolve button focus trap on modal close
+♻️ refactor(db): extract query builder to separate module
+✅ test(auth): add token expiry edge cases
 ```
+
+> Emoji เพิ่มเติม (hotfix, breaking change, dependency, security ฯลฯ) ดูได้ที่ `plugins/projects/references/commit-emoji.md` ของ marketplace ที่ติดตั้ง skill ชุดนี้
 
 ## Protected Branches
 
