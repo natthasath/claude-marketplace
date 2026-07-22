@@ -1,6 +1,6 @@
 # 🎉 devops
 
-Plugin สำหรับ **DevOps Workflow** — จัดการ Session Context และเพิ่มประสิทธิภาพการทำงานกับ Claude Code
+Plugin for **DevOps workflow** — manages session context and streamlines working with Claude Code.
 
 ### ⭐ Skills
 

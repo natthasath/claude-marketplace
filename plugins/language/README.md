@@ -1,6 +1,6 @@
 # 🎉 language
 
-Plugin สำหรับ **เครื่องมือด้านภาษา** — ล่ามแปลภาษาแบบต่อเนื่องไม่มีคำอธิบายพ่วง และ English Mentor สำหรับเรียนรู้ภาษา
+Plugin for **language tools** — continuous interpretation with no extra commentary, plus an English Mentor for language learning.
 
 ### ⭐ Skills
 

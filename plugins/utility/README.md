@@ -1,6 +1,6 @@
 # 🎉 utility
 
-Plugin สำหรับ **จัดการ OS Setup และ Config Snapshot** — บันทึกโครงสร้างระบบส่วนตัว และ export การตั้งค่าโปรแกรม รองรับ Windows 11, macOS (Mac Mini M4) และ Linux Ubuntu Desktop 24.04
+Plugin for **managing OS setup and config snapshots** — records your personal system layout and exports program settings, covering Windows 11, macOS (Mac Mini M4), and Linux Ubuntu Desktop 24.04.
 
 ### ⭐ Skills
 

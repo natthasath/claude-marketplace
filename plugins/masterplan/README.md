@@ -1,6 +1,6 @@
 # 🎉 masterplan
 
-Plugin สำหรับ **วางแผนและวิเคราะห์โปรเจกต์ซอฟต์แวร์** — ครอบคลุมตั้งแต่ Requirement จนถึง Architecture และ Database Design ให้พร้อม implement
+Plugin for **software project planning and analysis** — covers everything from Requirements through Architecture and Database Design, ready for implementation.
 
 ### ⭐ Skills
 

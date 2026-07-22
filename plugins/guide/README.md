@@ -1,6 +1,6 @@
 # 🎉 guide
 
-Plugin สำหรับ **ให้คำแนะนำและจับคู่ตัวเลือกที่เหมาะสม** — Design Style, Font Pairing, Web Design และ Note-taking Pattern
+Plugin for **recommendations and matching the right choice** — Design Style, Font Pairing, Web Design, and Note-taking Pattern.
 
 ### ⭐ Skills
 

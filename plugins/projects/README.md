@@ -1,6 +1,6 @@
 # 🎉 projects
 
-Plugin สำหรับ **Setup และจัดการ Development Project** — scaffold โครงสร้าง `.claude/` และ `context/` พร้อม skills ครบ workflow ตั้งแต่ init จนถึง ship
+Plugin for **setting up and managing development projects** — scaffolds the `.claude/` and `context/` structure, with skills covering the full workflow from init to ship.
 
 ### ⭐ Skills
 

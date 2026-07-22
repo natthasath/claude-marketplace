@@ -1,6 +1,6 @@
 # 🎉 capacities
 
-Plugin สำหรับ **Capacities PKM** — ออกแบบ Space, Object Types, Tags, Collections, Knowledge Notes และ Text Formatting ให้เป็นระบบที่ scan ได้เร็วและสม่ำเสมอ
+Plugin for **Capacities PKM** — designs Spaces, Object Types, Tags, Collections, Knowledge Notes, and Text Formatting into a consistent, fast-to-scan system.
 
 ### ⭐ Skills
 

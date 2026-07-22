@@ -1,6 +1,6 @@
 # 🎉 roleplay
 
-Plugin สำหรับ **จำลองบทบาท** — ฝึกทักษะการสัมภาษณ์ การสอบสวน การตัดสินใจเชิงยุทธศาสตร์ และการสนทนาภาษาอังกฤษผ่าน scenario จริง
+Plugin for **role-play simulation** — practice interview skills, investigation, strategic decision-making, and English conversation through realistic scenarios.
 
 ### ⭐ Skills
 

@@ -1,6 +1,6 @@
 # 🎉 productive
 
-Plugin สำหรับ **เพิ่มประสิทธิภาพการทำงาน** — ครอบคลุม Short Summary, Meetings, PDF, Workplace Communication, IT Scorecard, KPI และ Activity Report
+Plugin for **boosting work productivity** — covers Short Summary, Meetings, PDF, Workplace Communication, IT Scorecard, KPI, and Activity Report.
 
 ### ⭐ Skills
 

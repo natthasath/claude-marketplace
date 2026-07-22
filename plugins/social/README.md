@@ -1,6 +1,6 @@
 # 🎉 social
 
-Plugin สำหรับ **สร้างโพสต์โซเชียลมีเดีย** — เน้น Thought Leadership และ Personal Branding สำหรับ Facebook และ LinkedIn
+Plugin for **creating social media posts** — focused on Thought Leadership and Personal Branding for Facebook and LinkedIn.
 
 ### ⭐ Skills
 
