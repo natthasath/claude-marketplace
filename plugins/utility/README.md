@@ -37,10 +37,10 @@ Plugin สำหรับ **จัดการ OS Setup และ Config Snapsho
 ~/.config/claude-utility/
 └── settings.json                  ← Path config (สร้างครั้งแรกอัตโนมัติ)
 
-<os_profile_path>/                 ← default: plugins/utility/references/os-profile.md
+<os_profile_path>/                 ← default: ~/.claude/claude-utility/os-profile.md
 └── os-profile.md                  ← โครงสร้าง OS ส่วนตัว (สร้างโดย os-design)
 
-<snapshots_base_path>/             ← default: plugins/utility/snapshots/
+<snapshots_base_path>/             ← default: ~/.claude/claude-utility/snapshots/
 └── <program-name>/
     └── <YYYY-MM-DD>/
         ├── snapshot.md            ← สรุป config + คำแนะนำ

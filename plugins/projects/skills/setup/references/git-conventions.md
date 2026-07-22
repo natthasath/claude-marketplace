@@ -86,7 +86,7 @@ chore/<task>                   # tooling, dependencies, CI
 ✅ test(auth): add token expiry edge cases
 ```
 
-> Emoji เพิ่มเติม (hotfix, breaking change, dependency, security ฯลฯ) ดูได้ที่ `plugins/projects/references/commit-emoji.md` ของ marketplace ที่ติดตั้ง skill ชุดนี้
+> Emoji เพิ่มเติม (hotfix, breaking change, dependency, security ฯลฯ) — ดูรายการเต็มได้จาก skill `checkpoint`/`debug`/`setup` ที่ใช้ในโปรเจกต์นี้ (อ่านจาก `commit-emoji.md` ของ plugin `projects` โดยอัตโนมัติ ไม่ต้องเปิดเอง)
 
 ## Protected Branches
 

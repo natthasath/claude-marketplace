@@ -36,7 +36,7 @@ description: >
 
 ## ขั้นตอนตรวจสอบ path (ทำก่อนดาวน์โหลดทุกครั้ง)
 1. อ่านไฟล์ `~/.config/claude-utility/settings.json`
-2. ถ้า **ไม่มีไฟล์** (ใช้ครั้งแรก) → ถามผู้ใช้ว่าต้องการบันทึก snapshot ที่ folder ไหน พร้อมบอก default ว่า `plugins/utility/snapshots/` แล้ว **สร้าง config file** บันทึก path ที่เลือก จากนั้นดำเนินการต่อ
+2. ถ้า **ไม่มีไฟล์** (ใช้ครั้งแรก) → ถามผู้ใช้ว่าต้องการบันทึก snapshot ที่ folder ไหน พร้อมบอก default ว่า `~/.claude/claude-utility/snapshots/` แล้ว **สร้าง config file** บันทึก path ที่เลือก จากนั้นดำเนินการต่อ (ไม่ใช้ path ใต้ `plugins/utility/` เพราะโฟลเดอร์นั้นอยู่ใน plugin cache ที่ถูกแทนที่ทุกครั้งที่อัปเดต version)
 3. ถ้า **มีไฟล์แล้ว** → ใช้ `snapshots_base_path` จาก config โดยตรง ไม่ต้องถามซ้ำ
 4. ถ้าผู้ใช้ระบุ path ในข้อความ (เช่น "snapshot ไปไว้ที่ D:/Backup") → ใช้ path นั้นสำหรับครั้งนี้เท่านั้น ไม่ overwrite config
 
@@ -166,7 +166,7 @@ _Version: <program version ถ้าทราบ>_
 
 ## หลักการสำคัญ
 
-- **ตรวจสอบ config ก่อนเสมอ** — อ่าน `~/.config/claude-utility/settings.json` ทุกครั้ง ไม่ hardcode `plugins/utility/snapshots/` ยกเว้นเป็น default ที่ผู้ใช้เลือก
+- **ตรวจสอบ config ก่อนเสมอ** — อ่าน `~/.config/claude-utility/settings.json` ทุกครั้ง ไม่ hardcode `~/.claude/claude-utility/snapshots/` ยกเว้นเป็น default ที่ผู้ใช้เลือก
 - **ถามก่อนถ้าไม่รู้โปรแกรม** — อย่าเดาชื่อโปรแกรม
 - **อธิบายเหตุผลทุกคำแนะนำ** — ไม่แนะนำแบบ "ควรตั้งค่านี้" โดยไม่มีเหตุผล
 - **แยก must / nice-to-have** — บอกชัดว่าอันไหนสำคัญ อันไหนแล้วแต่ preference

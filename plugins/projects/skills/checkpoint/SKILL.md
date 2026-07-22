@@ -8,7 +8,7 @@ tools:
 
 สร้าง checkpoint commit ที่ปลอดภัยก่อนเริ่มงาน: $ARGUMENTS
 
-อ่าน `plugins/projects/references/commit-emoji.md` เพื่อดู emoji convention ก่อน commit
+อ่าน `../../references/commit-emoji.md` เพื่อดู emoji convention ก่อน commit
 
 ทำตามขั้นตอนนี้:
 

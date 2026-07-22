@@ -12,7 +12,7 @@ description: >
 
 ## บทบาท
 คุณทำหน้าที่เป็นผู้ช่วยที่สัมภาษณ์ผู้ใช้เพื่อทำความเข้าใจโครงสร้าง OS และ workflow ส่วนตัวของพวกเขา
-เป้าหมายคือสร้างไฟล์ `plugins/utility/references/os-profile.md` ที่ skill อื่นๆ ใน plugin utility จะใช้เป็น context
+เป้าหมายคือสร้างไฟล์ `os-profile.md` (ตำแหน่งตาม path จาก Step 0) ที่ skill อื่นๆ ใน plugin utility จะใช้เป็น context
 
 ## ขั้นตอนการทำงาน
 
@@ -30,7 +30,9 @@ description: >
 
 ## ขั้นตอนตรวจสอบ path (ทำก่อนทุกครั้ง)
 1. อ่านไฟล์ `~/.config/claude-utility/settings.json`
-2. ถ้า **ไม่มีไฟล์** (ใช้ครั้งแรก) → ถามผู้ใช้ว่าต้องการบันทึก `os-profile.md` ที่ folder ไหน พร้อมบอก default ว่า `plugins/utility/references/os-profile.md` แล้ว **สร้าง config file** บันทึก path ที่เลือก จากนั้นดำเนินการต่อ
+2. ถ้า **ไม่มีไฟล์** (ใช้ครั้งแรก) → ถามผู้ใช้ว่าต้องการบันทึก `os-profile.md` ที่ folder ไหน พร้อมบอก default ว่า `~/.claude/claude-utility/os-profile.md` แล้ว **สร้าง config file** บันทึก path ที่เลือก จากนั้นดำเนินการต่อ
+
+   > **ทำไมไม่ default ไปที่โฟลเดอร์ของ plugin เอง:** plugin ที่ติดตั้งจริงจะถูกเก็บไว้ใต้ `~/.claude/plugins/cache/<marketplace>/utility/<version>/` — path นี้เปลี่ยนทุกครั้งที่อัปเดต version และไฟล์ทั้งโฟลเดอร์จะถูกแทนที่/ลบตอน reinstall ถ้าเก็บ os-profile.md (ข้อมูลส่วนตัวของผู้ใช้) ไว้ในนั้น ข้อมูลจะหายเมื่อ plugin อัปเดต จึงต้องเก็บไว้ในตำแหน่งที่ผู้ใช้เป็นเจ้าของและคงอยู่ข้าม version แทน
 3. ถ้า **มีไฟล์แล้ว** → ใช้ `os_profile_path` จาก config โดยตรง ไม่ต้องถามซ้ำ
 
 ## เปลี่ยน Save Path
@@ -46,7 +48,7 @@ trigger เมื่อผู้ใช้พูดถึง: "เปลี่ย
 
 ### Step 1: ตรวจสอบสถานะ
 
-ก่อนเริ่ม ให้ตรวจสอบว่า `plugins/utility/references/os-profile.md` มีอยู่แล้วหรือไม่
+ก่อนเริ่ม ให้ตรวจสอบว่าไฟล์ที่ `os_profile_path` (จาก config ใน Step 0) มีอยู่แล้วหรือไม่
 
 - **ถ้ายังไม่มี** → แจ้งผู้ใช้ว่าจะเริ่มสร้างใหม่ ดำเนินการ Phase 1 ทั้งหมด
 - **ถ้ามีแล้ว** → ถามผู้ใช้:
