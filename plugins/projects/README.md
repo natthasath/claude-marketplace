@@ -49,6 +49,21 @@ Plugin สำหรับ **Setup และจัดการ Development Projec
 /list-phase
 ```
 
+### 💬 Commit Convention
+
+`checkpoint`, `debug` และ `setup` commit ด้วย emoji นำหน้าตาม [gitmoji](https://gitmoji.dev/) ผสม Conventional Commits — รายการเต็มอยู่ที่ [`references/commit-emoji.md`](references/commit-emoji.md)
+
+| Emoji | Type | Emoji | Type |
+|---|---|---|---|
+| 🎉 | Initial commit | ✅ | test |
+| ✨ | feat | 📦 | build |
+| 🐛 | fix | 👷 | ci |
+| 🚑️ | hotfix | 🔧 | chore |
+| 📝 | docs | 💥 | breaking change |
+| ♻️ | refactor | 🔒 | security |
+
+> Extended set (move/rename, dependency, deploy, secrets, i18n, accessibility, experiments) ดูใน reference file
+
 ### 💎 Files created by /setup
 
 ```
