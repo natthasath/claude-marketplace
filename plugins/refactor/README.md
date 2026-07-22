@@ -9,7 +9,7 @@ Plugin for improving code and documentation quality — Docker, Shell Script, an
 | `refactor-compose` | Refactor `docker-compose.yml` and `.env` to best practice |
 | `refactor-dockerfile` | Create and refactor `Dockerfile` with security, performance, and layer caching |
 | `refactor-shell` | Create and refactor Shell scripts with error handling, logging, and standard structure |
-| `refactor-readme` | Refactor `README.md` to a minimal open-source standard — English headers, emoji convention, progressive disclosure with subfolder links |
+| `refactor-readme` | Refactor `README.md` to a minimal open-source standard — English headers, emoji convention, and a leaner dedicated pattern for monorepo sub-folder/component READMEs |
 
 ### 💎 README Section Emoji Convention
 

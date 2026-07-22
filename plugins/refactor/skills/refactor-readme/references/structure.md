@@ -1,8 +1,13 @@
 # README Structure Reference
 
-ลำดับ section มาตรฐานสำหรับ README.md ทุกประเภทโปรเจกต์ ใช้ลำดับนี้เป็น default — ตัด section ที่ไม่มีเนื้อหาจริงออก ไม่ต้องใส่ placeholder ว่าง
+มี 2 pattern แยกกันตามระดับของ README:
 
-## Section Order
+- **Main / Root README** — README ของโปรเจกต์หรือ repo หลัก ใช้ **Section Order** ด้านล่างเต็มรูปแบบ
+- **Sub-folder README** — README ของ component ย่อยภายใน monorepo (plugin, module, service) ที่ main README link ออกไป ใช้ pattern ที่กระชับกว่า ดู **Sub-folder README Pattern** ด้านล่าง — คนละบริบทกัน: sub-folder README ไม่ใช่ "หน้าแรกที่คนไม่รู้จักโปรเจกต์เจอ" แต่เป็นจุดที่คนรู้อยู่แล้วว่ากำลังดู component ไหน ต้องการแค่ reference lookup ที่เร็ว ไม่ใช่ landing page เต็มรูปแบบ
+
+ทั้งสอง pattern ตัด section ที่ไม่มีเนื้อหาจริงออก ไม่ต้องใส่ placeholder ว่าง
+
+## Section Order (Main / Root README)
 
 emoji ในตารางนี้ต้องตรงกับ `references/emoji.md` เสมอ — ถ้าแก้ mapping ในไฟล์ใดไฟล์หนึ่งต้อง sync อีกไฟล์ด้วย
 
@@ -54,14 +59,31 @@ main README → สรุป 1 บรรทัดต่อ component + link
 | [`capacities`](plugins/capacities/README.md) | 5 | Capacities PKM — Tags, Notes, Formatting |
 
 # ตัวอย่าง sub-folder README:
-plugins/capacities/README.md → Skills table + Usage + reference tables ทั้งหมด
+plugins/capacities/README.md → โครงตาม Sub-folder README Pattern ด้านล่าง (กระชับ ไม่ใช่ full 27-section)
 ```
+
+## Sub-folder README Pattern
+
+ใช้ pattern นี้กับ README.md ที่อยู่ใน component ย่อยของ monorepo (เช่น `plugins/<name>/README.md`) — ไม่ใช่ version ย่อของ main README แต่เป็นคนละจุดประสงค์: คนที่เปิดไฟล์นี้รู้อยู่แล้วว่ากำลังดู component ไหน ต้องการ reference ที่ scan เร็ว ไม่ใช่ pitch ที่ต้องโน้มน้าวว่าน่าเชื่อถือ
+
+| # | Section | Emoji | Required | เมื่อใส่ |
+|---|---|---|---|---|
+| 1 | Component Name | 🎉 | ✅ | เสมอ (H1 title, emoji เดียวกับ main) |
+| 2 | Description | — | ✅ | เสมอ — 1 บรรทัด บอกว่า component นี้ครอบคลุมอะไร |
+| 3 | Skills / Components | ✨ | ✅ | เสมอ — ตาราง 2 คอลัมน์ (ชื่อ + วัตถุประสงค์สั้น) — mapping เดียวกับ Features ใน `emoji.md` เพราะ skills ของ plugin ก็คือ feature ที่มัน highlight |
+| 4 | Usage | 🏆 | เมื่อมี | ตัวอย่างคำสั่งเรียกใช้สั้นๆ |
+| 5 | Workflow | 🔁 | เมื่อมี | เฉพาะตอนที่ component ต้องเรียงลำดับกันเป็น flow (เช่น setup → implement → ship) |
+| 6 | (extra) | เลือกตามความหมาย | สูงสุด 1 อัน | ข้อมูลเฉพาะของ component นี้จริงๆ ที่ไม่เข้า 5 อันบน (เช่น comparison table, files created) |
+
+**ห้ามใส่แม้จะ "มีเนื้อหาจริง"** — section เหล่านี้เป็นของ main README เท่านั้น เพราะเป็นข้อมูลระดับ repo ทั้งก้อน ไม่ใช่ระดับ component เดียว: Badges, Requirements, Installation, Deployment, API Key/Credentials, Demo, Screenshots, Schedule/Cron, Testing, Troubleshooting, Roadmap, Changelog, Notifications, Security, License, Contact/Author, Donate
+
+**สัญญาณว่าเกิน budget** (ต้องการมากกว่า 1 extra section) — component นั้นซับซ้อนพอที่ควรมี README ย่อยของตัวเองอีกชั้น (เช่น `plugins/<name>/skills/<skill>/README.md`) แทนที่จะยัดทุกอย่างไว้ที่ระดับ plugin
 
 ## Language Rules
 
-- **Section headers**: English เท่านั้น — ไม่ใช้ภาษาไทยเป็นหัวข้อ
-- **Project description** (intro paragraph ใต้ title): English เท่านั้น — อธิบายว่าโปรเจกต์คืออะไร แก้ปัญหาอะไร
+- **Section headers**: English เท่านั้น — ไม่ใช้ภาษาไทยเป็นหัวข้อ (ใช้กับทั้ง main และ sub-folder README)
+- **Project / Component description** (intro บรรทัดใต้ title): English เท่านั้น — ใช้กับทั้ง main และ sub-folder README
 - **เนื้อหาใน table / bullet**: ใช้ภาษาตาม context ของโปรเจกต์ได้ (Thai หรือ English)
 - **Code block / command**: English / syntax ของภาษานั้นๆ เสมอ
 
-เหตุผล: header และ description เป็นสิ่งแรกที่คนอ่าน GitHub เจอ — English ทำให้ repo ดู professional และ accessible กับ audience ที่กว้างกว่า
+เหตุผล: header และ description เป็นสิ่งแรกที่คนอ่าน GitHub เจอ — English ทำให้ repo ดู professional และ accessible กับ audience ที่กว้างกว่า หลักการนี้ใช้เหมือนกันไม่ว่าจะเป็น main README หรือ sub-folder README เพราะทั้งคู่ยัง publish อยู่บน GitHub เหมือนกัน
