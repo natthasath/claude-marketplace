@@ -16,8 +16,17 @@ Plugin for improving code and documentation quality — Docker, Shell Script, an
 | Emoji | Section | Emoji | Section |
 |---|---|---|---|
 | 🎉 | Title | 🚀 | Installation |
-| ⭐ | Features | 🏆 | Usage |
-| ✅ | Requirements / License | 👉🏼 | Contributing |
-| 🔑 | Configuration | 🔨 | Fix Error |
-| ⚓ | Folder Structure | 💎 | API Reference |
-| 📸 | Screenshots | 💘 | Contact / Author |
+| 💎 | Repository / About | ⚙️ | Configuration |
+| ✨ | Features | 🔑 | API Key / Credentials |
+| 🔥 | Performance / Benchmarks | 🐳 | Deployment |
+| 🧊 | Tech Stack / Folder Structure | 🏆 | Usage |
+| 🧩 | Integrations / Plugins | 👉🏼 | Demo |
+| ✅ | Requirements | 📸 | Screenshots |
+| 📝 | API Reference | 📅 | Schedule / Cron |
+| 🧪 | Testing | ⚠️ | Troubleshooting |
+| 🦄 | Roadmap | 🙏 | Contributors / Credits |
+| ⚡ | Changelog | 🔔 | Notifications / Webhooks |
+| 🛡️ | Security | 📜 | License |
+| ✉️ | Contact / Author | 🍺 | Donate / Support |
+
+Full mapping and rules live in [`skills/refactor-readme/references/emoji.md`](skills/refactor-readme/references/emoji.md).

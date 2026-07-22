@@ -13,7 +13,7 @@ description: >
 
 อ่าน `references/examples.md` ก่อน generate เพื่อให้ tone, ความยาว และโครงสร้างประโยคสอดคล้องกับตัวอย่าง
 
-# รูปแบบ Output:
+# รูปแบบ:
 
 1 paragraph เท่านั้น ไม่มี header ไม่มี bullet ไม่มี formatting ใดๆ
 

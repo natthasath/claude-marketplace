@@ -4,20 +4,37 @@
 
 ## Section Order
 
+emoji ในตารางนี้ต้องตรงกับ `references/emoji.md` เสมอ — ถ้าแก้ mapping ในไฟล์ใดไฟล์หนึ่งต้อง sync อีกไฟล์ด้วย
+
 | # | Section | Emoji | Required | เมื่อใส่ |
 |---|---|---|---|---|
 | 1 | Project Name | 🎉 | ✅ | เสมอ (H1 title) |
 | 2 | Description | — | ✅ | เสมอ (intro paragraph ใต้ title) |
-| 3 | Features | ⭐ | เมื่อมี | มีฟีเจอร์เด่นที่ต้องการ highlight |
-| 4 | Installation | 🚀 | ✅ | เสมอ (ถ้าไม่มีขั้นตอนให้ใส่คำสั่งเดียว) |
-| 5 | Usage | 🏆 | ✅ | ตัวอย่างการใช้งาน + code snippet |
-| 6 | Configuration | 🔑 | เมื่อมี | มี `.env`, `config.json` หรือ env vars |
-| 7 | API Reference | 💎 | เมื่อมี | มี endpoint หรือ public function หลัก |
-| 8 | Screenshots | 📸 | เมื่อมี | มี UI หรือ CLI output ที่ช่วยให้เห็นภาพ |
-| 9 | Folder Structure | ⚓ | เมื่อมี | โปรเจกต์ซับซ้อนหรือมีหลาย module |
-| 10 | Contributing | 👉🏼 | เมื่อมี | repo เปิดรับ contribution |
-| 11 | License | ✅ | เมื่อมี | ระบุประเภท License เช่น MIT |
-| 12 | Contact / Author | 💘 | เมื่อมี | ช่องทางติดต่อหรือชื่อผู้พัฒนา |
+| 3 | Repository / About | 💎 | เมื่อมี | ต้องการอธิบายโปรเจกต์เพิ่มเติมนอกจาก intro |
+| 4 | Features | ✨ | เมื่อมี | มีฟีเจอร์เด่นที่ต้องการ highlight |
+| 5 | Performance / Benchmarks | 🔥 | เมื่อมี | มีตัวเลขความเร็ว/ประสิทธิภาพที่ต้องการโชว์ |
+| 6 | Tech Stack / Folder Structure | 🧊 | เมื่อมี | โปรเจกต์ซับซ้อนหรือมีหลาย module |
+| 7 | Integrations / Plugins / Extensions | 🧩 | เมื่อมี | รองรับ plugin, extension หรือเชื่อมต่อกับระบบภายนอก |
+| 8 | Requirements | ✅ | เมื่อมี | มี dependency หรือ environment ที่ต้องเตรียมก่อนติดตั้ง |
+| 9 | Installation | 🚀 | ✅ | เสมอ (ถ้าไม่มีขั้นตอนให้ใส่คำสั่งเดียว) |
+| 10 | Configuration | ⚙️ | เมื่อมี | มี `.env`, `config.json` หรือ env vars |
+| 11 | API Key / Credentials | 🔑 | เมื่อมี | มี API key, token หรือ secret ที่ต้องตั้งค่า |
+| 12 | Deployment | 🐳 | เมื่อมี | มีขั้นตอน deploy ขึ้น production เช่น Docker, CI/CD, cloud |
+| 13 | Usage | 🏆 | ✅ | ตัวอย่างการใช้งาน + code snippet |
+| 14 | Demo | 👉🏼 | เมื่อมี | มี live demo หรือ try-it-out link |
+| 15 | Screenshots | 📸 | เมื่อมี | มี UI หรือ CLI output ที่ช่วยให้เห็นภาพ |
+| 16 | API Reference | 📝 | เมื่อมี | มี endpoint หรือ public function หลัก |
+| 17 | Schedule / Cron | 📅 | เมื่อมี | มีงานที่รันตามเวลา |
+| 18 | Testing | 🧪 | เมื่อมี | มีวิธีรัน test suite หรือดู coverage |
+| 19 | Troubleshooting | ⚠️ | เมื่อมี | มีปัญหาที่พบบ่อยและวิธีแก้ |
+| 20 | Roadmap / Future Plans | 🦄 | เมื่อมี | มีแผนฟีเจอร์ในอนาคตที่ต้องการโชว์ |
+| 21 | Contributors / Credits / Thanks | 🙏 | เมื่อมี | ขอบคุณ contributor, library ที่ใช้ หรือแรงบันดาลใจของโปรเจกต์ |
+| 22 | Changelog | ⚡ | เมื่อมี | มีประวัติการอัปเดตที่ต้องการโชว์ |
+| 23 | Notifications / Webhooks / Alerts | 🔔 | เมื่อมี | มีฟีเจอร์แจ้งเตือนแบบ event-driven เช่น webhook, push notification |
+| 24 | Security / Security Policy | 🛡️ | เมื่อมี | มี vulnerability reporting policy หรือ security best practices |
+| 25 | License | 📜 | เมื่อมี | ระบุประเภท License เช่น MIT |
+| 26 | Contact / Author | ✉️ | เมื่อมี | ช่องทางติดต่อหรือชื่อผู้พัฒนา |
+| 27 | Donate / Support / Sponsor | 🍺 | เมื่อมี | มีช่องทางรับ donate เช่น Ko-fi, Buy Me a Coffee, GitHub Sponsors |
 
 ## Progressive Disclosure — เมื่อ section ยาวเกินไป
 
