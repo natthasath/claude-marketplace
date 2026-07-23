@@ -14,6 +14,7 @@ Plugin for **boosting work productivity** — covers Short Summary, Meetings, PD
 | `scorecard` | ประเมินระดับความยากง่ายของงาน IT ทุกสายงาน (Infrastructure, Network, Database, Developer, Security, Cloud, DevOps) พร้อม scorecard 6 มิติ |
 | `kpi` | ออกแบบ KPI และตัวชี้วัดสำหรับ Action Plan — รับกิจกรรมแล้วแนะนำตัวชี้วัด เกณฑ์ความสำเร็จ เป้าหมาย และวิธีวัดผล |
 | `activity-report` | สรุปความคืบหน้ากิจกรรมในแผนการปฏิบัติงานประจำปีของสำนัก — ถามข้อมูลครบ 5W (แผน / ทำ / ได้ / ติด / ต่อ) แล้วสรุปเป็น 1 paragraph ภาษาทางการ |
+| `save-cost` | ติดตั้ง CLI tools ที่ลดการใช้ token (gh, jq, ast-grep, uv, git-delta, duckdb ฯลฯ) พร้อม config และอัปเดต CLAUDE.md ให้ Claude รู้ว่าควรใช้ tool ไหนเมื่อไหร่ |
 
 ### 🏆 Usage
 
@@ -26,4 +27,5 @@ Plugin for **boosting work productivity** — covers Short Summary, Meetings, PD
 /scorecard <งาน IT ที่ต้องการประเมิน>
 /kpi <กิจกรรมหรือโปรเจกต์ที่ต้องการวางตัวชี้วัด>
 /activity-report <ชื่อกิจกรรม>
+/save-cost
 ```
