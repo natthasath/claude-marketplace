@@ -27,7 +27,7 @@ A Claude Code plugin marketplace bundling 12 plugins and 54 skills across PKM, p
 
 ```shell
 # 1. เพิ่ม marketplace
-/plugin marketplace add natthasath/claude-marketplace
+/plugin marketplace add natthasath/natthasath-marketplace
 
 # 2. ติดตั้ง plugin ที่ต้องการ
 /plugin install capacities@natthasath-marketplace
