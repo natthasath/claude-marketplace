@@ -90,13 +90,6 @@
       "source": "./plugins/utility",
       "category": "development",
       "keywords": ["utility", "os", "setup", "config", "snapshot", "windows", "macos", "linux", "naming-convention", "backup", "export"]
-    },
-    {
-      "name": "generator",
-      "description": "Plugin รวม Skills สำหรับสร้างสรรค์ ASCII Art ครอบคลุม Text Banner (figlet/toilet), Image to ASCII (jp2a/chafa/img2txt), Cowsay และ Rainbow Coloring (lolcat) แบบ self-contained ไม่ต้องติดตั้ง CLI tool ภายนอก",
-      "source": "./plugins/generator",
-      "category": "productivity",
-      "keywords": ["generator", "ascii", "ascii-art", "figlet", "toilet", "jp2a", "chafa", "img2txt", "cowsay", "lolcat", "banner", "text-art", "image-to-ascii", "terminal", "art"]
     }
   ]
 }

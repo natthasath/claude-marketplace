@@ -1,9 +1,9 @@
 # 🎉 natthasath-marketplace
 
-A Claude Code plugin marketplace bundling 13 plugins and 57 skills across PKM, project planning, DevOps, content writing, language, design, and productivity — install with a single command and start using slash commands right away.
+A Claude Code plugin marketplace bundling 12 plugins and 56 skills across PKM, project planning, DevOps, content writing, language, design, and productivity — install with a single command and start using slash commands right away.
 
-![plugins](https://img.shields.io/badge/plugins-13-blue)
-![skills](https://img.shields.io/badge/skills-57-brightgreen)
+![plugins](https://img.shields.io/badge/plugins-12-blue)
+![skills](https://img.shields.io/badge/skills-56-brightgreen)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-marketplace-8A63D2)
 
 ### ✨ Plugins
@@ -13,7 +13,6 @@ A Claude Code plugin marketplace bundling 13 plugins and 57 skills across PKM, p
 | [`capacities`](plugins/capacities/README.md) | 6 | จัดการ PKM บน Capacities — Tags, Knowledge Notes และ Text Formatting |
 | [`devops`](plugins/devops/README.md) | 1 | จัดการ Session Context — ตั้งชื่อและบันทึกจุดประสงค์ของ session |
 | [`document`](plugins/document/README.md) | 2 | จัดการเอกสารภาษาไทย — ตรวจสอบหนังสือราชการ และ blind ข้อมูล sensitive |
-| [`generator`](plugins/generator/README.md) | 1 | สร้างสรรค์ ASCII Art — Text Banner, Image to ASCII, Cowsay และ Rainbow Coloring แบบ self-contained |
 | [`guide`](plugins/guide/README.md) | 3 | แนะนำแนวทางออกแบบ — Design Style, Font Pairing, Web Design และ Note-taking |
 | [`language`](plugins/language/README.md) | 2 | จัดการงานด้านภาษา — ล่ามแปลต่อเนื่อง และ English Mentor |
 | [`masterplan`](plugins/masterplan/README.md) | 5 | วางแผนโปรเจกต์ซอฟต์แวร์ — Requirement, Architecture และ Database Design |
@@ -34,7 +33,6 @@ A Claude Code plugin marketplace bundling 13 plugins and 57 skills across PKM, p
 /plugin install capacities@natthasath-marketplace
 /plugin install devops@natthasath-marketplace
 /plugin install document@natthasath-marketplace
-/plugin install generator@natthasath-marketplace
 /plugin install guide@natthasath-marketplace
 /plugin install language@natthasath-marketplace
 /plugin install masterplan@natthasath-marketplace
